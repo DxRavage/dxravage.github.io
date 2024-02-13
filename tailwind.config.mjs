@@ -5,7 +5,7 @@ export default {
 		fontFamily: {
 			jetbrains: ['JetBrains Mono', 'monospace'],
 		}
-	
+
 	},
 	plugins: [],
 }

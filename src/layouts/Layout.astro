@@ -5,11 +5,21 @@ import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="en" class="bg-gradient-to-t from-zinc-900 to-gray-700">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Software Engineers website for a portfolio that has a collection of proyects"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Mariano Caballero Avila" />
+		<meta
+			name="keywords"
+			content="portfolio, mexican, web dev, software engineer"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	</head>
 	<Header />
 	<slot />
@@ -18,14 +28,14 @@ import Footer from "../components/Footer.astro";
 		id="about"
 		class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:text-2xl md:w-[640px] mx-auto text-center"
 	>
-		<h3 class="text-lime-400 pb-8 text-2xl lg:text-4xl mt-28">About Me</h3>
+		<h3 class="text-slate-200 dark:text-lime-400 pb-8 text-2xl lg:text-4xl mt-28">About Me</h3>
 		<p class="opacity-80 text-l lg:text-2xl">
-			I'm a Software Engineer student excited to join the tech industry.
+			I'm a Software Engineer student looking to join the tech industry.
 			Passionate about web development using different programming
-			languages and frameworks. Skilled using Astro and React and a little
-			of Tailwind to make unique websites.
+			languages and frameworks.
 		</p>
 	</article>
+	
 	<Footer />
 
 	<style is:global>
@@ -38,6 +48,7 @@ import Footer from "../components/Footer.astro";
 			font-family: "JetBrains Mono Variable", sans-serif;
 			font-weight: 400;
 		}
+		
 		h1 {
 			justify-content: center;
 		}
@@ -54,4 +65,5 @@ import Footer from "../components/Footer.astro";
 			}
 		}
 	</style>
+
 </html>
