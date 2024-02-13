@@ -13,9 +13,9 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ title, description, tags, image }) => (
-        <article class="flex flex-auto" id="projectsCollection">
-            <div class="bg-zinc-800 opacity-85 w-80 rounded-b-lg mr-8">
-                <img
+        <article id="projectsCollection">
+            <div class="bg-zinc-800 opacity-85 w-80 rounded-b-lg">
+                <img 
                     class="w-full rounded-t-lg h-30 relative opacity-20 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out"
                     src={image}
                     alt={`Landing page screenshot for ${title} project`}
