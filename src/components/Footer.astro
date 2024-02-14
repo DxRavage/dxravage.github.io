@@ -1,9 +1,9 @@
 ---
-
+import Modal from "./Modal.astro";
 ---
 
 <section
-    class="w-full border-t-2 border-gray-400 bg-slate-300 dark:bg-zinc-900"
+    class="w-full border-t-2 border-gray-400 bg-zinc-500 dark:bg-zinc-900"
     id="contact"
 >
     <div
@@ -13,7 +13,7 @@
             <div class="px-12 py-2">
                 <a
                     href="#about"
-                    class="text-base leading-6 text-lime-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
+                    class="text-base leading-6 text-rose-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
                 >
                     // about
                 </a>
@@ -21,7 +21,7 @@
             <div class="px-12 py-2">
                 <a
                     href="#"
-                    class="text-base leading-6 text-lime-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
+                    class="text-base leading-6 text-rose-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
                 >
                     // cv
                 </a>
@@ -29,24 +29,22 @@
             <div class="px-12 py-2">
                 <a
                     href="#projectsCollection"
-                    class="text-base leading-6 text-lime-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
+                    class="text-base leading-6 text-rose-600 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
                 >
                     // projects
                 </a>
             </div>
-            <div class="px-12 py-2">
-                <a
-                    href="#"
-                    class="text-base leading-6 text-lime-400 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-lime-400"
-                >
-                    // contact
-                </a>
+            <div>
+                <Modal />
+
             </div>
+           
         </nav>
         <div class="flex justify-center mt-8 space-x-6">
             <a
                 href="https://github.com/DxRavage"
                 class="text-gray-400 hover:text-gray-500 hover:scale-125 transition-all"
+                target="_blank"
             >
                 <span class="sr-only">GitHub</span>
                 <svg
@@ -64,6 +62,7 @@
             <a
                 href="https://www.linkedin.com/in/mariano-caballero-avila-714868255"
                 class="text-gray-400 hover:text-gray-500 hover:scale-125 transition-all"
+                target="_blank"
             >
                 <span class="sr-only">LinkedIn</span>
                 <svg

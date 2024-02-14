@@ -1,35 +1,47 @@
 ---
-const PROJECTS = [
-    {
-        title: "Project 1",
-        description: "This is a project",
-        link: "#",
-        github: "#",
-        image: "https://via.placeholder.com/150",
-        tags: ["tag1", "tag2", "tag3"],
-    },
-];
----
 
-{
-    PROJECTS.map(({ title, description, tags, image }) => (
-        <article id="projectsCollection">
-            <div class="bg-zinc-800 opacity-85 w-80 rounded-b-lg">
-                <img
-                    class="w-full rounded-t-lg h-30 relative opacity-20 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out"
-                    src={image}
-                    alt={`Landing page screenshot for ${title} project`}
-                />
-                <h1 class="text-2xl lg:4xl text-center text-lime-400">
-                    {title}
-                </h1>
-                <p class=" text-zinc-400">{description}</p>
-                <ul class="flex flex-row gap-4">
-                    {tags.map((tag) => (
-                        <li>{tag}</li>
-                    ))}
-                </ul>
-            </div>
-        </article>
-    ))
-}
+---
+<div class="container mx-auto px-5 py-2 lg:px-2 lg:pt-24">
+    <div class="-m-1 flex flex-wrap md:-m-2">
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+        <div class="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+      </div>
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://www.techsmith.com/blog/wp-content/uploads/2017/10/Website-mock-up-image-855.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
