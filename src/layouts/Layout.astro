@@ -2,7 +2,7 @@
 import "@fontsource-variable/jetbrains-mono";
 import Header from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
-import Table from "../components/Table.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -21,25 +21,13 @@ import Table from "../components/Table.astro";
 		/>
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="icon" type="image/x-icon" href="/logo.svg">
+		<title>MarianoDev | Portfolio</title>
+		<ViewTransitions />
 	</head>
-	<body class="bg-zinc-200">
+	<body class="bg-zinc-200" transition:animate="slide">
 		<Header />
 		<slot />
-
-		<article
-			id="about"
-			class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:text-2xl md:w-[640px] mx-auto text-center"
-		>
-			<h3 class="text-rose-500 pb-8 text-2xl lg:text-4xl mt-28">
-				About Me
-			</h3>
-			<p class="text-zinc-800 text-l lg:text-2xl">
-				I'm a Software Engineer student looking to join the tech
-				industry. Experienced in web development, I'm currently learning
-				new technologies and improving my skills. I'm passionate about
-				learning and I'm always looking for new challenges.
-			</p>
-		</article>
 		<Footer />
 	</body>
 
