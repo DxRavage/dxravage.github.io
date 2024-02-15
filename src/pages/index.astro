@@ -2,12 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Table from "../components/Table.astro";
 import Projects from "../components/Projects.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <Layout title="Mariano Dev Portfolio">
-	<main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
+	<head>
 		<title>MarianoDev | Portfolio</title>
-
+		<ViewTransitions />
+	</head>
+	<main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
 		<section class="mx-auto py-20 mt-40 border-b-2 border-zinc-800">
 			<h1
 				class="4xl lg:text-8xl md:text-6xl text-4xl flex flex-row gap-x-4 pb-4 text-zinc-800"

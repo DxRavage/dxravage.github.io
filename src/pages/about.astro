@@ -1,8 +1,14 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Headermain.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 <html class="bg-zinc-200">
+    <head>
+        <title>About Me</title>
+        <ViewTransitions />
+    </head>
+   
     <Header />
     <article
     id="about"
