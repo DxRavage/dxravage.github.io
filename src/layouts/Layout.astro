@@ -21,8 +21,11 @@ import { ViewTransitions } from "astro:transitions";
 		/>
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<link rel="icon" type="image/x-icon" href="/logo.svg">
-		<script defer data-domain="mariano.caballero.is-a.dev" src="https://plausible.io/js/script.js"></script>
+		<link rel="icon" type="image/x-icon" href="/logo.svg" />
+		<script
+			defer
+			data-domain="mariano.caballero.is-a.dev"
+			src="https://plausible.io/js/script.js"></script>
 		<title>MarianoDev | Portfolio</title>
 		<ViewTransitions />
 	</head>
@@ -30,33 +33,32 @@ import { ViewTransitions } from "astro:transitions";
 		<Header />
 		<slot />
 		<Footer />
-	</body>
-
-	<style is:global>
-		:root {
-			color-scheme: light dark;
-			scroll-behavior: smooth;
-		}
-
-		* {
-			font-family: "JetBrains Mono Variable", sans-serif;
-			font-weight: 400;
-		}
-
-		h1 {
-			justify-content: center;
-		}
-		body {
-			display: flex;
-			flex-direction: column;
-			min-height: 100vh;
-			list-style: none;
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			html {
-				scroll-behavior: auto;
+		<style is:global>
+			:root {
+				color-scheme: light dark;
+				scroll-behavior: smooth;
 			}
-		}
-	</style>
+
+			* {
+				font-family: "JetBrains Mono Variable", sans-serif;
+				font-weight: 400;
+			}
+
+			h1 {
+				justify-content: center;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				list-style: none;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+			}
+		</style>
+	</body>
 </html>
