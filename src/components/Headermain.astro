@@ -1,19 +1,21 @@
 ---
 
 ---
+
 <header
-    class="bg-zinc-300 shadow-lg shadow-zinc-500 relative flex justify-between items-center py-5 text-l lg:{1024px} lg:text-2xl md:{640px} sm:{480px} "
+    class="bg-zinc-300 shadow-lg shadow-zinc-500 relative flex justify-between items-center py-5 text-l lg:{1024px} lg:text-2xl md:{640px} sm:{480px}"
 >
     <img
         class="absolute top-0.5 w-52 md:w-72 hover:scale-110 opacity-80 hover:opacity-100 hover:shadow-zinc-500 cursor-pointer transition-all"
         src="/logo.svg"
         alt="logo mariano dev"
-  />
-    
+    />
+
     <nav class="block justify-end text-decoration-none ml-auto pr-4">
         <menu>
-            <img class="w-12 md:hidden opacity-80 hover:bg-zinc-400 active:bg-zinc-500 focus:outline-none rounded-md hover:opacity-100 cursor-pointer transition-all" src="/menu.svg" alt="menu icon for nav bar">
-            <ul class="hidden md:flex flex-row gap-x-10 opacity-80 text-zinc-800">
+            <ul
+                class="hidden md:flex flex-row gap-x-10 opacity-80 text-zinc-800"
+            >
                 <a
                     href="/"
                     class="hover:transform hover:scale-110 hover:text-rose-500 transition-all"
@@ -36,6 +38,200 @@
                     ><li>// contact</li></a
                 >
             </ul>
+            <div id="navbar" class="block md:hidden">
+                <div id="nav-container">
+                    <input
+                        id="checkbox"
+                        type="checkbox"
+                        class="hidden sm:block"
+                    />
+                    <div id="hamburger-lines">
+                        <span id="line1"></span>
+                        <span id="line2"></span>
+                        <span id="line3"></span>
+                    </div>
+                    <div id="menu-items">
+                        <a
+                            href="/"
+                            class="hover:transform hover:scale-110 hover:text-rose-500 transition-all"
+                            ><li>// home</li></a
+                        >
+                        <a
+                            href="/about/"
+                            class="hover:transform hover:scale-110 hover:text-rose-500 transition-all"
+                        >
+                            <li>// about</li></a
+                        >
+                        <a
+                            href="#projectsCollection"
+                            class="hover:transform hover:scale-110 hover:text-rose-500 transition-all"
+                            ><li>// projects</li></a
+                        >
+                        <a
+                            href="#contact"
+                            class="hover:transform hover:scale-110 hover:text-rose-500 transition-all"
+                            ><li>// contact</li></a
+                        >
+                    </div>
+                </div>
+            </div>
         </menu>
     </nav>
 </header>
+<style>
+    #nav-container {
+        max-width: 1050px;
+        width: 90%;
+        margin: auto;
+        margin-top: 0;
+        opacity: 0;
+    }
+
+    #navbar {
+        width: 100%;
+        box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    }
+
+    #nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+        right: 50px;
+    }
+
+    #navbar #menu-items {
+        display: flex;
+    }
+
+    #navbar #nav-container li {
+        list-style: none;
+    }
+
+    #navbar #nav-container a {
+        text-decoration: none;
+        color: rgb(228, 228, 228);
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    #navbar #nav-container a:hover {
+        font-weight: bolder;
+        color: rgb(244, 63, 94);
+    }
+
+    #nav-container {
+        display: block;
+        position: relative;
+        height: 60px;
+        opacity: 1;
+    }
+
+    #nav-container #checkbox {
+        position: absolute;
+        display: block;
+        height: 52px;
+        width: 42px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #nav-container #hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #nav-container #hamburger-lines #line1 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+        opacity: 0.9;
+    }
+
+    #nav-container #hamburger-lines #line2 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+        opacity: 0.9;
+    }
+
+    #nav-container #hamburger-lines #line3 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+        opacity: 0.9;
+    }
+    #nav-container #hamburger-lines #line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #nav-container #hamburger-lines #line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #nav-container #hamburger-lines #line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #navbar #menu-items {
+        padding-top: 110px;
+        height: 100vh;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+    }
+
+    #navbar #menu-items li {
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: none;
+        padding-right: 310px;
+    }
+
+    #nav-container input[type="checkbox"]:checked ~ #menu-items {
+        background-color: rgba(59, 59, 59, 0.685);
+
+        z-index: 1;
+        transform: translateX(0);
+    }
+
+    #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line1 {
+        transform: rotate(45deg);
+    }
+
+    #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line2 {
+        transform: scaleY(0);
+    }
+
+    #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line3 {
+        transform: rotate(-45deg);
+    }
+
+    #nav-container input[type="checkbox"]:checked ~ #menu-items li {
+        width: 700px;
+        display: block;
+    }
+</style>
