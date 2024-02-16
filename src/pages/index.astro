@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Table from "../components/Table.astro";
 import Projects from "../components/Projects.astro";
 import { ViewTransitions } from "astro:transitions";
+import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
 <Layout title="Mariano Dev Portfolio">
@@ -23,7 +24,9 @@ import { ViewTransitions } from "astro:transitions";
 			>
 				Software Engineer Student | Web Developer
 			</h2>
+		
 		</section>
+		<PrimaryButton />
 		<section class="mt-80 py-10">
 			<Table />
 		</section>
@@ -36,3 +39,7 @@ import { ViewTransitions } from "astro:transitions";
 		</section>
 	</main>
 </Layout>
+<script
+defer data-domain="mariano.avila.is-a.dev"
+src="https://analytics.is-a.dev/js/script.js">
+</script>
