@@ -1,28 +1,40 @@
 ---
 import Footer from "../components/Footer.astro";
+import "@fontsource-variable/jetbrains-mono";
 import Header from "../components/Headermain.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
+
 <html class="bg-zinc-200">
     <head>
         <title>About Me</title>
-        <link rel="icon" type="image/x-icon" href="/logo.svg">
+        <link rel="icon" type="image/x-icon" href="/logo.svg" />
         <ViewTransitions />
     </head>
-   
+
     <Header />
     <article
-    id="about"
-    class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:text-2xl md:w-[640px] mx-auto text-center"
->
-    <h1 transition:name="myname" class="text-zinc-800 pb-8 text-2xl lg:text-4xl mt-28">Mariano <span class="text-rose-500">Avila</span></h3>
-    <p class="text-zinc-800 text-l lg:text-2xl">
-        I'm a Software Engineer student looking to join the tech industry.
-        Experienced in web development, I'm currently learning new technologies
-        and improving my skills. I'm passionate about learning and I'm always
-        looking for new challenges.
-    </p>
-</article>
-<Footer />
+        id="about"
+        class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:w-[640px] mx-auto text-center"
+    >
+        <h1
+            transition:name="myname"
+            class="text-zinc-800 pb-8 text-6xl mt-28 border-b-2 border-zinc-800"
+        >
+            Mariano <span class="text-rose-500 font-bold">Avila</span>
+        </h1>
+        <p class="text-zinc-800 text-l lg:text-2xl pt-12">
+            I'm a Software Engineer student looking to join the tech industry.
+            Experienced in web development, I'm currently learning new
+            technologies and improving my skills. I'm passionate about learning
+            and I'm always looking for new challenges.
+        </p>
+    </article>
+    <Footer />
+    <style>
+        * {
+            font-family: "JetBrains Mono Variable", sans-serif;
+            font-weight: 400;
+        }
+    </style>
 </html>
-
