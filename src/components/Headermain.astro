@@ -11,7 +11,7 @@
         alt="logo mariano dev"
     />
 
-    <nav class="block justify-end text-decoration-none ml-auto pr-4">
+    <nav class="block justify-end text-decoration-none ml-auto pr-4 mt-8">
         <menu>
             <ul
                 class="hidden md:flex flex-row gap-x-10 opacity-80 text-zinc-800"
@@ -79,6 +79,9 @@
     </nav>
 </header>
 <style>
+    *{
+        padding-top: 0;
+    }
     #nav-container {
         max-width: 1050px;
         width: 90%;
@@ -144,7 +147,7 @@
         height: 26px;
         width: 32px;
         position: absolute;
-        top: 17px;
+        top: 10px;
         left: 20px;
         z-index: 2;
         display: flex;
@@ -193,7 +196,7 @@
     }
 
     #navbar #menu-items {
-        padding-top: 110px;
+        padding-top: 40px;
         height: 100vh;
         width: 100%;
         transform: translate(-150%);
@@ -201,6 +204,7 @@
         flex-direction: column;
         transition: transform 0.5s ease-in-out;
         text-align: center;
+        z-index: 4;
     }
 
     #navbar #menu-items li {
