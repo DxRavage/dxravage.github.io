@@ -3,6 +3,7 @@ import "@fontsource-variable/jetbrains-mono";
 import Header from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,13 +27,15 @@ import { ViewTransitions } from "astro:transitions";
 			defer
 			data-domain="mariano.caballero.is-a.dev"
 			src="https://plausible.io/js/script.js"></script>
-		<title>MarianoDev | Portfolio</title>
+		<title>{title}</title>
 		<ViewTransitions />
 	</head>
+
 	<body class="bg-zinc-200">
 		<Header />
 		<slot />
 		<Footer />
+
 		<style is:global>
 			:root {
 				color-scheme: light dark;
