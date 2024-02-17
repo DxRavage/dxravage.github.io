@@ -81,18 +81,20 @@
 <style>
     *{
         padding-top: 0;
+        
     }
     #nav-container {
-        max-width: 1050px;
+        max-width: 580px;
         width: 90%;
         margin: auto;
-        margin-top: 0;
+        top: 0;
         opacity: 0;
     }
 
     #navbar {
         width: 100%;
         box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+       
     }
 
     #nav-container {
@@ -147,7 +149,7 @@
         height: 26px;
         width: 32px;
         position: absolute;
-        top: 10px;
+        top: 20px;
         left: 20px;
         z-index: 2;
         display: flex;
@@ -216,23 +218,26 @@
     }
 
     #nav-container input[type="checkbox"]:checked ~ #menu-items {
-        background-color: rgba(59, 59, 59, 0.685);
-
-        z-index: 1;
+        background-color: rgb(116, 116, 116);
+        
         transform: translateX(0);
     }
 
     #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line1 {
         transform: rotate(45deg);
+        background: #e7e7e7;
     }
 
     #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line2 {
         transform: scaleY(0);
+        background: #e7e7e7;
     }
 
     #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line3 {
         transform: rotate(-45deg);
+        background: #e7e7e7;
     }
+
 
     #nav-container input[type="checkbox"]:checked ~ #menu-items li {
         width: 700px;
