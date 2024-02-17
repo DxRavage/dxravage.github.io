@@ -3,7 +3,7 @@ import "@fontsource-variable/jetbrains-mono";
 import Header from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta
 			name="description"
-			content="Software Engineers website for a portfolio that has a collection of proyects"
+			content={description}
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Mariano Caballero Avila" />
