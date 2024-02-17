@@ -15,20 +15,21 @@ import { ViewTransitions } from "astro:transitions";
     <Header />
     <article
         id="about"
-        class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:w-[640px] mx-auto text-center"
+        class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:w-[640px] mx-auto"
     >
         <h1
             transition:name="myname"
-            class="text-zinc-800 pb-8 text-6xl mt-28 border-b-2 border-zinc-800"
+            class="text-center text-zinc-800 pb-8 text-6xl mt-28 border-b-2 border-zinc-800"
         >
             Mariano <span class="text-rose-500 font-bold">Avila</span>
         </h1>
-        <p class="text-zinc-800 text-l lg:text-2xl pt-12">
+        <p class="text-zinc-800 text-l lg:text-2xl pt-12 pb-48 leading-relaxed text-pretty">
             I'm a Software Engineer student looking to join the tech industry.
-            Experienced in web development, I'm currently learning new
+            Experienced in web development, currently learning new
             technologies and improving my skills. I'm passionate about learning
             and I'm always looking for new challenges.
         </p>
+        
     </article>
     <Footer />
     <style>
