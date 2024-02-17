@@ -1,10 +1,10 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Headermain.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
-
-<Header />
-<main
+<MainLayout title="404">
+  <main
   class="h-screen w-full flex flex-col justify-center items-center bg-zinc-100"
 >
   <h1 class="text-9xl font-extrabold text-zinc-600 tracking-widest">404</h1>
@@ -27,4 +27,5 @@ import Header from "../components/Headermain.astro";
     </a>
   </button>
 </main>
-<Footer />
+</MainLayout>
+

@@ -1,43 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import Table from "../components/Table.astro";
-import Projects from "../components/Projects.astro";
-import { ViewTransitions } from "astro:transitions";
 import PrimaryButton from "../components/PrimaryButton.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout title="Mariano Dev Portfolio">
-	<html>
-		<head>
-			<title>MarianoDev | Portfolio</title>
-			<ViewTransitions />
-		</head>
-		<main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
-			<section class="mx-auto py-20 mt-40 border-b-2 border-zinc-800">
-				<h1
-					class="4xl lg:text-8xl md:text-6xl text-4xl flex flex-row gap-x-4 pb-4 text-zinc-800"
-					transition:name="myname"
-				>
-					Mariano <span class="text-rose-500 font-bold">Avila</span>
-				</h1>
-				<h2
-					class="text-2xl opacity-80 lg:text-4xl md:text-2xl sm:text-xl text-center text-zinc-800"
-				>
-					Software Engineer Student | Web Developer
-				</h2>
-		
-			</section>
-			<PrimaryButton />
-			<section class="mt-80 py-10">
-				<Table />
-			</section>
-
-			<section
-				class="flex flex-nowrap flex-col lg:flex-row gap-8 items-center"
-				id="projectsCollection"
+<MainLayout title="Mariano Dev | Portfolio">
+	<main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
+		<section class="mx-auto py-20 mt-40 border-b-2 border-zinc-800">
+			<h1
+				class="4xl lg:text-8xl md:text-6xl text-4xl flex flex-row gap-x-4 pb-4 text-zinc-800"
+				transition:name="myname"
 			>
-				<Projects />
-			</section>
-		</main>
-	</html>
-</Layout>
+				Mariano <span class="text-rose-500 font-bold">Avila</span>
+			</h1>
+			<h2
+				class="text-2xl opacity-80 lg:text-4xl md:text-2xl sm:text-xl text-center text-zinc-800"
+			>
+				Software Engineer Student | Web Developer
+			</h2>
+		</section>
+		<PrimaryButton />
+		<section class="mt-80 py-10">
+			<Table />
+		</section>
+	</main>
+</MainLayout>
