@@ -1,20 +1,29 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+
 import Table from "../components/Table.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
-import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Mariano Dev | Portfolio" description="main page for personal porfolio website">
+<MainLayout
+	title="Mariano Dev | Portfolio"
+	description="main page for personal porfolio website"
+>
 	<main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
-		<section class="mx-auto py-20 mt-40 border-b-2 border-zinc-800">
+		<section
+			class="mx-auto py-20 mt-40 border-b-2 border-zinc-800 dark:border-violet-600"
+		>
 			<h1
-				class="4xl lg:text-8xl md:text-6xl text-4xl flex flex-row gap-x-4 pb-4 text-zinc-800"
+				class="4xl lg:text-8xl md:text-6xl text-4xl flex flex-row gap-x-4 pb-4 text-zinc-800 dark:bg-zinc-200"
 				transition:name="myname"
 			>
-				Mariano <span class="text-rose-500 font-bold">Avila</span>
+				Mariano <span
+					class="text-rose-500 dark:border-violet-600 font-bold"
+					>Avila</span
+				>
 			</h1>
 			<h2
-				class="text-2xl opacity-80 lg:text-4xl md:text-2xl sm:text-xl text-center text-zinc-800"
+				class="text-2xl opacity-80 lg:text-4xl md:text-2xl sm:text-xl text-center text-zinc-800 dark:bg-zinc-200"
 			>
 				Software Engineer Student | Web Developer
 			</h2>
