@@ -8,9 +8,9 @@ export default {
 				'secondary': 'var(--color-secondary)',
 				'twitch': 'var(--color-twitch)'
 			},
-		fontFamily: {
-			jetbrains: ['JetBrains Mono', 'monospace'],
+			fontFamily: {
+				jetbrains: ['JetBrains Mono', 'monospace'],
+			}
 		}
-
 	}
-},
+};
