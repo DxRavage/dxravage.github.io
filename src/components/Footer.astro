@@ -1,6 +1,9 @@
 ---
 import Linkedin from "../components/Linkedin.astro";
 import Github from "../components/Github.astro";
+import Mail from "../components/Mail.astro";
+import Whatsapp from "../components/Whatsapp.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <section
@@ -12,26 +15,12 @@ import Github from "../components/Github.astro";
   <div
     class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
-    <section class="border-b-2 border-secondary flex flex-row justify-center items-center">
-      <a href="mailto:marianoavilaj4@gmail.com">
-        <img
-          src="/src/icons/mail.svg"
-          alt="vector image of an envelope"
-          class="size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all"
-        /></a
-      >
-      <img
-      src="/src/icons/logo.svg"
-      class="size-40 px-8 hover:scale-110 opacity-80 hover:opacity-100 hover:shadow-zinc-500 cursor-pointer transition-all"
-      alt=""
-    />
-      <a href="tel:8683963024">
-        <img
-          src="/src/icons/brand-whatsapp.svg"
-          alt="vecotr image of whatsapp logo"
-          class="size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all"
-        /></a
-      >
+    <section
+      class="border-b-2 border-secondary flex flex-row justify-center items-center"
+    >
+      <Mail />
+      <Logo />
+      <Whatsapp />
     </section>
   </div>
   <div class="flex justify-center mt-8 space-x-6">
@@ -41,5 +30,4 @@ import Github from "../components/Github.astro";
   <p class="mt-8 text-base leading-6 text-center text-primary">
     © 2024 Mariano Avila.
   </p>
-
 </section>
