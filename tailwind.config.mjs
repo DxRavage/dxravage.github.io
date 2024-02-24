@@ -4,9 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary': 'var(--color-primary)',
-				'secondary': 'var(--color-secondary)',
-				'twitch': 'var(--color-twitch)'
+				'zprim': 'var(--color-zprim)',
+				'zsec': 'var(--color-zsec)',
+				'rose': 'var(--color-rose)',
+				'indigo': 'var(--color-indigo'
 			},
 			fontFamily: {
 				jetbrains: ['JetBrains Mono', 'monospace'],
