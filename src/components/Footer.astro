@@ -1,33 +1,45 @@
 ---
 import Linkedin from "../components/Linkedin.astro";
-import Github from "../components/Github.astro"
+import Github from "../components/Github.astro";
 ---
+
 <section
-    class="w-full border-t-2 border-gray-400"
-    style="background: rgb(88,88,88);
+  class="w-full border-t-2 border-gray-400 dark:border-zinc-600"
+  style="background: rgb(88,88,88);
     background: linear-gradient(180deg, rgba(88,88,88,0.95) 0%, rgba(0,0,0,0.8953956582633054) 70%);"
-    id="contact"
+  id="contact"
 >
-    <div
-        class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
-    >
-        <section class="border-b-2 border-zinc-200">
-            <img
-                src="/logo.svg"
-                class="size-40 mx-auto hover:scale-110 opacity-80 hover:opacity-100 hover:shadow-zinc-500 cursor-pointer transition-all"
-                alt=""
-            />
-            <div class="flex flex-row gap-12 pl-32 ">
-                <img src="/mail.svg" alt="vector image of an envelope"  class="flex justify-center mt-8 space-x-6 size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all">
-                <img src="/brand-whatsapp.svg" alt="vecotr image of whatsapp logo" class="flex justify-center mt-8 space-x-6 size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all">
-            </div>
-        </section>
-        <div class="flex justify-center mt-8 space-x-6">
-           <Github />
-           <Linkedin />
-        </div>
-        <p class="mt-8 text-base leading-6 text-center text-zinc-100">
-            © 2024 Mariano Avila.
-        </p>
-    </div>
+  <div
+    class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+  >
+    <section class="border-b-2 border-zinc-200 flex flex-row justify-center items-center">
+      <a href="mailto:marianoavilaj4@gmail.com">
+        <img
+          src="/mail.svg"
+          alt="vector image of an envelope"
+          class="size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all"
+        /></a
+      >
+      <img
+      src="/logo.svg"
+      class="size-40 px-8 hover:scale-110 opacity-80 hover:opacity-100 hover:shadow-zinc-500 cursor-pointer transition-all"
+      alt=""
+    />
+      <a href="tel:8683963024">
+        <img
+          src="/brand-whatsapp.svg"
+          alt="vecotr image of whatsapp logo"
+          class="size-12 hover:scale-110 opacity-80 hover:opacity-100 cursor-pointer transition-all"
+        /></a
+      >
+    </section>
+  </div>
+  <div class="flex justify-center mt-8 space-x-6">
+    <Github />
+    <Linkedin />
+  </div>
+  <p class="mt-8 text-base leading-6 text-center text-zinc-100">
+    © 2024 Mariano Avila.
+  </p>
+
 </section>
