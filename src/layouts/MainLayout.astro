@@ -8,60 +8,82 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content={description}
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="Mariano Caballero Avila" />
-		<meta
-			name="keywords"
-			content="portfolio, mexican, web dev, software engineer"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<link rel="icon" type="image/x-icon" href="/logo.svg" />
-		<script
-			defer
-			data-domain="mariano.caballero.is-a.dev"
-			src="https://plausible.io/js/script.js"></script>
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mariano Caballero Avila" />
+    <meta
+      name="keywords"
+      content="portfolio, mexican, web dev, software engineer"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="/logo.svg" />
+    <script
+      defer
+      data-domain="mariano.caballero.is-a.dev"
+      src="https://plausible.io/js/script.js"></script>
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
 
-	<body class="bg-zinc-200">
-		<Header />
-		<slot />
-		<Footer />
+  <body class="bg-zinc-200 dark:bg-zinc-600">
+    <Header />
+    <slot />
+    <Footer />
 
-		<style is:global>
-			:root {
-				color-scheme: light dark;
-				scroll-behavior: smooth;
-			}
+    <style is:global>
+      :root {
+        --color-primary: #333;
+        --color-secondary: #ddd;
+        --color-twitch: #6441a4;
 
-			* {
-				font-family: "JetBrains Mono Variable", sans-serif;
-				font-weight: 400;
-			}
+        --background-color: var(--color-secondary);
+        --background-image: var(--background-color) url("/concrete.png") repeat;
+      }
 
-			h1 {
-				justify-content: center;
-			}
-			body {
-				display: flex;
-				flex-direction: column;
-				min-height: 100vh;
-				list-style: none;
-			}
+      .dark {
+        --color-primary: #ddd;
+        --color-secondary: #333;
+        --color-twitch: #a270ff;
 
-			@media (prefers-reduced-motion: reduce) {
-				html {
-					scroll-behavior: auto;
-				}
-			}
-		</style>
-	</body>
+        --background-image: var(--background-color) url("/concrete-dark.png")
+          repeat;
+      }
+
+      html {
+        font-family: "JetBrains Mono Variable", system-ui, sans-serif;
+        font-weight: 400;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        overscroll-behavior: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: theme("colors.primary");
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        list-style: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </body>
 </html>
