@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/jetbrains-mono";
-import Header from "../components/Headermain.astro";
+import Headermain from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 const { title, description } = Astro.props;
@@ -34,7 +34,7 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
-    <Header />
+    <Headermain />
     <slot />
     <Footer />
   </body>
@@ -42,20 +42,23 @@ const { title, description } = Astro.props;
 
     <style is:global>
       :root {
-        --color-zprim: #52525b;
-        --color-zsec: #e4e4e7;
+        --color-primary: #52525b;
+        --color-secondary: #e4e4e7;
         --color-rose: #e11d48;
+		    --color-zinc: #71717a;
 
-        --background-color: var(--color-zsec);
-        --background-image: var(--background-color) url("/public/concrete.png") repeat;
+        --background-color: var(--color-secondary);
+        --background-image: var(--background-color) url("../public/concrete.png") repeat;
       }
 
       .dark {
-        --color-zprim: #e4e4e7;
-        --color-zsec: #27272a;
+        --color-primary: #e4e4e7;
+        --color-secondary: #27272a;
         --color-rose: #4f46e5;
+	    	--color-zinc: #a1a1aa;
 
-        --background-image: var(--background-color) url("/public/concrete-dark.png") repeat;
+	    	--background-color: var(--color-secondary);
+       
       }
 
       html {
@@ -83,7 +86,7 @@ const { title, description } = Astro.props;
 
       ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: theme("colors.zsec");
+        background-color: theme("colors.secondary");
         border: 2px solid transparent;
         background-clip: content-box;
       }
