@@ -9,55 +9,71 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+	<title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Mariano Caballero Avila" />
+
     <meta
       name="keywords"
       content="portfolio, mexican, web dev, software engineer"
     />
+
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/x-icon" href="/logo.svg" />
-    <script
+    
+	<script
       defer
       data-domain="mariano.caballero.is-a.dev"
-      src="https://plausible.io/js/script.js"></script>
-    <title>{title}</title>
+      src="https://plausible.io/js/script.js">
+	</script>
+   
     <ViewTransitions />
   </head>
 
-  <body class="bg-zinc-200 dark:bg-zinc-600">
+  <body>
     <Header />
     <slot />
     <Footer />
+  </body>
+</html>
 
     <style is:global>
       :root {
-        --color-primary: #333;
-        --color-secondary: #ddd;
-        --color-twitch: #6441a4;
+        --color-zprim: #52525b;
+        --color-zsec: #e4e4e7;
+        --color-rose: #e11d48;
 
-        --background-color: var(--color-secondary);
-        --background-image: var(--background-color) url("/concrete.png") repeat;
+        --background-color: var(--color-zsec);
+        --background-image: var(--background-color) url("/public/concrete.png") repeat;
       }
 
       .dark {
-        --color-primary: #ddd;
-        --color-secondary: #333;
-        --color-twitch: #a270ff;
+        --color-zprim: #e4e4e7;
+        --color-zsec: #27272a;
+        --color-rose: #4f46e5;
 
-        --background-image: var(--background-color) url("/concrete-dark.png")
-          repeat;
+        --background-image: var(--background-color) url("/public/concrete-dark.png") repeat;
       }
 
       html {
         font-family: "JetBrains Mono Variable", system-ui, sans-serif;
-        font-weight: 400;
+        background: var(--background-image);
         scroll-behavior: smooth;
         overflow-x: hidden;
         overscroll-behavior: none;
+      }
+
+      .sr-only:not(:focus):not(:active) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
       }
 
       ::-webkit-scrollbar {
@@ -67,9 +83,16 @@ const { title, description } = Astro.props;
 
       ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: theme("colors.primary");
+        background-color: theme("colors.zsec");
         border: 2px solid transparent;
         background-clip: content-box;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--background-image);
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: var(--background-image);
       }
 
       body {
