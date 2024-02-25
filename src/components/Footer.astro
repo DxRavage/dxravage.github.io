@@ -4,6 +4,7 @@ import Github from "../components/Github.astro";
 import Mail from "../components/Mail.astro";
 import Whatsapp from "../components/Whatsapp.astro";
 import Logo from "../components/Logo.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
 <section
@@ -12,20 +13,26 @@ import Logo from "../components/Logo.astro";
     background: linear-gradient(180deg, rgba(88,88,88,0.95) 0%, rgba(0,0,0,0.8953956582633054) 70%);"
   id="contact"
 >
+  <div class="flex flex-row h-24 p-4 justify-center items-center bg-zinc border-2 border-secondary absolute w-fit rounded-md -mt-12 gap-12 md:left-1/3">
+    <h1 class="text-secondary">    Lets Build something together! </h1>
+    <p class="text-secondary">lorem ipsun</p>
+    <PrimaryButton />
+  </div>
   <div
-    class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+    class="max-w-screen-xl px-4 -mt-0.5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
     <section
-      class="border-b-2 border-secondary flex flex-row justify-center items-center"
+      class="border-b-2 pt-4 border-secondary flex flex-col justify-center items-center"
     >
-      <Mail />
       <Logo />
-      <Whatsapp />
+      <p class="text-secondary pb-4">lorem ipsun</p>
     </section>
   </div>
   <div class="flex justify-center mt-8 space-x-6">
+    <Mail />
     <Github />
     <Linkedin />
+    <Whatsapp />
   </div>
   <p class="mt-8 text-base leading-6 text-center text-primary">
     © 2024 Mariano Avila.
