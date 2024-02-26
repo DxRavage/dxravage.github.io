@@ -13,28 +13,38 @@ import PrimaryButton from "../components/PrimaryButton.astro";
     background: linear-gradient(180deg, rgba(88,88,88,0.95) 0%, rgba(0,0,0,0.8953956582633054) 70%);"
   id="contact"
 >
-  <div class="flex flex-row h-24 p-4 justify-center items-center bg-zinc border-2 border-secondary absolute w-fit rounded-md -mt-12 gap-12 md:left-1/3">
-    <h1 class="text-secondary">    Lets Build something together! </h1>
-    <p class="text-secondary">lorem ipsun</p>
-    <PrimaryButton />
-  </div>
+
   <div
     class="max-w-screen-xl px-4 -mt-0.5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
     <section
-      class="border-b-2 pt-4 border-secondary flex flex-col justify-center items-center"
+      class="border-b-2 pt-8 border-zinc flex flex-col justify-center items-center"
     >
       <Logo />
-      <p class="text-secondary pb-4">lorem ipsun</p>
+      <p
+        class="leading-6 text-pretty text-center text-secondary opacity-70 pb-4"
+      >
+        Designed by myself, built using <span
+          class="hover:text-rose cursor-pointer"
+          ><a href="https://astro.build" target="_blank" rel="noopener">Astro</a
+          ></span> and
+          <span class="hover:text-rose cursor-pointer"
+            ><a href="https://tailwindcss.com" target="_blank" rel="noopener"
+              >Tailwind CSS</a
+            >,
+          </span> deployed with <span class="hover:text-rose cursor-pointer"
+            ><a href="https://pages.github.com" target="_blank" rel="noopener"
+              >GithubPages</a
+            ></span
+          >.
+        </span>
+      </p>
     </section>
+    <div class="flex justify-center mt-4 p-6 space-x-6">
+      <Mail />
+      <Github />
+      <Linkedin />
+      <Whatsapp />
+    </div>
   </div>
-  <div class="flex justify-center mt-8 space-x-6">
-    <Mail />
-    <Github />
-    <Linkedin />
-    <Whatsapp />
-  </div>
-  <p class="mt-8 text-base leading-6 text-center text-primary">
-    © 2024 Mariano Avila.
-  </p>
 </section>
