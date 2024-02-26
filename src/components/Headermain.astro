@@ -1,5 +1,8 @@
 ---
-
+import Linkedin from "../components/Linkedin.astro";
+import Github from "../components/Github.astro";
+import Mail from "../components/Mail.astro";
+import Whatsapp from "../components/Whatsapp.astro";
 ---
 
 <header
@@ -30,28 +33,28 @@
       style="fill:#e11d48;fill-opacity:1;stroke-width:2.44669"></path>
   </svg>
 
-  <nav class="block justify-end text-decoration-none ml-auto pr-4 mt-8">
+  <nav class="block justify-end text-decoration-none ml-auto pr-8 mt-8">
     <menu>
-      <ul class="hidden md:flex flex-row gap-x-10 opacity-80 text-primary">
+      <ul class="hidden md:flex flex-row gap-x-10 opacity-80 hover:text-secondary transition-all duration-75">
         <a
           href="/"
-          class="hover:transform hover:scale-110 hover:text-rose transition-all"
+          class="hover:transform hover:scale-110 hover:text-rose active:text-opacity-0 transition-all duration-75"
           ><li>// home</li></a
         >
         <a
           href="/about/"
-          class="hover:transform hover:scale-110 hover:text-rose transition-all"
+          class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
         >
           <li>// about</li></a
         >
         <a
           href="#projectsCollection"
-          class="hover:transform hover:scale-110 hover:text-rose transition-all"
+          class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
           ><li>// projects</li></a
         >
         <a
           href="#contact"
-          class="hover:transform hover:scale-110 hover:text-rose transition-all"
+          class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
           ><li>// contact</li></a
         >
       </ul>
@@ -67,23 +70,24 @@
             <a
               href="/"
               class="hover:transform hover:scale-110 hover:text-rose transition-all"
-              ><li>// home</li></a
+              ><li>Home</li></a
             >
             <a
               href="/about/"
               class="hover:transform hover:scale-110 hover:text-rose transition-all"
             >
-              <li>// about</li></a
+              <li>About</li></a
             >
             <a
               href="#projectsCollection"
               class="hover:transform hover:scale-110 hover:text-rose transition-all"
-              ><li>// projects</li></a
+              ><li>Projects</li></a
             >
+
             <a
-              href="#contact"
+              href="mailto:marianoavilaj4@gmail.com"
               class="hover:transform hover:scale-110 hover:text-rose transition-all"
-              ><li>// contact</li></a
+              ><li>Send me an email!</li></a
             >
           </div>
         </div>
@@ -97,6 +101,7 @@
   }
   #nav-container {
     max-width: 580px;
+    padding-right: 10px;
     width: 90%;
     margin: auto;
     top: 0;
@@ -105,14 +110,13 @@
 
   #navbar {
     width: 100%;
+    padding-right: 10px;
   }
 
   #nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 62px;
-    right: 50px;
+    position: absolute;
+    z-index: 4;
+    margin: 0;
   }
 
   #navbar #menu-items {
@@ -226,8 +230,7 @@
   }
 
   #nav-container input[type="checkbox"]:checked ~ #menu-items {
-    background-color: rgb(116, 116, 116);
-
+    background-color: rgb(207, 207, 207);
     transform: translateX(0);
   }
 
@@ -243,11 +246,11 @@
 
   #nav-container input[type="checkbox"]:checked ~ #hamburger-lines #line3 {
     transform: rotate(-45deg);
-    background: #e7e7e7;
+    background: #0e2431;
   }
 
   #nav-container input[type="checkbox"]:checked ~ #menu-items li {
-    width: 700px;
+    width: 720px;
     display: block;
   }
 </style>

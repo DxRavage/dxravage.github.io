@@ -1,22 +1,79 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Name from "../components/Name.astro";
 ---
-<MainLayout title="About" description="this is an about page to display authors personal description">
-    <article
-        id="about"
-        class="py-10 px-8 mt-12 mb-12 w-full lg:w-[1024px] md:w-[640px] mx-auto"
+
+<MainLayout
+  title="About"
+  description="this is an about page to display authors personal description"
+>
+  <section
+    class="flex flex-row gap-4 md:gap-40 justify-center py-10 px-8 mt-12"
+  >
+    <div
+      class="order-2 border-l-2 border-zinc h-fit pl-8 mt-12"
+      transition:name="myname"
     >
-        <h1
+      <Name />
+    </div>
+    <article id="about" class="w-96">
+      <!--
+       <h1
             transition:name="myname"
-            class="text-center text-primary pb-8 text-6xl mt-28 border-b-2 border-primaryy"
+            class="text-center font-levibrush text-primary pb-8 text-6xl mt-28 border-b-2 border-primaryy"
         >
             Mariano <span class="text-rose font-bold">Avila</span>
         </h1>
-        <p class="text-primary text-l lg:text-2xl pt-12 pb-48 leading-relaxed text-pretty">
-            I'm a Software Engineer student looking to join the tech industry.
-            Experienced in web development, currently learning new
-            technologies and improving my skills. I'm passionate about learning
-            and I'm always looking for new challenges.
-        </p>  
+         -->
+      <div class="pt-12">
+        <h1 class="text-8xl text-primary font-extrabold font-jetbrains">
+          About
+        </h1>
+        <p
+          class="text-primary text-sm w-96 lg:text-xl pt-12 leading-relaxed antialiased font-light tracking-wide text-balance"
+        >
+          Hello there! Around 18 years ago i got access to a computer for the
+          fist time when my grandad got a laptop so he could write for his
+          newspapper from home.
+          <p class="text-primary text-sm w-96 lg:text-xl pt-12 leading-relaxed antialiased font-light tracking-wide text-balance">
+            Initially, I learned to use software like Word to assist with our
+            family business. However, I soon discovered the endless
+            possibilities computers offered beyond simple word processing,
+            starting with a copy of Age of Mythology, my parthner back then
+            Visual Boy Advanced that i used to play Pokemon Emerald countless
+            times all the way to World of Warcraft a couple years after that.
+          </p>
+          <p class="text-primary text-sm w-96 lg:text-xl pt-12 leading-relaxed antialiased font-light tracking-wide text-balance">
+            Messed around a little with linux distros like Debian and Arch back
+            then. Now a 27 years old Mexican Software Engineer with a taste for
+            web development. Currently into component-based languages such as
+            Astro, React also using Tailwind CSS, got a like into it for the
+            ability to streamline development and great code reusability.
+            Commited to deliver great user experience trough web optimization
+            and responsive design.
+          </p>
+        </p>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Reading tech content.</li>
+          <li>Gaming.</li>
+          <li>Language learning.</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+          <li>Reading tech content.</li>
+          <li>Gaming.</li>
+          <li>Language learning.</li>
+        </ul>
+
+        <h2>Technologies</h2>
+        <ul>
+          <li>Reading tech content.</li>
+          <li>Gaming.</li>
+          <li>Language learning.</li>
+        </ul>
+      </div>
     </article>
+  </section>
 </MainLayout>

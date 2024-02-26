@@ -9,7 +9,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-	<title>{title}</title>
+    <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,93 +23,100 @@ const { title, description } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/x-icon" href="/logo.svg" />
-    
-	<script
+
+    <script
       defer
       data-domain="mariano.caballero.is-a.dev"
-      src="https://plausible.io/js/script.js">
-	</script>
-   
+      src="https://plausible.io/js/script.js"
+    ></script>
+
     <ViewTransitions />
   </head>
 
-  <body>
+  <body class="w-screen">
     <Headermain />
     <slot />
     <Footer />
   </body>
-</html>
+  
+  <style is:global>
+    :root {
+      --color-primary: #52525b;
+      --color-secondary: #e4e4e7;
+      --color-rose: #e11d48;
+      --color-zinc: #71717a;
 
-    <style is:global>
-  :root {
-        --color-primary: #52525b;
-        --color-secondary: #e4e4e7;
-        --color-rose: #e11d48;
-        --color-zinc: #71717a;
+      --background-color: var(--color-secondary);
+      --background-image: var(--background-color) url("../public/concrete.png")
+        repeat;
+    }
 
-        --background-color: var(--color-secondary);
-        --background-image: var(--background-color) url("../public/concrete.png") repeat;
-      }
+    .dark {
+      --color-primary: #e4e4e7;
+      --color-secondary: #27272a;
+      --color-rose: #4f46e5;
+      --color-zinc: #a1a1aa;
 
-      .dark {
-        --color-primary: #e4e4e7;
-        --color-secondary: #27272a;
-        --color-rose: #4f46e5;
-        --color-zinc: #a1a1aa;
+      --background-color: var(--color-secondary);
+      --background-image: var(--background-color)
+        url("../public/concrete-dark.png") repeat;
+    }
+    
+    html {
+      font-family: "JetBrains Mono Variable", system-ui, sans-serif;
+      background: var(--background-image);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      overscroll-behavior: none;
+    }
 
-        --background-color: var(--color-secondary);
-        --background-image: var(--background-color) url("../public/concrete-dark.png") repeat;
-      }
+    @font-face {
+      font-family: "LeviReBrushed";
+      src: url("/fonts/LeviReBrushed.woff2") format("woff2");
+    }
 
+    .sr-only:not(:focus):not(:active) {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: theme("colors.secondary");
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--background-image);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: var(--background-image);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      list-style: none;
+    }
+    h1 {
+      font-family:;
+    }
+    @media (prefers-reduced-motion: reduce) {
       html {
-        font-family: "JetBrains Mono Variable", system-ui, sans-serif;
-        background: var(--background-image);
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-        overscroll-behavior: none;
+        scroll-behavior: auto;
       }
-
-      .sr-only:not(:focus):not(:active) {
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: theme("colors.secondary");
-        border: 2px solid transparent;
-        background-clip: content-box;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--background-image);
-      }
-
-      ::-webkit-scrollbar-corner {
-        background: var(--background-image);
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        list-style: none;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-    </style>
-  </body>
+    }
+  </style>
 </html>
