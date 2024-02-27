@@ -45,6 +45,7 @@ const { title, description } = Astro.props;
       --color-secondary: #e4e4e7;
       --color-rose: #e11d48;
       --color-zinc: #71717a;
+      cursor: url("/src/icons/atom-2.svg") 16 16, pointer;
 
       --background-color: var(--color-secondary);
       --background-image: var(--background-color) url("../public/concrete.png")
@@ -62,6 +63,8 @@ const { title, description } = Astro.props;
         url("../public/concrete-dark.png") repeat;
     }
     
+  
+
     html {
       font-family: "JetBrains Mono Variable", system-ui, sans-serif;
       background: var(--background-image);
