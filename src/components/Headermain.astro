@@ -3,6 +3,7 @@ import Linkedin from "../components/Linkedin.astro";
 import Github from "../components/Github.astro";
 import Mail from "../components/Mail.astro";
 import Whatsapp from "../components/Whatsapp.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <header
@@ -33,29 +34,33 @@ import Whatsapp from "../components/Whatsapp.astro";
       style="fill:#e11d48;fill-opacity:1;stroke-width:2.44669"></path>
   </svg>
 
-  <nav class="block justify-end text-decoration-none ml-auto pr-12 mt-2 md:mt-8">
+  <nav
+    class="block justify-end text-decoration-none ml-auto pr-12 mt-2 md:mt-8"
+  >
     <menu>
-      <ul class="hidden md:flex flex-row gap-x-10 opacity-80 hover:text-secondary transition-all duration-75">
+      <ul
+        class="hidden md:flex flex-row gap-x-10 opacity-80 hover:text-secondary transition-all duration-75"
+      >
         <a
           href="/"
           class="hover:transform hover:scale-110 hover:text-rose active:text-opacity-0 transition-all duration-75"
-          ><li> Home</li></a
+          ><li>Home</li></a
         >
         <a
           href="/about/"
           class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
         >
-          <li> About</li></a
+          <li>About</li></a
         >
         <a
           href="#projectsCollection"
           class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
-          ><li> Projects</li></a
+          ><li>Projects</li></a
         >
         <a
           href="#contact"
           class="hover:transform hover:scale-110 hover:text-rose transition-all duration-75"
-          ><li> Contact</li></a
+          ><li>Contact</li></a
         >
       </ul>
       <div id="navbar" class="block md:hidden">
@@ -131,7 +136,7 @@ import Whatsapp from "../components/Whatsapp.astro";
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2rem;
-    padding: 0.7rem;
+    padding: 0.5rem;
   }
 
   #navbar #nav-container a:hover {
@@ -150,7 +155,6 @@ import Whatsapp from "../components/Whatsapp.astro";
     display: block;
     height: 52px;
     width: 42px;
-    left: 20px;
     z-index: 5;
     opacity: 0;
     cursor: pointer;
@@ -217,16 +221,14 @@ import Whatsapp from "../components/Whatsapp.astro";
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease-in-out;
-    text-align: center;
     z-index: 4;
   }
 
   #navbar #menu-items li {
-    margin-bottom: 1.2rem;
+    padding: 40px;
     font-size: 1.5rem;
     font-weight: 500;
     display: none;
-    padding-right: 310px;
   }
 
   #nav-container input[type="checkbox"]:checked ~ #menu-items {
