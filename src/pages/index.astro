@@ -1,20 +1,29 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-import Hero from "../sections/Hero.astro"
+import Hero from "../sections/Hero.astro";
 import Table from "../components/Table.astro";
-
+import Projects from "../sections/Projects.astro";
 ---
 
 <MainLayout
   title="Mariano Dev | Portfolio"
   description="main page for personal porfolio website"
 >
-  <main class="w-full lg:w-[1024px] md:w-[640px] sm:w-{480px} mx-auto">
+  <main>
     <Hero />
-
-    <section >
-      <Table />
-    </section>
+    <Table />
+    <Projects
+      title="Proyecto 1"
+      description="lorem impuasdoashd hoaisdaohisd hioased"
+    />
+    <Projects
+    title="Proyecto 1"
+    description="lorem impuasdoashd hoaisdaohisd hioased"
+  />
+  <Projects
+  title="Proyecto 1"
+  description="lorem impuasdoashd hoaisdaohisd hioased"
+/>
   </main>
 </MainLayout>
