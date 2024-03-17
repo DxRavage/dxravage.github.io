@@ -1,18 +1,21 @@
 ---
-const { title, description, imgSrc } = Astro.props;
+const { title, description, imgSrc, BadgeName } = Astro.props;
 import Badge from "../components/Badge.astro";
 ---
 
-<section
-  class="h-42 px-6 bg-transparent hover:bg-zinc-600 flex flex-row mx-auto max-w-4xl pb-24"
->
-  <div>
-    <h1>{title}</h1>
-    <p>{description}</p>
-    <Badge title="Astro" />
-    <Badge title="Tailwind" />
-  </div>
-  <div>
-    <img src={imgSrc} alt="Captura de pantalla que muestra un proyecto"/>
+<section class="h-42 px-6 flex flex-col md:flex-row mx-auto pb-24 justify-center items-center">
+  <div class="rounded-lg hover:bg-opacity-100 border-2 border-zinc p-8 md:w-1/2 flex flex-col md:flex-row">
+    <div class="md:w-1/2">
+      <h1 class="font-jetbrains text-2xl text-rose">{title}</h1>
+      <p class="text-sm text-primary">{description}</p>
+      <Badge title={BadgeName} />
+    </div>
+    <div class="md:w-1/2 flex justify-center md:justify-end">
+      <img
+        class="transition-all duration-500 transform hover:scale-110"
+        src={imgSrc}
+        alt="Captura de pantalla que muestra un proyecto"
+      />
+    </div>
   </div>
 </section>
