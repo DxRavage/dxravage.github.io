@@ -3,11 +3,15 @@ const { title, description, imgSrc, BadgeName } = Astro.props;
 import Badge from "../components/Badge.astro";
 ---
 
-<section class="h-42 px-6 flex flex-col md:flex-row mx-auto pb-24 justify-center items-center">
-  <div class="rounded-lg hover:bg-opacity-100 border-2 border-zinc p-8 md:w-1/2 flex flex-col md:flex-row">
+<section
+  class="h-42 px-6 flex flex-col md:flex-row mx-auto pb-24 justify-center items-center"
+>
+  <div
+    class="rounded-lg bg-neutral-500 bg-opacity-20 hover:bg-opacity-40 border-2 border-zinc p-8 md:w-1/2 flex flex-col md:flex-row"
+  >
     <div class="md:w-1/2">
-      <h1 class="font-jetbrains text-2xl text-rose">{title}</h1>
-      <p class="text-sm text-primary">{description}</p>
+      <h1 class="text-2xl text-rose font-mechsuit pb-4">{title}</h1>
+      <p class="font-jetbrains text-sm text-primary pb-4">{description}</p>
       <Badge title={BadgeName} />
     </div>
     <div class="md:w-1/2 flex justify-center md:justify-end">
