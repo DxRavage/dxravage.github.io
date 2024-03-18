@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/jetbrains-mono";
+import '@fontsource/michroma';
 import Headermain from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
@@ -63,16 +64,11 @@ const { title, description } = Astro.props;
       }
 
       html {
-        font-family: "JetBrains Mono Variable", system-ui, sans-serif;
+        font-family: "michroma", "Mechsuit", system-ui, sans-serif;
         background: var(--background-image);
         scroll-behavior: smooth;
         overflow-x: hidden;
         overscroll-behavior: none;
-      }
-
-      @font-face {
-        font-family: "LeviReBrushed";
-        src: url("/fonts/LeviReBrushed.woff2") format("woff2");
       }
 
       ::-webkit-scrollbar {
@@ -100,9 +96,7 @@ const { title, description } = Astro.props;
         min-height: 100vh;
         list-style: none;
       }
-      h1 {
-        font-family:;
-      }
+
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
