@@ -11,7 +11,9 @@ export default {
 			},
 			fontFamily: {
 				jetbrains: ['JetBrains Mono', 'monospace'],
-				levibrush: ['LeviReBrushed']
+				levibrush: ['LeviReBrushed'],
+				mechsuit: ['Mechsuit'],
+				michroma: ['Michroma']
 			}
 		}
 	}
