@@ -8,7 +8,7 @@ import Name from "../components/Name.astro";
   description="this is an about page to display authors personal description"
 >
   <section
-    class="flex flex-row gap-4 md:gap-40 justify-center py-10 px-8 mt-12"
+    class="flex flex-row gap-4 md:gap-40 justify-center py-20 px-8 mt-12"
   >
     <div
       class="order-2 border-l-2 border-zinc h-fit pl-4 md:px-12 md:mt-12"
@@ -18,13 +18,13 @@ import Name from "../components/Name.astro";
     </div>
     <article id="about" class="md:px-12">
       <div class="md:py-12">
-        <h1 class="text-4xl md:text-8xl text-primary font-extrabold font-jetbrains">
+        <h1 class="text-4xl md:text-8xl text-primary font-extrabold font-mechsuit">
           About
         </h1>
         <section
           class="text-primary text-sm md:text-xl pt-12 leading-relaxed antialiased font-light tracking-wide text-balance space-y-4"
         >
-          <p>
+          <p> 
             Hello there! Around 18 years ago i got access to a computer for the
             fist time when my grandad got a laptop to write content for his
             newspapper from home.
@@ -89,4 +89,11 @@ import Name from "../components/Name.astro";
       </div>
     </article>
   </section>
+
+  <style>
+    h2 {
+      font-family: mechsuit;
+    }
+  </style>
+
 </MainLayout>
