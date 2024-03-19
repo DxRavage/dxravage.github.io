@@ -52,6 +52,14 @@ const { title, description } = Astro.props;
           url("../public/concrete.png") repeat;
       }
 
+      @font-face {
+        font-family: 'mechsuit';
+        src: url('/fonts/Mechsuit.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       .dark {
         --color-primary: #e4e4e7;
         --color-secondary: #27272a;
