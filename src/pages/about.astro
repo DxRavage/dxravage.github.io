@@ -7,13 +7,21 @@ import Name from "../components/Name.astro";
   title="About"
   description="this is an about page to display authors personal description"
 >
+
+<h1
+class=" text-4xl md:hidden md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 pt-12 text-rose items-center font-mechsuit"
+transition:name="myname"
+>
+Avila <span class="text-primary pt-4">mariano</span>
+</h1>
   <section
-    class="flex flex-row md:gap-40 justify-center py-20 px-8 mt-12"
+    class="flex flex-row justify-center pb-20 px-8 mt-12"
   >
     <div
-      class="order-2 h-fit pl-2 md:pr-8 md:mt-12"
+      class="order-2 h-fit md:pr-8 md:mt-12"
       transition:name="myname"
     >
+      
       <Name />
     </div>
     <article id="about" class="md:px-12">
