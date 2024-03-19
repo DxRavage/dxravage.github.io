@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="author" content="Mariano Caballero Avila" />
 
     <meta
@@ -24,11 +24,6 @@ const { title, description } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/x-icon" href="/logo.svg" />
-
-    <script
-      defer
-      data-domain="mariano.caballero.is-a.dev"
-      src="https://plausible.io/js/script.js"></script>
 
     <ViewTransitions />
   </head>
