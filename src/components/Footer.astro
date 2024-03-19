@@ -7,17 +7,14 @@ import Logo from "../components/Logo.astro";
 ---
 
 <section
-  class="w-full border-t-2 border-secondary dark:border-primary"
-  style="background: rgb(88,88,88);
-    background: linear-gradient(180deg, rgba(88,88,88,0.95) 0%, rgba(0,0,0,0.8953956582633054) 70%);"
-  id="contact"
+  class="w-full border-t-2 border-zinc bg-gradient-to-b from-neutral-600 via-neutral-700 to-black bg-opacity-35"  
 >
 
   <div
     class="max-w-screen-xl px-4 -mt-0.5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
     <section
-      class="border-b-2 pt-8 border-zinc flex flex-col justify-center items-center"
+      class="pt-8 flex flex-col justify-center items-center"
     >
       <Logo />
       <p
@@ -39,7 +36,7 @@ import Logo from "../components/Logo.astro";
         </span>
       </p>
     </section>
-    <div class="flex justify-center mt-4 p-6 space-x-6">
+    <div class="flex justify-center mt-4 pb-12 space-x-6">
       <Mail />
       <Github />
       <Linkedin />
