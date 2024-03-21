@@ -18,8 +18,20 @@ const { title, description } = Astro.props;
 
     <meta
       name="keywords"
-      content="portfolio, mexican, web dev, software engineer"
+      content="portfolio, mexican dev, web development, software engineer, website design, website projects, astro dev, astro website"
     />
+
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{description}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-website-url.com" />
+    <meta property="og:image" content="https://your-website-url.com/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:description" content="{description}" />
+    <meta name="twitter:image" content="https://your-website-url.com/twitter-card-image.jpg" />
+   
 
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -39,12 +51,12 @@ const { title, description } = Astro.props;
         --color-rose: #e11d48;
         --color-zinc: #71717a;
         cursor:
-          url("/src/icons/atom-2.svg") 16 16,
+          url("/atom-2.svg") 16 16,
           pointer;
 
         --background-color: var(--color-secondary);
         --background-image: var(--background-color)
-          url("../public/concrete.png") repeat;
+          url("/concrete.png") repeat;
       }
 
       @font-face {
@@ -55,19 +67,8 @@ const { title, description } = Astro.props;
         font-display: swap;
       }
 
-      .dark {
-        --color-primary: #e4e4e7;
-        --color-secondary: #27272a;
-        --color-rose: #4f46e5;
-        --color-zinc: #a1a1aa;
-
-        --background-color: var(--color-secondary);
-        --background-image: var(--background-color)
-          url("../public/concrete-dark.png") repeat;
-      }
-
       html {
-        font-family: "michroma", "mechsuit", system-ui, sans-serif;
+        font-family: "michroma", system-ui, sans-serif;
         background: var(--background-image);
         scroll-behavior: smooth;
         overflow-x: hidden;
@@ -92,14 +93,6 @@ const { title, description } = Astro.props;
       ::-webkit-scrollbar-corner {
         background: var(--background-image);
       }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        list-style: none;
-      }
-
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
