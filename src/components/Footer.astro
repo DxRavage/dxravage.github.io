@@ -11,12 +11,12 @@ import Logo from "../components/Logo.astro";
 >
 
   <div
-    class="max-w-screen-xl px-4 -mt-0.5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+    class="max-w-screen-xl -mt-0.5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
     <section
-      class="pt-8 flex flex-col justify-center items-center"
+      class="pt-8 flex flex justify-center items-center"
     >
-      <Logo />
+  
       <p
         class="leading-6 text-pretty text-center text-primary opacity-70 pb-4"
       >
@@ -35,12 +35,14 @@ import Logo from "../components/Logo.astro";
           >.
         </span>
       </p>
+      <Logo />
+      <div class="flex space-x-6">
+        <Mail />
+        <Github />
+        <Linkedin />
+        <Whatsapp />
+      </div>
     </section>
-    <div class="flex justify-center mt-4 pb-12 space-x-6">
-      <Mail />
-      <Github />
-      <Linkedin />
-      <Whatsapp />
-    </div>
+
   </div>
 </section>
