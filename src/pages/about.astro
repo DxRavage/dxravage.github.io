@@ -5,108 +5,84 @@ import Name from "../components/Name.astro";
 
 <MainLayout
   title="About"
-  description="this is an about page to display authors personal description"
+  description="this is an about page to display authors personal description, experiences, skills and education"
 >
-
-<h1
-class=" text-4xl md:hidden md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 pt-12 text-rose items-center font-mechsuit"
-transition:name="myname"
->
-Avila <span class="text-primary pt-4">mariano</span>
-</h1>
-  <section
-    class="flex flex-row justify-center pb-20 px-8 mt-12"
+  <h1
+    class="text-4xl md:hidden md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 pt-12 text-rose items-center font-mechsuit"
+    transition:name="myname"
   >
-    <div
-      class="order-2 h-fit md:pr-8 md:mt-12"
-      transition:name="myname"
-    >
-      
+    Avila <span class="text-primary pt-4">Mariano</span>
+  </h1>
+  <section class="flex justify-center pb-20 px-8 mt-12">
+    <div class="order-2 h-fit md:pr-8 md:mt-12" transition:name="myname">
       <Name />
     </div>
     <article id="about" class="md:px-12">
-      <div class="md:py-12">
-        <h1 class="text-4xl md:text-6xl text-primary font-extrabold font-mechsuit">
-          About
-        </h1>
-        <section
-          class="text-primary text-sm md:text-xl pt-12 leading-relaxed antialiased tracking-wide text-balance"
-        >
-          <p> 
-            Hello there! Around 18 years ago i got access to a computer for the
-            fist time when my grandad got a laptop to write content for his
-            newspapper from home.
-            <p>
-              Initially, I learned to use software like Word to assist with our
-              family business. However, I soon discovered the endless
-              possibilities computers offered beyond simple word processing,
-              starting with a copy of Age of Mythology, my parthner back then
-              Visual Boy Advanced that i used to play Pokemon Emerald countless
-              times all the way to World of Warcraft a couple years after that.
-            </p>
-            <p>
-              Messed around a little with linux distros like Debian and Arch
-              back then. Now a 27 years old Mexican Software Engineer with a
-              taste for web development, commited to deliver great user
-              experience trough web optimization and responsive design.
-              <p>
-                Currently into component-based languages such as Astro, React
-                also using Tailwind CSS, got a like into it for the ability to
-                streamline development and great code reusability. Strongly
-                believe all this and everything i done so far is what makes me
-                who i am today.
-              </p>
-            </p>
-          </p>
-        </section>
-        <section class="text-primary text-sm md:text-xl pt-12">
-          <h2 class="font-bold text-2xl">Experience</h2>
-          <ul class="gap-4">
-            <li>- Degree in Software Engineering</li>
-            <li>- 3 Years of experience as a bilingual cx service</li>
-            <li>
-              - 1 year leading new hires from Mexico and Colombia, helping to
-              get along with training process, product knowledge and coaching using SMART goals.
-            </li>
-          </ul>
+      <section
+        class="text-primary py-16 leading-relaxed antialiased tracking-wide text-balance"
+      >
+        <p>
+          Mexican Software Engineer with a passion for web development.
+          Experienced in delivering exceptional user experiences through web
+          optimization and responsive design. Currently exploring UX Design.
+          Skilled in component-based languages like Astro and React, and
+          utilizing Tailwind CSS for streamlined development and code
+          reusability.
+        </p>
+        <p>
+          Skilled in component-based languages (Astro, React) and utilizing
+          Tailwind CSS for efficient development and reusable code. (Combines
+          the best parts of both paragraphs)
+        </p>
+      </section>
 
-          <h2 class="font-bold pt-6 text-2xl">Skills</h2>
-          <ul class="gap-4">
-            <li>- HTML</li>
-            <li>- CSS</li>
-            <li>- JavaScript</li>
-            <li>- Agile Methodologies</li>
-          </ul>
+      <section
+        class="flex flex-col md:flex-row text-primary pt-12 border-t-2 border-zinc md:border-none"
+      >
+        <ul class="pl-5 mb-4">
+          <h2>Experience</h2>
+          <li> Software Engineering Student</li>
+          <li> 3 Years as Bilingual CX Service</li>
+          <li>1 Year Leading New Hires (Mexico & Colombia)</li>
+          <li>
+            Training Process, Product Knowledge, Coaching with SMART Goals
+          </li>
+        </ul>
 
-          <h2 class="font-bold pt-6 text-2xl">Technologies</h2>
-          <ul class="gap-4">
-            <li>- Tailwind CSS</li>
-            <li>- MySQL</li>
-            <li>- Astro</li>
-            <li>- React</li>
-          </ul>
-          <h2 class="font-bold pt-6 text-2xl">Hobbies</h2>
-          <ul class="gap-4">
-            <li>- Reading Manga</li>
-            <li>- Watching Anime, Series, Movies</li>
-            <li>- Gaming</li>
-            <li>- Learning new tech</li>
-            <li>- Learning new languages</li>
-          </ul>
-        </section>
-      </div>
+        <ul class="pl-5 mb-4">
+          <h2>Skills</h2>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Agile Methodologies</li>
+        </ul>
+
+        <ul class="pl-5 mb-4">
+          <h2>Technologies</h2>
+          <li>Tailwind CSS</li>
+          <li>MySQL</li>
+          <li>Astro</li>
+          <li>React</li>
+        </ul>
+      </section>
     </article>
   </section>
-
-  <style>
-    h2 {
-      font-family: mechsuit;
-      padding-bottom: 12px;
-    }
-
-    p{
-      padding-bottom: 18px
-    }
-  </style>
-
 </MainLayout>
+
+<style>
+  h2 {
+    font-family: mechsuit;
+    padding-bottom: 12px;
+  }
+
+  p {
+    padding-bottom: 18px;
+  }
+  ul {
+    max-width: 400px;
+    padding: 16px
+  }
+  li {
+    padding-bottom: 4px;
+  }
+</style>
