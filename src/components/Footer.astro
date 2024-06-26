@@ -6,35 +6,29 @@ import Whatsapp from "../components/Whatsapp.astro";
 import Logo from "../components/Logo.astro";
 ---
 
-<section class="w-full">
-  <div>
-    <section class="flex flex-col md:flex-row justify-center items-center py-4">
-      <p
-        class="leading-6 text-sm text-pretty text-center text-primary opacity-70 px-4 md:px-12"
-      >
-        Designed by myself, built using <span
-          class="hover:text-rose cursor-pointer"
-          ><a href="https://astro.build" target="_blank" rel="noopener">Astro</a
-          ></span
-        > and
-        <span class="hover:text-rose cursor-pointer"
-          ><a href="https://tailwindcss.com" target="_blank" rel="noopener"
-            >Tailwind CSS</a
-          >,
-        </span> deployed with <span class="hover:text-rose cursor-pointer"
-          ><a href="https://pages.github.com" target="_blank" rel="noopener"
-            >GithubPages</a
-          ></span
-        >.
-      </p>
-    </section>
-      <Logo />
-      <div class="flex space-x-2 justify-center py-4">
-        <Mail />
-        <Github />
-        <Linkedin />
-        <Whatsapp />
-      </div>
-    </div>
+<section class="flex flex-col md:flex-row justify-center items-center">
+  <p
+    class="leading-6 text-sm text-pretty text-center text-primary opacity-70 px-4 md:px-12"
+  >
+    Designed by myself, built using <span class="hover:text-rose cursor-pointer"
+      ><a href="https://astro.build" target="_blank" rel="noopener">Astro</a
+      ></span
+    > and
+    <span class="hover:text-rose cursor-pointer"
+      ><a href="https://tailwindcss.com" target="_blank" rel="noopener"
+        >Tailwind CSS</a
+      >,
+    </span> deployed with <span class="hover:text-rose cursor-pointer"
+      ><a href="https://pages.github.com" target="_blank" rel="noopener"
+        >GithubPages</a
+      ></span
+    >.
+  </p>
+  <Logo />
+  <div class="flex space-x-2 justify-center">
+    <Mail />
+    <Github />
+    <Linkedin />
+    <Whatsapp />
   </div>
 </section>
