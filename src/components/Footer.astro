@@ -11,14 +11,13 @@ import Logo from "../components/Logo.astro";
 >
 
   <div
-    class=""
   >
     <section
       class="flex flex-col md:flex-row justify-center items-center"
     >
-  
+    <Logo />
       <p
-        class="leading-6 text-pretty text-center text-primary opacity-70"
+        class="leading-6 text-sm text-pretty text-center text-primary opacity-70 px-4 md:px-12"
       >
         Designed by myself, built using <span
           class="hover:text-rose cursor-pointer"
@@ -35,8 +34,8 @@ import Logo from "../components/Logo.astro";
           >.
         </span>
       </p>
-      <Logo />
-      <div class="flex space-x-6 pb-4">
+  
+      <div class="flex space-x-2 py-4">
         <Mail />
         <Github />
         <Linkedin />
