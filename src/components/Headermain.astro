@@ -3,7 +3,7 @@
 ---
 
 <header
-  class="shadow-md shadow-primary relative flex justify-between items-center py-4 text-sm font-mechsuit"
+  class="shadow-md shadow-primary relative flex justify-between items-center py-4 text-sm font-mechsuit sticky top-0 z-50"
 >
   <a
     href="https://mariano.avila.is-a.dev"
@@ -270,4 +270,17 @@
     width: 720px;
     display: block;
   }
+  .no-shadow {
+    box-shadow: none;
+  }
 </style>
+<script>
+  document.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("no-shadow");
+    } else {
+      header.classList.remove("no-shadow");
+    }
+  });
+</script>
