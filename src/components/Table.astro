@@ -4,13 +4,13 @@ import AstroIcon from "./AstroIcon.astro";
 import Develop from "../components/Develop.astro";
 ---
 
-<section
-  class="mx-auto md:w-3/4 flex flex-col lg:flex-row pb-24 text-pretty"
->
+<section class="mx-auto md:w-3/4 flex flex-col lg:flex-row pb-24 text-pretty">
   <div class="flex-1 p-8">
-    <div class="flex flex-row items-center border-b-2 border-zinc">
+    <div class="flex flex-row items-center">
       <Develop />
-      <h1 class="text-rose align-middle text-lg pl-4 pb-2 ">Software Development</h1>
+      <h1 class="text-rose align-middle text-lg pl-4 pb-2">
+        Software Development
+      </h1>
     </div>
     <p class="text-primary pt-4">
       Experience in Java programming, along with proficiency in Spring framework
@@ -18,7 +18,7 @@ import Develop from "../components/Develop.astro";
     </p>
   </div>
   <div class="flex-1 p-8">
-    <div class="flex flex-row items-center border-b-2 border-zinc pb-4">
+    <div class="flex flex-row items-center pb-4">
       <AstroIcon />
       <h1 class="text-rose align-middle text-lg pl-4">Astro Dev</h1>
     </div>
@@ -28,7 +28,7 @@ import Develop from "../components/Develop.astro";
     </p>
   </div>
   <div class="flex-1 p-8">
-    <div class="flex flex-row items-center border-b-2 border-zinc  pb-4">
+    <div class="flex flex-row items-center pb-4">
       <React />
       <h1 class="text-rose align-middle text-lg pl-4">React Dev</h1>
     </div>
@@ -40,7 +40,7 @@ import Develop from "../components/Develop.astro";
 </section>
 
 <style>
-  h1{
+  h1 {
     font-family: mechsuit;
   }
 </style>
