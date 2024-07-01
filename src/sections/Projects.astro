@@ -4,22 +4,24 @@ import Badge from "../components/Badge.astro";
 ---
 
 <section
-  class="h-42 bg-neutral-100 bg-opacity-35 flex flex-col md:flex-row mx-auto pb-12 justify-center pt-12 items-center"
+  class="bg-neutral-100 bg-opacity-35 flex flex-wrap md:flex-wrap pb-12 justify-center p-14 items-center"
 >
   <div
-    class=" bg-opacity-20  hover:border-2 border-zinc md:p-8 md:w-1/2 flex flex-col lg:flex-row transition-all"
+    class="bg-opacity-20 bg-black md:p-8 flex flex-col"
   >
-    <div class="md:w-auto lg:w-1/2 p-8">
-      <h1 class="text-2xl text-rose font-mechsuit pb-4">{title}</h1>
+    <div class="p-8 ">
+      <h2 class="text-2xl text-rose font-mechsuit pb-4">{title}</h2>
       <p class="text-sm text-primary pb-4">{description}</p>
-      {BadgeNames && BadgeNames.map((badgeName, index) => (
-        <Badge key={index} title={badgeName} />
-      ))}
-      
+      {
+        BadgeNames &&
+          BadgeNames.map((badgeName, index) => (
+            <Badge key={index} title={badgeName} />
+          ))
+      }
     </div>
-    <div class="md:w-1/2 flex justify-center md:justify-end">
+    <div class="justify-center">
       <img
-        class="transition-all duration-500 transform hover:scale-110"
+        class="w-36"
         src={imgSrc}
         alt="Captura de pantalla que muestra un proyecto"
       />
