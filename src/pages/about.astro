@@ -1,46 +1,72 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Name from "../components/Name.astro";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout
-  title="About"
+  title="About | Avila Mariano"
   description="this is an about page to display authors personal description, experiences, skills and education"
 >
-  <h1
-    class="text-4xl md:hidden md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 pt-12 text-rose items-center font-mechsuit"
-    transition:name="myname"
-  >
-    Avila <span class="text-primary pt-4">Mariano</span>
-  </h1>
-  <section class="flex justify-center pb-20 px-8 mt-12">
-    <div class="order-2 h-fit md:pr-8 md:mt-12" transition:name="myname">
-      <Name />
-    </div>
-    <article id="about" class="md:px-12">
-      <section
-        class="text-primary py-16 leading-relaxed antialiased tracking-wide text-balance"
-      >
-        <p>
+  <div class="flex flex-col items-center">
+    <h1
+      class="text-4xl flex flex-col md:flex-row pt-14 pb-4 text-rose items-center gap-x-2 font-mechsuit"
+      transition:name="myname"
+    >
+      Avila <span class="text-primary">Mariano</span>
+    </h1>
+
+    <section class="flex justify-center p-8 lg:px-52">
+      <Image
+        class="rounded-md"
+        src="/public/avilamarianodev.avif"
+        height="150"
+        width="150"
+        alt="mariano avila dev picture"
+      />
+      <div class="flex flex-col">
+        <p class="font-bold text-sm md:text-base hidden lg:flex p-8">
           Mexican Software Engineer with a passion for web development.
           Experienced in delivering exceptional user experiences through web
-          optimization and responsive design. Currently exploring UX Design.
-          Skilled in component-based languages like Astro and React, and
-          utilizing Tailwind CSS for streamlined development and code
-          reusability.
+          optimization and responsive design.
         </p>
-        <p>
+        <p class="text-sm hidden lg:flex px-8">
+          Currently exploring UX Design. Skilled in component-based languages
+          like Astro and React, and utilizing Tailwind CSS for streamlined
+          development and code reusability.
+        </p>
+        <p class="text-sm hidden lg:flex px-8">
           Skilled in component-based languages (Astro, React) and utilizing
-          Tailwind CSS for efficient development and reusable code. (Combines
-          the best parts of both paragraphs)
+          Tailwind CSS for efficient development and reusable code.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section class="flex justify-center p-8 md:p-14">
+    <article id="about">
+      <section class="text-primary">
+        <p class="font-bold text-sm md:text-base lg:hidden">
+          Mexican Software Engineer with a passion for web development.
+          Experienced in delivering exceptional user experiences through web
+          optimization and responsive design.
+        </p>
+        <p class="text-sm lg:hidden">
+          Currently exploring UX Design. Skilled in component-based languages
+          like Astro and React, and utilizing Tailwind CSS for streamlined
+          development and code reusability.
+        </p>
+        <p class="text-sm lg:hidden">
+          Skilled in component-based languages (Astro, React) and utilizing
+          Tailwind CSS for efficient development and reusable code.
         </p>
       </section>
 
       <section
-        class="flex flex-col md:flex-row text-primary pt-12 border-t-2 border-zinc md:border-none"
+        class="flex flex-col md:flex-row text-primary pt-12 border-t-2 border-zinc"
       >
-        <ul class="pl-5 mb-4">
-          <li class="font-bold text-2xl">Experience</li>
+        <ul class="text-sm">
+          <li class="font-bold text-lg">Experience</li>
           <li>Software Engineering Student</li>
           <li>3 Years as Bilingual CX Service</li>
           <li>1 Year Leading New Hires (Mexico & Colombia)</li>
@@ -50,16 +76,16 @@ import Name from "../components/Name.astro";
           </li>
         </ul>
 
-        <ul class="pl-5 mb-4">
-          <li class="font-bold text-2xl">Design Skills</li>
+        <ul class="text-sm">
+          <li class="font-bold text-lg">Design Skills</li>
           <li>UI/UX</li>
           <li>Wireframing & Prototyping</li>
           <li>Design Thinking</li>
           <li>Design Research</li>
         </ul>
 
-        <ul class="pl-5 mb-4">
-          <li class="font-bold text-2xl">
+        <ul class="text-sm">
+          <li class="font-bold text-lg">
             Technical Skills<li>
               <li>CSS3 + HTML5</li>
               <li>JavaScript</li>
@@ -78,14 +104,14 @@ import Name from "../components/Name.astro";
     <style>
       h2 {
         font-family: mechsuit;
-        padding-bottom: 12px;
+        padding-bottom: 14px;
       }
 
       p {
         padding-bottom: 18px;
       }
       ul {
-        max-width: 400px;
+        max-width: 300px;
         padding: 16px;
       }
       li {
