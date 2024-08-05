@@ -12,125 +12,137 @@ const { title, description, imgSrc, BadgeNames } = Astro.props;
   </h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <!-- Proyecto 1 -->
-    <div class="relative bg-slate-400 bg-opacity-35 group h-80">
-      <div
-        class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-        style="background-image: url('/rpvfund.png');"
-      >
-      </div>
-      <div
-        class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-      >
-        <div
-          class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
-        >
-          <div class="p-8">
-            <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-            <p class="text-xs text-secondary">{description}</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Proyecto 2 -->
-    <div class="relative bg-slate-400 bg-opacity-35 group h-80">
-      <div
-        class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-        style="background-image: url('/rpvfund.png');"
-      >
-      </div>
-      <div
-        class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-      >
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
         <div
-          class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
         >
-          <div class="p-8">
-            <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-            <p class="text-xs text-secondary">{description}</p>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Proyecto 3 -->
-    <div class="relative bg-slate-400 bg-opacity-35 group h-80">
-      <div
-        class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-        style="background-image: url('/rpvfund.png');"
-      >
-      </div>
-      <div
-        class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-      >
         <div
-          class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
         >
-          <div class="p-8">
-            <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-            <p class="text-xs text-secondary">{description}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Proyecto 4 -->
-    <div class="relative bg-slate-400 bg-opacity-35 group h-80">
-      <div
-        class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-        style="background-image: url('/rpvfund.png');"
-      >
-      </div>
-      <div
-        class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-      >
-        <div
-          class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
-        >
-          <div class="p-8">
-            <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-            <p class="text-xs text-secondary">{description}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-        <!-- Proyecto 5 -->
-        <div class="relative bg-slate-400 bg-opacity-35 group h-80">
           <div
-            class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-            style="background-image: url('/rpvfund.png');"
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
           >
-          </div>
-          <div
-            class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div
-              class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
-            >
-              <div class="p-8">
-                <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-                <p class="text-xs text-secondary">{description}</p>
-              </div>
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
             </div>
           </div>
         </div>
-            <!-- Proyecto 6 -->
-    <div class="relative bg-slate-400 bg-opacity-35 group h-80">
-      <div
-        class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
-        style="background-image: url('/rpvfund.png');"
-      >
       </div>
-      <div
-        class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
-      >
+    </a>
+    <!-- Proyecto 2 -->
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
         <div
-          class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
         >
-          <div class="p-8">
-            <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
-            <p class="text-xs text-secondary">{description}</p>
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <div
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          >
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </a>
+    <!-- Proyecto 3 -->
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
+        <div
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
+        >
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <div
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          >
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- Proyecto 4 -->
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
+        <div
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
+        >
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <div
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          >
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- Proyecto 5 -->
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
+        <div
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
+        >
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <div
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          >
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- Proyecto 6 -->
+    <a href="/project">
+      <div class="relative bg-slate-400 bg-opacity-35 group h-80">
+        <div
+          class="absolute inset-0 bg-contain bg-center group-hover:bg-opacity-75"
+          style="background-image: url('/rpvfund.png');"
+        >
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <div
+            class="flex items-end justify-center h-full bg-stone-600 bg-opacity-65"
+          >
+            <div class="p-8">
+              <h2 class="text-xl text-rose font-mechsuit pb-4">{title}</h2>
+              <p class="text-xs text-secondary">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 </section>
