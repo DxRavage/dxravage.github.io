@@ -6,25 +6,40 @@ import Whatsapp from "../components/Whatsapp.astro";
 import Logo from "../components/Logo.astro";
 ---
 
-<section class="flex flex-col md:flex-row justify-center items-center py-4 md:py-0">
+<section class="flex flex-col md:flex-row justify-center items-center pb-4">
   <p
     class="text-xs md:text-sm text-pretty text-center text-primary opacity-65 px-4 md:px-12"
   >
-    Designed by myself, built using <span class="hover:text-rose hover:opacity-100 cursor-pointer"
-      ><a href="https://astro.build" target="_blank" rel="noopener" title="Visit Astro website">Astro</a
+    Designed by myself, built using <span
+      class="hover:text-rose hover:opacity-100 cursor-pointer"
+      ><a
+        href="https://astro.build"
+        target="_blank"
+        rel="noopener"
+        title="Visit Astro website">Astro</a
       ></span
     > and
-    <span class="hover:text-rose hover:opacity-100  cursor-pointer"
-      ><a href="https://tailwindcss.com" target="_blank" rel="noopener" title="Visit Tailwind website"
-        >Tailwind CSS</a
+    <span class="hover:text-rose hover:opacity-100 cursor-pointer"
+      ><a
+        href="https://tailwindcss.com"
+        target="_blank"
+        rel="noopener"
+        title="Visit Tailwind website">Tailwind CSS</a
       >,
-    </span> deployed with <span class="hover:text-rose hover:opacity-100  cursor-pointer"
-      ><a href="https://pages.github.com" target="_blank" rel="noopener" title="Visit GithubPages website"
-        >GithubPages</a
+    </span> deployed with <span
+      class="hover:text-rose hover:opacity-100 cursor-pointer"
+      ><a
+        href="https://pages.github.com"
+        target="_blank"
+        rel="noopener"
+        title="Visit GithubPages website">GithubPages</a
       ></span
     >.
   </p>
-  <Logo />
+  <div class="overflow-hidden">
+    <Logo />
+  </div>
+
   <div class="flex space-x-2 justify-center">
     <Mail />
     <Github />
