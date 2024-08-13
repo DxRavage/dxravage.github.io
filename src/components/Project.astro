@@ -1,11 +1,11 @@
 ---
-const { title, description, imgSrc, BadgeNames } = Astro.props;
+const { title, description, imgSrc, link } = Astro.props;
 ---
 
 <section>
   <div>
     <a
-      href="https://wow-astro-ek16uz3l6-mariano-avilas-projects.vercel.app"
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
       title="Project Website"
