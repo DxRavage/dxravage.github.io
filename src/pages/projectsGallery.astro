@@ -1,0 +1,26 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Project from "../components/Project.astro";
+---
+
+<MainLayout
+  title="Projects | Avila Mariano"
+  description="this is an about page to display authors personal projects with a simple showcase of images and content"
+>
+  <section class="pt-14 md:p-14">
+    <h2 class="flex justify-center pb-8 text-xl text-center">
+      Work in progress...
+    </h2>
+    <h2 class="flex justify-center pb-4 text-md md:text-xl text-center opacity-35">
+      Developer focused in component-based languages, <br /> user experiences and
+      responsive design
+    </h2>
+    <section class="grid grid-cols-1 lg:grid-cols-3 lg:px-28">
+      <Project
+        title="WoW - Clone"
+        description="Clone of World of Warcraft Website using Astro and Tailwind"
+        imgSrc="/projectSS/wowastro.png"
+      />
+    </section>
+  </section>
+</MainLayout>
