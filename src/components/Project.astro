@@ -4,13 +4,8 @@ const { title, description, imgSrc, link } = Astro.props;
 
 <section>
   <div>
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Project Website"
-    >
-      <div class="relative  bg-opacity-35 group h-96">
+    <a href={link} rel="noopener noreferrer" title="Project Website">
+      <div class="relative bg-opacity-35 group h-96">
         <div
           class="absolute inset-0 bg-cover lg:bg-contain bg-no-repeat bg-center group-hover:bg-opacity-75"
           style={`background-image: url('${imgSrc}');`}

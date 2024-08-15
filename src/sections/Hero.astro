@@ -2,15 +2,13 @@
 import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
-<section
-  class="flex flex-col mx-auto items-center pt-40 md:w-2/3"
->
+<section class="flex flex-col mx-auto items-center pt-40 md:w-2/3">
   <div>
     <h1
-      class=" text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 py-12 text-rose items-center font-mechsuit"
+      class="text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-8 py-12 text-rose items-center font-mechsuit"
       transition:name="myname"
     >
-    Avila <span class="text-primary pt-4 md:pt-0">mariano</span>
+      Avila <span class="text-primary pt-4 md:pt-0">mariano</span>
     </h1>
   </div>
 
@@ -20,4 +18,9 @@ import PrimaryButton from "../components/PrimaryButton.astro";
     Software Engineer Student <span class="hidden md:inline-flex"> |</span> Web Developer
   </h2>
 </section>
-<PrimaryButton />
+<PrimaryButton
+  href="mailto:marianoavilaj4@gmail.com"
+  title="Send an email to Mariano"
+  content="Contact Me"
+  style="py-36 md:py-48 flex justify-center"
+/>
