@@ -1,10 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import PrimaryButton from "../components/PrimaryButton.astro";
 import Plus from "../components/Plus.astro";
 import Image from "astro/components/Image.astro";
 
-const { title, tech, descript1, descript2, link, imgSrc, alt } = Astro.props;
+const { title, tech, descript1, descript2, imgSrc, link} = Astro.props;
 ---
 
 <MainLayout
@@ -25,7 +24,7 @@ const { title, tech, descript1, descript2, link, imgSrc, alt } = Astro.props;
       <p class="text-sm font-bold">
         {descript1}
         <a
-          href="https://wow-astro.vercel.app"
+          href={link}
           target="_blank"
           title="Visit project website"
         >
@@ -38,7 +37,7 @@ const { title, tech, descript1, descript2, link, imgSrc, alt } = Astro.props;
       {descript2}
     </p>
     <div class="flex flex-col items-center gap-4">
-   
+      <Image src={imgSrc} alt="Website screenshot" width={1200} height={500} />
     </div>
   </section>
 </MainLayout>
