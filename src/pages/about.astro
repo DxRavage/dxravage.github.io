@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Name from "../components/Name.astro";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout
@@ -16,6 +17,14 @@ import Name from "../components/Name.astro";
     </h1>
 
     <section class="flex justify-center pt-8 lg:px-80">
+      <!-- 
+      <Image
+        class="rounded-md"
+        src="/avilamarianodev.avif"
+        height="150"
+        width="150"
+        alt="mariano avila dev picture"
+      />-->
       <div class="flex flex-col">
         <p class="font-bold text-sm md:text-base hidden lg:flex p-8">
           Mexican Software Engineer with a passion for web development.
