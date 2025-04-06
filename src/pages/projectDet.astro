@@ -33,9 +33,20 @@ const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
       {descript2}
     </p>
     <div class="flex flex-col items-center gap-4 pb-8">
-      {imageSources && imageSources.map((src) => (
-        src && <Image src={src} alt="Website screenshot" width={1200} height={500} />
-      ))}
+      {
+        imageSources &&
+          imageSources.map(
+            (src) =>
+              src && (
+                <Image
+                  src={src}
+                  alt="Website screenshot"
+                  width={1200}
+                  height={500}
+                />
+              )
+          )
+      }
     </div>
   </section>
 </MainLayout>
