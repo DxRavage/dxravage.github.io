@@ -1,9 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Project from "../components/Project.astro";
-import wowSS from "wow/wowastro.png";
-import gbooksSS from "gbooks/GbooksSS.png";
-import aikidoSS from "aikido/AikidoSS2.png";
 ---
 
 <MainLayout
@@ -24,19 +21,19 @@ import aikidoSS from "aikido/AikidoSS2.png";
       <Project
         title="WoW - Clone"
         description="Clone of World of Warcraft Website using Astro and Tailwind"
-        imgSrc={wowSS}
+        imgSrc="wow/wowastro.png"
         link="/projectBlog/wowClone"
       />
       <Project
         title="Book Finder"
         description="Implementation of Google Books API"
-        imgSrc={gbooksSS}
+        imgSrc="gbooks/GbooksSS.png"
         link="/projectBlog/gBooks"
       />
       <Project
         title="Aikido Mobile App"
         description="Mobile App for Aikido Dojo"
-        imgSrc={aikidoSS}
+        imgSrc="aikido/AikidoSS2.png"
         link="/projectBlog/Aikido"
       />
     </section>
