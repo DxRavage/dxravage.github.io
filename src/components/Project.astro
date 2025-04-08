@@ -8,7 +8,7 @@ const { title, description, imgSrc, link } = Astro.props;
       <div class="relative bg-opacity-35 group h-96">
         <div
           class="absolute inset-0 bg-cover bg-no-repeat bg-center group-hover:bg-opacity-75 overflow-hidden"
-          style={`background-image: url('${imgSrc}');`}
+          style={`background-image: url(${imgSrc});`}
         >
         </div>
         <div
