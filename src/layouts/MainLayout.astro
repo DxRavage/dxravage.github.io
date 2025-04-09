@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/jetbrains-mono";
-import '@fontsource/michroma';
+import "@fontsource/michroma";
 import Headermain from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
@@ -13,28 +13,36 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <link rel="canonical" href="https://dxravage.github.io">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="canonical" href="https://dxravage.github.io" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
     <meta name="author" content="Mariano Caballero Avila" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta
       name="keywords"
-      content="mexican software engineer, Full-Stack Web Developer, Website Design, software engineer, Responsive Website Design, ux/ui, front-end web developer, astro dev, astro website, build websites with Astro"
+      content="software engineer, Full-Stack Web Developer, Website Design, software engineer, Responsive Website Design, ux/ui, front-end web developer, astro dev, astro website, build websites with Astro"
     />
 
-    <meta property="og:site_name" content="Avila Dev Portfolio">
+    <meta property="og:site_name" content="Avila Dev Portfolio" />
     <meta property="og:title" content="{title}" />
     <meta property="og:description" content="{description}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://your-website-url.com" />
-    <meta property="og:image" content="https://your-website-url.com/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://your-website-url.com/og-image.jpg"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{title}" />
     <meta name="twitter:description" content="{description}" />
-    <meta name="twitter:image" content="https://your-website-url.com/twitter-card-image.jpg" />
-   
+    <meta
+      name="twitter:image"
+      content="https://your-website-url.com/twitter-card-image.jpg"
+    />
 
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -47,7 +55,7 @@ const { title, description } = Astro.props;
     <Headermain />
     <slot />
     <Footer />
-    
+
     <style is:global>
       :root {
         --color-primary: #52525b;
@@ -56,13 +64,12 @@ const { title, description } = Astro.props;
         --color-zinc: #71717a;
 
         --background-color: var(--color-secondary);
-        --background-image: var(--background-color)
-          url("/concrete.png") repeat;
+        --background-image: var(--background-color) url("/concrete.png") repeat;
       }
 
       @font-face {
-        font-family: 'mechsuit';
-        src: url('/fonts/Mechsuit.woff2') format('woff2');
+        font-family: "mechsuit";
+        src: url("/fonts/Mechsuit.woff2") format("woff2");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
