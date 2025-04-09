@@ -1,16 +1,20 @@
 ---
+import { Image } from "astro:assets";
 const { title, description, imgSrc, link } = Astro.props;
 ---
 
 <section>
   <div>
     <a href={link} rel="noopener noreferrer" title="Project Website">
-      <div class="relative bg-opacity-35 group h-96">
-        <div
-          class="absolute inset-0 bg-cover bg-no-repeat bg-center group-hover:bg-opacity-75 overflow-hidden"
-          style={`background-image: url(${imgSrc});`}
-        >
-        </div>
+      <div class="relative bg-opacity-35 group h-96 overflow-hidden">
+        <Image
+          src={imgSrc}
+          alt={title}
+          class="absolute inset-0 object-cover object-center w-full h-full group-hover:opacity-75 transition-opacity duration-300"
+          width="400"
+          height="200"
+          loading="lazy"
+        />
         <div
           class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
         >
