@@ -1,13 +1,14 @@
 ---
-import wowAstro from '/src/assets/wow.webp';
+import wowAstro from "/src/assets/wow.webp";
 import gBooks from "/src/assets/bookfinder.webp";
+import AikidoSS1 from '/src/assets/aikido1.webp';
 ---
 
-<section class="pb-14">
-  <div class="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 h-full">
+<section class="py-14 content-center mx-auto">
+  <div class="py-4 px-2 mx-auto max-w-screen-xl lg:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
       <div
-        class="bg-opacity-35 col-span-2 sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col"
+        class="bg-opacity-35 h-auto flex flex-col"
       >
         <a
           href="/projectBlog/wowClone"
@@ -27,13 +28,12 @@ import gBooks from "/src/assets/bookfinder.webp";
       </div>
 
       <div
-        class="bg-opacity-35 col-span-2 sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col"
+        class="bg-opacity-35 h-auto flex flex-col"
       >
         <a
           href="/projectBlog/gBooks"
           class="group relative flex flex-col overflow-hidden px-4 pb-4 pt-40 flex-grow bg-cover bg-no-repeat"
           style={`background-image: url(${gBooks.src});`}
-          )
         >
           <div
             class="absolute inset-0 bg-zinc opacity-55 transition-opacity duration-300 group-hover:opacity-25"
@@ -43,6 +43,25 @@ import gBooks from "/src/assets/bookfinder.webp";
             class="text-2xl font-medium text-rose p-4 xs:text-xl md:text-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           >
             Book Finder
+          </h3>
+        </a>
+      </div>
+      <div
+        class="bg-opacity-35 h-auto flex flex-col"
+      >
+        <a
+          href="/projectBlog/Aikido"
+          class="group relative flex flex-col overflow-hidden px-4 pb-4 pt-40 flex-grow bg-cover bg-no-repeat"
+          style={`background-image: url(${AikidoSS1.src});`}
+        >
+          <div
+            class="absolute inset-0 bg-zinc opacity-55 transition-opacity duration-300 group-hover:opacity-25"
+          >
+          </div>
+          <h3
+            class="text-2xl font-medium text-rose p-4 xs:text-xl md:text-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            Aikido App
           </h3>
         </a>
       </div>
