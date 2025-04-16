@@ -20,10 +20,10 @@ const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
       {title}
     </h1>
 
-    <div class="gap-4 lg:gap-14 flex flex-row justify-center">
+    <div class="flex justify-center items-center gap-4">
       <p class="text-xs font-bold">
         {descript1}
-        <a href={link} target="_blank" title="Visit project website">
+        <a href={link} target="_blank" title="Visit project website" class="inline-flex items-center">
           <Plus />
         </a>
       </p>
