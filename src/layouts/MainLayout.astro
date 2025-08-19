@@ -3,7 +3,6 @@ import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/michroma";
 import Headermain from "../components/Headermain.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 const { title, description } = Astro.props;
 ---
 
@@ -33,28 +32,17 @@ const { title, description } = Astro.props;
     />
 
     <meta property="og:site_name" content="Avila Dev Portfolio" />
-    <meta property="og:title" content="{title}" />
-    <meta property="og:description" content="{description}" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-website-url.com" />
-    <meta
-      property="og:image"
-      content="https://your-website-url.com/og-image.jpg"
-    />
+    <meta property="og:url" content="https://dxravage.github.io" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{title}" />
     <meta name="twitter:description" content="{description}" />
-    <meta
-      name="twitter:image"
-      content="https://your-website-url.com/twitter-card-image.jpg"
-    />
 
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="/logo.svg" />
-
-    <ViewTransitions />
   </head>
 
   <body>
