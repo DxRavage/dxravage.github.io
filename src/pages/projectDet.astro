@@ -4,14 +4,18 @@ import Plus from "../components/svg/Plus.astro";
 import { Image } from "astro:assets";
 
 const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
+
+function getExtension(filename: string) {
+  return filename.split(".").pop()?.toLowerCase() || "";
+}
 ---
 
 <MainLayout
   title="Projects | Avila Mariano"
-  description="this is an page to display showcase of a specific project trough a brief description and image gallery"
+  description="This page showcases a specific project with a description and image/video gallery"
 >
   <section
-    class="px-4 lg:pt-32 py-8 lg:px-44 gap-4 flex flex-col justify-center text-center center"
+    class="px-4 lg:pt-32 py-8 lg:px-44 gap-4 flex flex-col justify-center text-center"
   >
     <h2 class="text-xs md:text-md opacity-60">
       {tech}<span class="bold text-rose text-sm">-</span>
@@ -23,7 +27,12 @@ const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
     <div class="flex justify-center items-center gap-4">
       <p class="text-xs font-bold">
         {descript1}
-        <a href={link} target="_blank" title="Visit project website" class="inline-flex items-center">
+        <a
+          href={link}
+          target="_blank"
+          title="Visit project website"
+          class="inline-flex items-center"
+        >
           <Plus />
         </a>
       </p>
@@ -32,20 +41,37 @@ const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
     <p class="text-sm text-left py-8 lg:px-20 text-pretty leading-relaxed">
       {descript2}
     </p>
+
     <div class="flex flex-col items-center gap-4 pb-8">
       {
         imageSources &&
-          imageSources.map(
-            (src) =>
-              src && (
+          imageSources.map((srcObject) => {
+            const srcUrl =
+              typeof srcObject === "string" ? srcObject : srcObject.src;
+            const extension = getExtension(srcUrl);
+
+            if (extension === "mp4" || extension === "webm") {
+              return (
+                <video
+                  src={srcUrl}
+                  muted
+                  autoplay
+                  loop
+                  class="w-3/4 h-auto rounded-lg"
+                />
+              );
+            } else {
+              return (
                 <Image
-                  src={src}
+                  src={srcObject}
                   alt="Project screenshot"
                   width={1200}
                   height={500}
+                  class="rounded-lg shadow-lg"
                 />
-              )
-          )
+              );
+            }
+          })
       }
     </div>
   </section>
