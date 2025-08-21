@@ -7,6 +7,7 @@ import wowImage from "/src/assets/wow.webp";
 import gbooksImage from "/src/assets/bookfinder2.webp";
 import aikidoImage from "/src/assets/aikido2.webp";
 import dungeon from "/src/assets/characterSelection.png";
+import ani from "/src/assets/anihero.webp";
 ---
 
 <MainLayout
@@ -25,6 +26,24 @@ import dungeon from "/src/assets/characterSelection.png";
     </h2>
     <section class="grid grid-cols-1 lg:grid-cols-3 lg:px-28">
       <Project
+        title="Endless Dungeon"
+        description="Turn-based RPG game with character selection and combat"
+        imgSrc={dungeon}
+        link="/projectBlog/Dungeon"
+      />
+      <Project
+        title="Aikido Mobile App"
+        description="Mobile App for Aikido Dojo"
+        imgSrc={aikidoImage}
+        link="/projectBlog/Aikido"
+      />
+      <Project
+        title="Ani Web App"
+        description="Web App for Anime content discovery and community engagement"
+        imgSrc={ani}
+        link="/projectBlog/Ani"
+      />
+      <Project
         title="WoW - Clone"
         description="Clone of World of Warcraft Website using Astro and Tailwind"
         imgSrc={wowImage}
@@ -36,17 +55,6 @@ import dungeon from "/src/assets/characterSelection.png";
         imgSrc={gbooksImage}
         link="/projectBlog/gBooks"
       />
-      <Project
-        title="Aikido Mobile App"
-        description="Mobile App for Aikido Dojo"
-        imgSrc={aikidoImage}
-        link="/projectBlog/Aikido"
-      />
-      <Project
-        title="Endless Dungeon"
-        description="Turn-based RPG game with character selection and combat"
-        imgSrc={dungeon}
-        link="/projectBlog/Dungeon"
     </section>
   </section>
 </MainLayout>
