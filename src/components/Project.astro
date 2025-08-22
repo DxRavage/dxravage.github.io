@@ -10,7 +10,7 @@ const { title, description, imgSrc, link } = Astro.props;
         <Image
           src={imgSrc}
           alt={title}
-          class="absolute inset-0 object-cover object-center w-full h-full group-hover:opacity-75 transition-opacity duration-300"
+          class="absolute inset-0 object-contain object-center w-full h-full group-hover:opacity-75 transition-opacity duration-300"
           width="1200"
           height="600"
           loading="lazy"
@@ -20,7 +20,7 @@ const { title, description, imgSrc, link } = Astro.props;
         >
           <div class="flex items-end h-full bg-stone-400 bg-opacity-50">
             <div class="p-4">
-              <h2 class="text-xl text-rose font-medium pb-4">{title}</h2>
+              <h2 class="text-xl text-rose font-bold pb-4">{title}</h2>
               <p class="text-xs text-primary">{description}</p>
             </div>
           </div>
