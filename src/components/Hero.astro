@@ -11,26 +11,29 @@ import PrimaryButton from "../components/PrimaryButton.astro";
   >
   </div>
 
-  <section class="flex flex-col mx-auto items-center pt-12 md:pt-24 md:w-2/3">
-    <div>
-      <h1
-        class="text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-4 md:mb-8 py-12 text-rose items-center font-mechsuit"
-        transition:name="myname"
-      >
-        Avila <span class="text-primary pt-4 md:pt-0">mariano</span>
-      </h1>
-    </div>
+  <div class="relative z-10 flex flex-col items-center">
+    <section class="flex flex-col mx-auto items-center pt-12 md:pt-24 md:w-2/3">
+      <div>
+        <h1
+          class="text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-4 md:mb-8 py-12 text-rose items-center font-mechsuit"
+          transition:name="myname"
+        >
+          Avila <span class="text-primary pt-4 md:pt-0">mariano</span>
+        </h1>
+      </div>
 
-    <h2
-      class="text-xl md:text-2xl lg:text-3xl opacity-80 px-6 pb-4 md:px-4 text-center text-secondary"
-    >
-      Software Engineer <span class="hidden md:inline-flex"> |</span> Web Developer
-    </h2>
-  </section>
-  <PrimaryButton
-    href="mailto:marianoavilaj4@gmail.com"
-    title="Send an email to Mariano"
-    content="Contact Me"
-    style="pt-8 py-16 md:pt-20 md:pb-40 mb-32 flex justify-center"
-  />
+      <h2
+        class="text-xl md:text-2xl lg:text-3xl opacity-80 px-6 pb-4 md:px-4 text-center text-secondary"
+      >
+        Software Engineer <span class="hidden md:inline-flex"> |</span> Web Developer
+      </h2>
+    </section>
+
+    <PrimaryButton
+      href="mailto:marianoavilaj4@gmail.com"
+      title="Send an email to Mariano"
+      content="Contact Me"
+      style="pt-8 py-16 md:pt-20 md:pb-40 mb-32 flex justify-center"
+    />
+  </div>
 </section>
