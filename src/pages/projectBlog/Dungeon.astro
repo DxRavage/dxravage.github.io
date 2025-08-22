@@ -2,7 +2,7 @@
 // Component Imports
 import ProjectDet from "../projectDet.astro";
 
-//Image Imports
+// Image and video imports
 import Endless1 from "/src/assets/endlessmenu.mp4";
 import Endless2 from "/src/assets/endlessstart.mp4";
 import Endless3 from "/src/assets/endlessfight.mp4";
@@ -11,22 +11,54 @@ import EndlessSS2 from "/src/assets/characterSelection.png";
 import EndlessSS3 from "/src/assets/selection.png";
 import EndlessSS4 from "/src/assets/combat.png";
 import EndlessSS5 from "/src/assets/boss.png";
+
+const projectAssets = [
+  {
+    src: Endless1,
+    title: "Game Menu",
+  },
+  {
+    src: Endless2,
+    title: "Character Selection",
+  },
+  {
+    src: Endless3,
+    title: "Combat Gameplay",
+  },
+  {
+    src: EndlessSS1,
+    title: "Main Menu Screenshot",
+  },
+  {
+    src: EndlessSS2,
+    title: "Character Selection UI",
+  },
+  {
+    src: EndlessSS3,
+    title: "Dungeon Selection",
+  },
+  {
+    src: EndlessSS4,
+    title: "In-Game Combat",
+  },
+  {
+    src: EndlessSS5,
+    title: "Boss Fight",
+  },
+];
 ---
 
 <ProjectDet
   title="Endless Dungeon"
-  tech=" Game Design | POO "
+  tech="Game Design | POO"
   descript1="React | TypeScript | Tailwind CSS"
-  descript2="Endless Dungeon is a turn base  game where players explore procedurally generated dungeons, battling enemies and collecting loot to enhance their characters. The game features a variety of character classes, each with unique abilities, and a turn-based combat system that requires strategic planning. he game is built using React and TypeScript, ensuring a robust and maintainable codebase. Tailwind CSS is used for styling, providing a modern and responsive design. The game includes features such as character progression, item management, and a variety of enemy types to keep gameplay engaging."
+  descript2="Endless Dungeon is a turn-based game where players explore procedurally generated dungeons, battling enemies and collecting loot to enhance their characters. The game features a variety of character classes, each with unique abilities, and a turn-based combat system that requires strategic planning. The game is built using React and TypeScript, ensuring a robust and maintainable codebase. Tailwind CSS is used for styling, providing a modern and responsive design. The game includes features such as character progression, item management, and a variety of enemy types to keep gameplay engaging."
   link="https://endless-dungeon.vercel.app/"
-  imageSources={[
-    Endless1,
-    Endless2,
-    Endless3,
-    EndlessSS1,
-    EndlessSS2,
-    EndlessSS3,
-    EndlessSS4,
-    EndlessSS5
-  ]}
+  imageSources={projectAssets}
+  insight={{
+    title: "Design Principles",
+    heading: "Building a Combat Based with Code",
+    description:
+      "Endless Dungeon's combat and character systems are built on an Object-Oriented Programming foundation. Each character class, enemy type, and item is a distinct object with its own properties and behaviors. This structured approach allows for a robust and easily maintainable codebase. It made it possible to create a rich variety of unique abilities and game features, ensuring that the game world feels dynamic and responsive to the player's choices.",
+  }}
 />

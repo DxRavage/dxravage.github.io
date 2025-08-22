@@ -2,11 +2,36 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Plus from "../components/svg/Plus.astro";
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
-const { title, tech, descript1, descript2, imageSources, link } = Astro.props;
+type Asset = {
+  src: string | ImageMetadata;
+  title?: string;
+  description?: string;
+};
+
+type Insight = {
+  title: string;
+  heading: string;
+  description: string;
+};
+
+const { title, tech, descript1, descript2, imageSources, link, insight } =
+  Astro.props as {
+    title: string;
+    tech: string;
+    descript1: string;
+    descript2: string;
+    imageSources: Asset[];
+    link: string;
+    insight?: Insight;
+  };
 
 function getExtension(filename: string) {
-  return filename.split(".").pop()?.toLowerCase() || "";
+  if (typeof filename === "string") {
+    return filename.split(".").pop()?.toLowerCase() || "";
+  }
+  return "";
 }
 ---
 
@@ -42,35 +67,62 @@ function getExtension(filename: string) {
       {descript2}
     </p>
 
-    <div class="flex flex-col items-center gap-4 pb-8">
+    <div class="flex flex-col items-center gap-12">
       {
         imageSources &&
-          imageSources.map((srcObject) => {
+          imageSources.map((asset, index) => {
             const srcUrl =
-              typeof srcObject === "string" ? srcObject : srcObject.src;
+              typeof asset.src === "string" ? asset.src : asset.src.src;
             const extension = getExtension(srcUrl);
-
-            if (extension === "mp4" || extension === "webm") {
-              return (
-                <video
-                  src={srcUrl}
-                  muted
-                  autoplay
-                  loop
-                  class="w-3/4 h-auto rounded-lg"
-                />
-              );
-            } else {
-              return (
-                <Image
-                  src={srcObject}
-                  alt="Project screenshot"
-                  width={1200}
-                  height={500}
-                  class="rounded-lg shadow-lg"
-                />
-              );
-            }
+            return (
+              <>
+                <div class="flex flex-col items-center gap-4">
+                  {asset.title && (
+                    <p class="text-xs md:text-md text-center font-bold">
+                      <span class="text-rose text-bold">-</span>
+                      {asset.title}
+                      <span class="text-rose text-bold">-</span>
+                    </p>
+                  )}
+                  {extension === "mp4" || extension === "webm" ? (
+                    <video
+                      src={srcUrl}
+                      muted
+                      autoplay
+                      loop
+                      class="w-3/4 h-auto rounded-lg"
+                    />
+                  ) : typeof asset.src !== "string" ? (
+                    <Image
+                      src={asset.src}
+                      alt={asset.title || "Project screenshot"}
+                      width={1200}
+                      height={500}
+                      class="rounded-lg shadow-lg"
+                    />
+                  ) : (
+                    <img
+                      src={asset.src}
+                      alt={asset.title || "Project screenshot"}
+                      width={1200}
+                      height={500}
+                      class="rounded-lg shadow-lg"
+                    />
+                  )}
+                </div>
+                {index === 0 && insight && (
+                  <div class="flex flex-col items-center gap-2 py-8 lg:px-44 text-pretty leading-relaxed text-left">
+                    <h3 class="font-bold text-xl md:text-md text-zinc opacity-75">
+                      {insight.title}
+                    </h3>
+                    <h1 class="font-bold text-lg md:text-xl pb-4 text-rose opacity-75">
+                      {insight.heading}
+                    </h1>
+                    <p class="text-sm opacity-60">{insight.description}</p>
+                  </div>
+                )}
+              </>
+            );
           })
       }
     </div>

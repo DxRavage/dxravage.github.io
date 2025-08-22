@@ -2,9 +2,9 @@
 // Component Imports
 import ProjectDet from "../projectDet.astro";
 
-//Image Imports -- Pending image upgrade from png to svg
-import AikidoSS1 from '/src/assets/aikido1.webp';
-import AikidoSS2 from '/src/assets/aikido2.webp';
+// Image and video imports
+import AikidoSS1 from "/src/assets/aikido1.webp";
+import AikidoSS2 from "/src/assets/aikido2.webp";
 import AikidoSS4 from "/src/assets/aikido3.webp";
 import AikidoSS3 from "/src/assets/aikido4.webp";
 import AikidoSS5 from "/src/assets/aikido5.webp";
@@ -13,9 +13,22 @@ import AikidoSS6 from "/src/assets/aikido6.webp";
 
 <ProjectDet
   title="Ryusui Dojo App"
-  tech=" UX/UI | Mobile App"
+  tech="UX/UI | Mobile App"
   descript1="Figma"
-  descript2="The Ryusui Dojo mobile app provides Aikido students and prospective members with essential information, including class schedules, events information and dojo details, all within a user-friendly and intuitive interface for seamless navigation. "
-  link='https://www.figma.com/proto/MMLNEIPUIIlE76tZCgEG7I/Aikido-Project?node-id=0-1&t=9Nc9Sw4a362NsmBD-1"'
-  imageSources={[AikidoSS1, AikidoSS2, AikidoSS4, AikidoSS3, AikidoSS5, AikidoSS6]}
+  descript2="The Ryusui Dojo App is a comprehensive mobile solution designed to streamline communication and access to information for Aikido students. The app provides a central hub for viewing real-time class schedules, registering for upcoming events, and staying informed about dojo announcements. The design prioritizes a clean, intuitive interface and seamless navigation, ensuring that both current students and prospective members can easily find the information they need to engage with the dojo's community."
+  link="https://www.figma.com/file/YOUR_FIGMA_PROJECT_ID"
+  imageSources={[
+    { src: AikidoSS1, title: "Class Schedule Screen" },
+    { src: AikidoSS2, title: "Events Calendar" },
+    { src: AikidoSS3, title: "Dojo Information" },
+    { src: AikidoSS4, title: "User Profile" },
+    { src: AikidoSS5, title: "Main Dashboard" },
+    { src: AikidoSS6, title: "Announcements Section" },
+  ]}
+  insight={{
+    title: "Approach",
+    heading: "Design-First and User-Centric",
+    description:
+      "The design process began with a deep focus on the end-user. Through user research and wireframing, I identified the key needs of both current students and new visitors. The goal was to create a simple, effective interface that minimizes friction. Using Figma, I created a component-based design system to ensure consistency and a cohesive user experience across all screens. The result is a clean, intuitive app that puts the user's needs at the forefront, making it easy to connect with the dojo.",
+  }}
 />

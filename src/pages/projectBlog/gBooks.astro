@@ -13,7 +13,18 @@ import bfinder5 from "/src/assets/bookfinder5.webp";
   title="Book Finder WebApp"
   tech="Web Development | API"
   descript1="Astro | Tailwind CSS | Typescript"
-  descript2="Users can search for books by author or title and instantly see the cover, title, and author. A single click on a book expands a detailed panel showcasing the title, author, cover image, description, average rating, genre, and an embedded viewer link for a quick preview. This project is built using the modern web technologies Astro for a fast and content-focused site, Tailwind CSS for efficient styling, and TypeScript for enhanced code maintainability and scalability.."
+  descript2="The Book Finder WebApp allows users to search for books by author or title, instantly displaying key details like cover, title, and author. A single click on a book expands a detailed panel showcasing the title, author, description, average rating, genre, and an embedded viewer link. This project leverages the Google Books API and is built with the modern web technologies Astro for a fast, content-focused site, Tailwind CSS for efficient styling, and TypeScript for enhanced code maintainability and scalability."
   link="https://book-finder-dusky-six.vercel.app"
-  imageSources={[findersearch, bfinder, bfinder2, bfinder5]}
+  imageSources={[
+    { src: findersearch, title: "Search Functionality" },
+    { src: bfinder, title: "Homepage & Search Results" },
+    { src: bfinder2, title: "Detailed Book View" },
+    { src: bfinder5, title: "Preview with Embedded Viewer" },
+  ]}
+  insight={{
+    title: "Approach",
+    heading: "Integrating a Powerful API with a Modern Stack",
+    description:
+      "The main challenge and core feature of this project was the seamless integration of the **Google Books API**. This required handling asynchronous data fetching, managing API responses, and dynamically rendering book information. The project's architecture, built with **Astro**, was essential for delivering this content quickly, while **TypeScript** ensured that the data models were robust and predictable. The result is a highly functional application that demonstrates a practical understanding of API consumption and efficient data display.",
+  }}
 />

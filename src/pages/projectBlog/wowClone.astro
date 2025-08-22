@@ -1,4 +1,5 @@
 ---
+// Component Imports
 import ProjectDet from "../projectDet.astro";
 
 //Image Imports
@@ -13,5 +14,15 @@ import wowSS3 from "/src/assets/wow3.webp";
   descript1="Astro | Tailwind CSS"
   descript2="This project is a fully responsive clone of the World of Warcraft website, built from scratch using Astro and Tailwind CSS. Its modular, component-based architecture ensures maintainability and scalability, while Astro's static site generation and Tailwind's utility-first design deliver exceptional speed and adaptability across all devices."
   link="https://wow-astro.vercel.app"
-  imageSources={[wowSS, wowSS2, wowSS3]}
+  imageSources={[
+    { src: wowSS, title: "Main Homepage" },
+    { src: wowSS2, title: "Mobile Homepage" },
+    { src: wowSS3, title: "Full Mobile Page" },
+  ]}
+  insight={{
+    title: "Approach",
+    heading: "Recreating a Complex Web",
+    description:
+      "The primary challenge in this project was recreating the intricate, content-heavy layout of the original website while maintaining performance and responsiveness. By using **Astro's static site generation**, the site is pre-rendered into simple HTML, drastically reducing load times. **Tailwind CSS** was instrumental in replicating the design details efficiently and ensuring the layout adapted flawlessly to different screen sizes. This project served as an excellent exercise in translating a complex visual design into a clean, modern, and performant web experience.",
+  }}
 />

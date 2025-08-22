@@ -1,17 +1,28 @@
 ---
+// Component Imports
 import ProjectDet from "../projectDet.astro";
 
-import AniSS1 from '/src/assets/anivid.mp4';
-import AniSS2 from '/src/assets/anivid2.mp4';
-import AniSS3 from '/src/assets/ani.webp';
-
+// Image Imports
+import AniSS1 from "/src/assets/anivid.mp4";
+import AniSS2 from "/src/assets/anivid2.mp4";
+import AniSS3 from "/src/assets/ani.webp";
 ---
 
 <ProjectDet
   title="Ani Web App"
-  tech=" UX UI | WEB APP"
+  tech="UX UI | WEB APP"
   descript1="Astro | Tailwind CSS | Typescript"
-  descript2="The Ani Web App is a comprehensive platform designed to provide users with a seamless experience in exploring and engaging with anime content. It features an intuitive interface, advanced search capabilities, and personalized recommendations, making it easy for users to discover new shows and connect with the anime community."
-  link=''
-  imageSources={[AniSS1, AniSS2, AniSS3]}
+  descript2="The Ani Web App is a comprehensive platform designed to provide users with a seamless experience in exploring and engaging with anime content. It features an intuitive interface, advanced search capabilities, and personalized recommendations, making it easy for users to discover new shows and connect with the anime community. The app is built with Astro for a fast, modern web experience and styled with Tailwind CSS for a responsive, component-driven design."
+  link=""
+  imageSources={[
+    { src: AniSS1, title: "Hero Section" },
+    { src: AniSS2, title: "Content Recomendation" },
+    { src: AniSS3, title: "Homepage" },
+  ]}
+  insight={{
+    title: "Approach",
+    heading: "Performance-First Design with Modern Tech",
+    description:
+      "The core philosophy behind the Ani Web App was to build a highly performant and user-friendly experience from the ground up. By leveraging Astro's island architecture, we delivered a lightning-fast site with minimal JavaScript, ensuring quick load times even on mobile devices. The visual design, crafted with Tailwind CSS, focused on a clean, accessible layout that makes content discovery a breeze. This technical and design-oriented approach resulted in a fluid, responsive application that puts the user's experience first.",
+  }}
 />
