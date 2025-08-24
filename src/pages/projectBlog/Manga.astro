@@ -1,0 +1,40 @@
+---
+// Component Imports
+import ProjectDet from "../projectDet.astro";
+
+// Image and video imports
+import mScrapper from "/src/assets/mangass.png"; 
+import mScrapper2 from "/src/assets/mangass.png"; 
+import mScrapper3 from "/src/assets/mangass.png"; 
+
+
+const projectAssets = [
+  {
+    src: mScrapper,
+    title: "Game Menu",
+  },
+    {
+    src: mScrapper2,
+    title: "Game Menu",
+  },
+    {
+    src: mScrapper3,
+    title: "Game Menu",
+  },
+]; 
+---
+
+<ProjectDet
+  title="Manga Scrapper"
+  tech="Web Scraping | Node.js | JSDOM"
+  descript1="API Development"
+  descript2="The Manga Scrapper is a powerful backend API built with Node.js that programmatically fetches and organizes manga content from external websites. It uses web scraping techniques to extract manga details, chapter lists, and individual page images, providing a structured JSON response for a front-end application. The API is designed for efficient, on-demand content retrieval, ensuring users can access up-to-date manga titles and chapters seamlessly."
+  link="https://deeply-debris.vercel.app/#title"
+  imageSources={projectAssets}
+  insight={{
+    title: "Approach",
+    heading: "Web Scraping & Data Structuring",
+    description:
+      "The core of this project is its robust web scraping engine. The process involved identifying the HTML structure of the target website, using JSDOM to simulate a browser environment, and writing precise selectors to extract the necessary data. A key challenge was handling dynamic URLs and potential changes to the source site's structure. By structuring the scraped data into a clean JSON format, the API provides a reliable and easy-to-consume content source, decoupling the front-end user interface from the complexities of the scraping process.",
+  }}
+/>
