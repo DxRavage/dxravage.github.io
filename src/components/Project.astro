@@ -16,9 +16,9 @@ const { title, description, imgSrc, link } = Astro.props;
           loading="lazy"
         />
         <div
-          class="absolute inset-0 opacity-0 cursor-pointer group-hover:opacity-80 transition-opacity duration-300"
+          class="absolute inset-0 md:opacity-0 cursor-pointer group-hover:opacity-80 transition-opacity duration-300"
         >
-          <div class="flex items-end h-full bg-stone-400 bg-opacity-50">
+          <div class="flex items-end h-full md.bg-stone-400 bg-opacity-50">
             <div class="p-4">
               <h2 class="text-xl text-rose font-bold pb-4">{title}</h2>
               <p class="text-xs text-primary">{description}</p>
