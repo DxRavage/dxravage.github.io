@@ -1,14 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Name from "../components/Name.astro";
-import { Image } from "astro:assets";
 ---
 
 <MainLayout
   title="About | Avila Mariano"
   description="this is an about page to display authors personal description, experiences, skills and education"
 >
-  <div class="flex flex-col items-center pb-12">
+  <div class="flex flex-col items-center p-4 md:pb-12">
     <h1
       class="text-4xl flex flex-col md:flex-row pt-14 pb-4 text-rose items-center gap-x-2 font-mechsuit"
       transition:name="myname"
@@ -19,27 +17,33 @@ import { Image } from "astro:assets";
     <section class="flex justify-center pt-8 lg:px-80">
       <div class="flex flex-col">
         <p class="font-bold text-sm md:text-base hidden lg:flex p-8">
-          Software Engineer experienced in delivering great user experience
-          through web optimization and responsive design.
+          As a Software Engineer, I focus on building modern, high-performance
+          web applications with an emphasis on user experience and responsive
+          design
         </p>
         <p class="text-sm hidden lg:flex px-8">
-          I specialize in component-based websites for streamlined development
-          and code reusability.
+          My expertise lies in component-based architecture, allowing for
+          efficient development and high code reusability. I bring three years
+          of experience in leading remote teams and facilitating skill
+          development, blending technical.
         </p>
       </div>
     </section>
   </div>
 
-  <section class="flex justify-center p-8 md:p-14">
+  <section class="flex justify-center px-8">
     <article id="about">
       <section class="text-primary">
         <p class="font-bold text-sm md:text-base lg:hidden">
-          Software Engineer experienced in delivering great user experience
-          through web optimization and responsive design.
+          As a Software Engineer, I focus on building modern, high-performance
+          web applications with an emphasis on user experience and responsive
+          design
         </p>
         <p class="text-sm lg:hidden">
-          Love to work with component-based websites for streamlined development
-          and code reusability.
+          My expertise lies in component-based architecture, allowing for
+          efficient development and high code reusability. I bring three years
+          of experience in leading remote teams and facilitating skill
+          development, blending technical.
         </p>
       </section>
 
@@ -59,12 +63,8 @@ import { Image } from "astro:assets";
           <li>
             Leading Trainees remotely for Mexico, Colombia and Philippines
           </li>
-          <li>
-            Training facilitation
-          </li>
-          <li>
-            QA and coaching sessions based on SMART goals.
-          </li>
+          <li>Training facilitation</li>
+          <li>QA and coaching sessions based on SMART goals.</li>
         </ul>
 
         <ul class="text-xs">
@@ -79,7 +79,6 @@ import { Image } from "astro:assets";
               <li>Rest API</li>
             </li>
           </li>
-          
         </ul>
 
         <ul class="text-xs">
