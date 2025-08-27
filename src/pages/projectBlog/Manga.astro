@@ -3,38 +3,75 @@
 import ProjectDet from "../projectDet.astro";
 
 // Image and video imports
-import mScrapper from "/src/assets/mangass.png"; 
-import mScrapper2 from "/src/assets/mangass.png"; 
-import mScrapper3 from "/src/assets/mangass.png"; 
+import mScrapper1 from "/src/assets/mshome.webp";
+import mScrapper2 from "/src/assets/mschapters.webp";
+import mScrapper3 from "/src/assets/mschapter.webp";
+import mScrapper4 from "/src/assets/mbhome.webp";
+import mScrapper5 from "/src/assets/mbchapters.webp";
+import mScrapper6 from "/src/assets/mbchapters2.webp";
+import mScrapper7 from "/src/assets/mbchapter.webp";
+import msvideo from "/src/assets/msvideo.mp4";
+import msvideo2 from "/src/assets/msvideo2.mp4";
+import msvideo3 from "/src/assets/msvideo3.mp4";
 
-
+// Updated project assets
 const projectAssets = [
   {
-    src: mScrapper,
-    title: "Game Menu",
+    src: msvideo,
+    title: "Navigating Home and Chapters",
   },
-    {
+  {
+    src: mScrapper1,
+    title: "Manga Home",
+  },
+
+  {
     src: mScrapper2,
-    title: "Game Menu",
+    title: "Manga Chapters",
   },
-    {
+  {
+    src: msvideo2,
+    title: "Selecting a Manga Chapter",
+  },
+  {
     src: mScrapper3,
-    title: "Game Menu",
+    title: "Manga Chapter",
   },
-]; 
+  {
+    src: msvideo3,
+    title: "Reading and Next Chapter",
+  },
+  {
+    src: mScrapper4,
+    title: "Mobile Manga Home",
+  },
+  {
+    src: mScrapper5,
+    title: "Mobile Manga",
+  },
+  {
+    src: mScrapper6,
+    title: "Mobile Manga Chapters",
+  },
+  {
+    src: mScrapper7,
+    title: "Mobile Manga Chapter",
+  },
+];
 ---
 
 <ProjectDet
-  title="Manga Scrapper"
+
+  title="Manga Scraper"
   tech="Web Scraping | Node.js | JSDOM"
   descript1="API Development"
-  descript2="The Manga Scrapper is a powerful backend API built with Node.js that programmatically fetches and organizes manga content from external websites. It uses web scraping techniques to extract manga details, chapter lists, and individual page images, providing a structured JSON response for a front-end application. The API is designed for efficient, on-demand content retrieval, ensuring users can access up-to-date manga titles and chapters seamlessly."
-  link="https://deeply-debris.vercel.app/#title"
+  descript2="The Manga Scraper is a robust, on-demand backend API that programmatically scrapes and organizes manga content from popular online sources. Built with Node.js and JSDOM, it navigates complex HTML structures to extract manga details, complete chapter lists, and individual page images. By providing this content as a clean, structured JSON response, the API offers a reliable and efficient way for any front-end application to access a vast and up-to-date library of manga titles and chapters."
+  link="https://deeply-debris.vercel.app"
   imageSources={projectAssets}
   insight={{
     title: "Approach",
-    heading: "Web Scraping & Data Structuring",
+    heading: "Web Scraping & Resilience",
     description:
-      "The core of this project is its robust web scraping engine. The process involved identifying the HTML structure of the target website, using JSDOM to simulate a browser environment, and writing precise selectors to extract the necessary data. A key challenge was handling dynamic URLs and potential changes to the source site's structure. By structuring the scraped data into a clean JSON format, the API provides a reliable and easy-to-consume content source, decoupling the front-end user interface from the complexities of the scraping process.",
+      "The core of this project is its resilient web scraping engine. The process involved dissecting the HTML structure of the target website to identify key elements, then using JSDOM to create a simulated browser environment for data extraction. A critical challenge was designing the system to handle dynamic content and potential structural changes on the source site. The solution was to implement robust selectors and flexible parsing logic. By doing so, the API provides a reliable and easy-to-consume content source, effectively decoupling the front-end user experience from the complexities and potential instability of the scraping process. This approach ensures a seamless and stable flow of content for the user.",
   }}
 />
