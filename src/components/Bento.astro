@@ -1,164 +1,61 @@
 ---
-import wowAstro from "/src/assets/Logo-wow.avif";
-import gBooks from "/src/assets/bookf.png";
-import AikidoSS1 from "/src/assets/aikido.webp";
-import dungeon from "/src/assets/endless.png";
-import AniSS1 from "/src/assets/anihero.webp";
+import Project from "@components/Project.astro";
+
+import wowImage from "/src/assets/wow.webp";
+import gbooksImage from "/src/assets/bookfinder.webp";
+import aikidoImage from "/src/assets/aikido.webp";
+import dungeon from "/src/assets/mainMenu.png";
+import ani from "/src/assets/anihero.webp";
 import mScrapper from "/src/assets/mschapters.webp";
 ---
 
-<section class="py-14 content-center mx-auto">
-  <div class="py-4 px-2 mx-auto max-w-screen-xl lg:px-6 bg-opacity-35">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
-      <div class="bg-opacity-35 h-auto flex flex-col">
-        <a
-          href="/projectBlog/Dungeon"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${dungeon.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Endless Dungeon
-            </h3>
-            <p
-              class="text-md font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Game Design | POO
-            </p>
-          </div>
-        </a>
-      </div>
+<section class="pt-14 mb-44 md:p-14">
+  <h2 class="flex justify-center pb-8 text-xl text-center">
+    Featured Work & Projects
+  </h2>
+  <h2
+    class="flex justify-center pb-4 text-md md:text-xl md:px-64 text-center opacity-35"
+  >
+    I build modern, responsive web applications with a focus on great user
+    experiences and scalable component-based architecture.
+  </h2>
+  <section class="grid grid-cols-1 lg:grid-cols-3 lg:px-28">
+    <Project
+      title="Endless Dungeon"
+      description="Turn-based RPG game with character selection and combat"
+      imgSrc={dungeon}
+      link="/projectBlog/Dungeon"
+    />
+    <Project
+      title="Manga Scrapper"
+      description="Web App for Manga content discovery"
+      imgSrc={mScrapper}
+      link="/projectBlog/Manga"
+    />
+    <Project
+      title="Ani Web App"
+      description="Web App for Anime content discovery"
+      imgSrc={ani}
+      link="/projectBlog/Ani"
+    />
 
-      <div class="bg-opacity-35 h-auto flex flex-col">
-        <a
-          href="/projectBlog/Manga"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${mScrapper.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Manga Scrapper
-            </h3>
-            <p
-              class="text-sm font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Web Scraping | API Development
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="h-auto flex flex-col">
-        <a
-          href="/projectBlog/Ani"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${AniSS1.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Ani Web App
-            </h3>
-            <p
-              class="text-sm font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              UX UI | WEB APP
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="bg-opacity-35 h-auto flex flex-col">
-        <a
-          href="/projectBlog/gBooks"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${gBooks.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Book Finder
-            </h3>
-            <p
-              class="text-sm font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Web Development | API Integration
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="bg-opacity-35 h-auto flex flex-col">
-        <a
-          href="/projectBlog/Aikido"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${AikidoSS1.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Ryusui Dojo App
-            </h3>
-            <p
-              class="text-sm font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              UX/UI | Mobile App
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="h-auto flex flex-col">
-        <a
-          href="/projectBlog/wowClone"
-          class="group relative flex flex-col overflow-hidden aspect-square flex-grow bg-contain bg-center bg-no-repeat"
-          style={`background-image: url(${wowAstro.src});`}
-        >
-          <div
-            class="absolute inset-0 bg-gray-900/70 opacity-10 transition-opacity duration-300 group-hover:opacity-60"
-          >
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 p-4">
-            <h3
-              class="text-2xl font-medium text-rose xs:text-xl md:text-3xl md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              WoW - Clone
-            </h3>
-            <p
-              class="text-sm font-light text-zinc group-hover:text-secondary md:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            >
-              Web Development
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+    <Project
+      title="Book Finder"
+      description="Implementation of Google Books API"
+      imgSrc={gbooksImage}
+      link="/projectBlog/gBooks"
+    />
+    <Project
+      title="Aikido Mobile App"
+      description="Mobile App for Aikido Dojo"
+      imgSrc={aikidoImage}
+      link="/projectBlog/Aikido"
+    />
+    <Project
+      title="WoW - Clone"
+      description="Clone of World of Warcraft Website using Astro and Tailwind"
+      imgSrc={wowImage}
+      link="/projectBlog/wowClone"
+    />
+  </section>
 </section>
