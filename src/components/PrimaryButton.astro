@@ -1,16 +1,13 @@
 ---
-const {href, content, title, style} = Astro.props;
+const { href, content, title, style } = Astro.props;
 ---
 
 <div class={style}>
-  <a href={href}
-  title={title}
-  target="_blank"
-  >
+  <a href={href} title={title} target="_blank">
     <button
-      class="bg-transparent text-rose border-primary
-         hover:text-zinc hover:border-rose active:bg-rose
-         active:text-secondary border-2 p-4 rounded-md"
+      class="bg-rose hover:bg-transparent border-2 border-rose text-secondary
+         hover:text-secondary hover:border-rose active:bg-rose
+         active:text-secondary p-4 rounded-md"
     >
       {content}
     </button></a
