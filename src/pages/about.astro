@@ -6,23 +6,25 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="About | Avila Mariano"
   description="this is an about page to display authors personal description, experiences, skills and education"
 >
-  <div class="flex flex-col items-center p-4 md:pb-12">
+  <div
+    class="flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-24 md:max-w-4xl md:mx-auto"
+  >
     <h1
-      class="text-4xl flex flex-col md:flex-row pt-14 pb-4 text-rose items-center gap-x-2 font-mechsuit"
+      class="text-4xl flex flex-col pt-14 pb-4 text-rose items-center gap-x-2 font-mechsuit"
       transition:name="myname"
     >
       Avila <span class="text-primary">Mariano</span>
     </h1>
 
-    <section class="flex justify-center pt-8 lg:px-80">
-      <div class="flex flex-col">
-        <p class="font-bold text-sm md:text-base hidden lg:flex p-8">
+    <section class="flex justify-center md:justify-start pt-8 pl-12">
+      <div class="flex flex-col gap-4">
+        <p class="font-bold text-sm hidden lg:flex">
           As a Software Engineer, I focus on building modern, high-performance
           web applications with an emphasis on user experience and responsive
           design
         </p>
-        <p class="text-sm hidden lg:flex px-8">
-          My expertise lies in component-based architecture, allowing for 
+        <p class="text-xs hidden lg:flex">
+          My expertise lies in component-based architecture, allowing for
           efficient development and high code reusability. I bring three years
           of experience in leading remote teams and facilitating skill
           development, blending technical.
@@ -36,15 +38,15 @@ import MainLayout from "../layouts/MainLayout.astro";
       <section class="text-primary space-y-4">
         <p class="font-bold text-sm md:text-base lg:hidden">
           As a Software Engineer, I focus on building modern, high-performance
-          web applications with an emphasis on user experience and
-          responsive design
+          web applications with an emphasis on user experience and responsive
+          design
         </p>
 
         <p class="text-sm lg:hidden pb-4">
-          My expertise lies in component-based architecture, allowing for 
-          efficient development and high code reusability. I bring three
-          years of experience in leading remote teams and facilitating
-          skill development, blending technical.
+          My expertise lies in component-based architecture, allowing for
+          efficient development and high code reusability. I bring three years
+          of experience in leading remote teams and facilitating skill
+          development, blending technical.
         </p>
       </section>
 
