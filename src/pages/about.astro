@@ -22,7 +22,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           design
         </p>
         <p class="text-sm hidden lg:flex px-8">
-          My expertise lies in component-based architecture, allowing for
+          My expertise lies in component-based architecture, allowing for 
           efficient development and high code reusability. I bring three years
           of experience in leading remote teams and facilitating skill
           development, blending technical.
@@ -33,43 +33,64 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <section class="flex justify-center px-8">
     <article id="about">
-      <section class="text-primary">
+      <section class="text-primary space-y-4">
         <p class="font-bold text-sm md:text-base lg:hidden">
           As a Software Engineer, I focus on building modern, high-performance
-          web applications with an emphasis on user experience and responsive
-          design
+          web applications with an emphasis on user experience and
+          responsive design
         </p>
-        <p class="text-sm lg:hidden">
-          My expertise lies in component-based architecture, allowing for
-          efficient development and high code reusability. I bring three years
-          of experience in leading remote teams and facilitating skill
-          development, blending technical.
+
+        <p class="text-sm lg:hidden pb-4">
+          My expertise lies in component-based architecture, allowing for 
+          efficient development and high code reusability. I bring three
+          years of experience in leading remote teams and facilitating
+          skill development, blending technical.
         </p>
       </section>
 
       <section
-        class="flex flex-col md:flex-row text-primary pt-12 border-t-2 border-zinc"
+        class="flex flex-col md:flex-row text-primary pt-12 border-t-2 border-zinc w- gap-8"
       >
         <ul class="text-xs">
-          <li class="font-bold text-sm">Education</li>
+          <li class="font-bold text-sm mb-1">
+            Education <span class="text-rose flex flex-col">-</span>
+          </li>
           <li>Universidad Autonoma del Noreste</li>
           <li>Software Engineering</li>
           <li>2025</li>
         </ul>
 
-        <ul class="text-xs">
-          <li class="font-bold text-sm">Experience</li>
-          <li>3 Years as Senior Trainer</li>
-          <li>
-            Leading Trainees remotely for Mexico, Colombia and Philippines
-          </li>
-          <li>Training facilitation</li>
-          <li>QA and coaching sessions based on SMART goals.</li>
-        </ul>
+        <div>
+          <ul class="text-xs">
+            <li class="font-bold text-sm">
+              Experience <span class="text-rose flex flex-col">-</span>
+            </li>
+            <li>
+              <li class="text-md font-bold">Technology Support Analyst</li>
+              <li>Qualfon | Allstate</li>
+              <li>Incident Management</li>
+              <li class="font-light">
+                Diagnosing and resolving a wide range of technical issues
+                including troubleshooting and resolving hardware, software, and
+                network issues.
+              </li>
+            </li>
+
+            <li class="text-md font-bold pt-4">Senior Trainer</li>
+            <li>Qualfon | Allstate</li>
+            <li>
+              Leading Trainees remotely for Mexico, Colombia and Philippines.
+            </li>
+            <li>
+              Conducted QA and coaching sessions to ensure goal attainment
+              through the use of SMART goals.
+            </li>
+          </ul>
+        </div>
 
         <ul class="text-xs">
           <li class="font-bold text-sm">
-            Technical Skills<li>
+            Technical Skills <span class="text-rose flex flex-col">-</span><li>
               <li>Astro</li>
               <li>Typescript</li>
               <li>Tailwind CSS</li>
@@ -82,7 +103,9 @@ import MainLayout from "../layouts/MainLayout.astro";
         </ul>
 
         <ul class="text-xs">
-          <li class="font-bold text-sm">Design Skills</li>
+          <li class="font-bold text-sm mb-1">
+            Design Skills<span class="text-rose flex flex-col">-</span>
+          </li>
           <li>UI/UX</li>
           <li>Wireframing & Prototyping</li>
           <li>Design Thinking</li>
@@ -90,23 +113,13 @@ import MainLayout from "../layouts/MainLayout.astro";
         </ul>
       </section>
     </article>
-
-    <style>
-      h2 {
-        font-family: mechsuit;
-        padding-bottom: 14px;
-      }
-
-      p {
-        padding-bottom: 18px;
-      }
-      ul {
-        max-width: 400px;
-        padding: 18px;
-      }
-      li {
-        padding-bottom: 8px;
-      }
-    </style>
   </section></MainLayout
 >
+<style>
+  ul {
+    max-width: 400px;
+  }
+  li {
+    padding-bottom: 4px;
+  }
+</style>
