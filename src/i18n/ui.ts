@@ -13,7 +13,7 @@ export const ui = {
     "nav.contact": "Contact",
     "nav.lang": "ES",
     "nav.langLink": "/es",
-    "hero.subtitle": "Software Engineer | Web Developer",
+    "hero.subtitle": "Software Engineer | Tech Support & Critical Ops",
     "hero.contact": "Contact Me",
     "bento.title": "Featured Work & Projects",
     "bento.subtitle": "I build modern, responsive web applications with a focus on great user experiences and scalable component-based architecture.",
@@ -63,14 +63,21 @@ export const ui = {
     "exp.tp.i2": "Omni-channel technical assistance (Phone & Chat) for end-users.",
     "exp.tp.i3": "Lifecycle management of service requests and incident reporting.",
     "exp.tp.i4": "Remote hardware provisioning and signal analysis for ISP equipment.",
-
-    "table.reactDesc": "Skilled in developing dynamic and responsive user interfaces through the use of modular components.",
-    "table.astroDesc": "Skilled using Astro to develop component based websites that are efficient and responsive for a great user experience across diverse platforms.",
-    "table.tsDesc": "Proficient in TypeScript's strong typing and modern JavaScript features to build scalable and maintainable front-end applications.",
-    "details.title": "Professional Experience",
+    // Skills Table
+    "table.reactDesc": "Expertise in building high-performance, responsive interfaces using modular components. Focused on UX stability and seamless integration.",
+    "table.astroDesc": "Deep technical troubleshooting and Root Cause Analysis (RCA) for high-availability systems and critical workflows.",
+    "table.tsDesc": "Specialized in TypeScript for scalable logic and diagnosing REST APIs, Webhooks, and JSON data structures.", "details.title": "Professional Experience",
     "details.exp1Desc": "Bachelor of Science in Software Engineering",
     "details.exp2Desc": "Google Professional UX Design Certificate",
-    "details.exp3Desc": "Oracle Professional Back End Certificate"
+    "details.exp3Desc": "Oracle Professional Back End Certificate",
+    // Education Labels
+    "edu.label.inst": "Institution",
+    "edu.label.prov": "Provider",
+    "edu.label.prog": "Program",
+    "details.title": "Professional Experience",
+    "about.unit1": "Interface Stack",
+    "about.unit2": "System Architecture",
+    "about.unit3": "Data Logic & Protocols",
   },
   es: {
     "nav.home": "Inicio",
@@ -79,7 +86,7 @@ export const ui = {
     "nav.contact": "Contacto",
     "nav.lang": "EN",
     "nav.langLink": "/",
-    "hero.subtitle": "Ingeniero de Software | Desarrollador Web",
+    "hero.subtitle": "Ingeniero de Software | Soporte Técnico y Ops Críticas",
     "hero.contact": "Contáctame",
     "bento.title": "Trabajo y Proyectos Destacados",
     "bento.subtitle": "Construyo aplicaciones web modernas y responsivas con un enfoque en excelentes experiencias de usuario y arquitectura de componentes escalable.",
@@ -130,12 +137,21 @@ export const ui = {
     "exp.tp.i3": "Gestión del ciclo de vida de solicitudes de servicio e incidentes.",
     "exp.tp.i4": "Aprovisionamiento remoto de hardware y análisis de señal para equipos ISP.",
 
-    "table.reactDesc": "Habilidad en el desarrollo de interfaces de usuario dinámicas y responsivas mediante el uso de componentes modulares.",
-    "table.astroDesc": "Habilidad usando Astro para desarrollar sitios web basados en componentes que son eficientes y responsivos para una gran experiencia de usuario.",
-    "table.tsDesc": "Competente en el tipado fuerte de TypeScript y características modernas de JavaScript para construir aplicaciones escalables.",
-    "details.title": "Experiencia Profesional",
+    // Skills Table
+    "table.reactDesc": "Experiencia en la creación de interfaces responsivas de alto rendimiento. Enfoque en estabilidad de UX e integración fluida.",
+    "table.astroDesc": "Diagnóstico técnico profundo y Análisis de Causa Raíz (RCA) para sistemas de alta disponibilidad y flujos críticos.",
+    "table.tsDesc": "Especializado en TypeScript para lógica escalable y diagnóstico de REST APIs, Webhooks y estructuras JSON.", "details.title": "Experiencia Profesional",
     "details.exp1Desc": "Licenciatura en Ingeniería de Software",
     "details.exp2Desc": "Certificado Profesional de Diseño UX de Google",
-    "details.exp3Desc": "Certificado Profesional de Back-End de Oracle"
+    "details.exp3Desc": "Certificado Profesional de Back-End de Oracle",
+
+    // Education Labels
+    "edu.label.inst": "Institución",
+    "edu.label.prov": "Proveedor",
+    "edu.label.prog": "Programa",
+    "details.title": "Experiencia Profesional",
+    "about.unit1": "Stack de Interfaz",
+    "about.unit2": "Arquitectura de Sistemas",
+    "about.unit3": "Lógica de Datos y Protocolos",
   },
 } as const;
