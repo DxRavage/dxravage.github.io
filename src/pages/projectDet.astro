@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
 import Plus from "../components/svg/Plus.astro";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
@@ -40,34 +41,56 @@ function getExtension(filename: string) {
   description="This page showcases a specific project with a description and image/video gallery"
 >
   <section
-    class="px-4 lg:pt-32 py-8 lg:px-44 gap-4 flex flex-col justify-center text-center"
+    class="relative px-4 lg:pt-32 py-16 lg:px-44 gap-8 flex flex-col justify-center text-center mecha-grid border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden"
   >
-    <h2 class="text-xs md:text-md opacity-60">
-      {tech}<span class="bold text-rose text-sm">-</span>
-    </h2>
-    <h1 class="font-bold text-xl md:text-4xl lg:text-6xl text-rose opacity-75">
-      {title}
-    </h1>
-
-    <div class="flex justify-center items-center gap-4">
-      <p class="text-xs font-bold">
-        {descript1}
-        <a
-          href={link}
-          target="_blank"
-          title="Visit project website"
-          class="inline-flex items-center"
-        >
-          <Plus />
-        </a>
-      </p>
+    <!-- HUD Decoration -->
+    <div class="scanline"></div>
+    <div class="absolute top-10 left-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
+      PROJECT_LOG // ID: {title.substring(0, 3).toUpperCase()}
+    </div>
+    <div class="absolute top-10 right-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
+      STATUS: OPERATIONAL
     </div>
 
-    <p class="text-sm text-left py-8 lg:px-52 text-pretty leading-relaxed">
+    <div class="z-10 flex flex-col gap-4">
+      <h2 class="text-xs md:text-sm font-mono uppercase tracking-[0.4em] opacity-80 flex flex-wrap justify-center gap-2">
+        {tech.split(' | ').map((t, i, arr) => (
+          <>
+            <span class="text-blue-600 dark:text-blue-400">{t}</span>
+            {i < arr.length - 1 && <span class="text-zinc-500 dark:text-zinc-500 font-bold tracking-normal opacity-100">//</span>}
+          </>
+        ))}
+      </h2>
+      <h1 class="font-mechsuit text-4xl md:text-6xl lg:text-8xl transition-all duration-500 hover:scale-[1.02]">
+        <span class="text-rose dark:text-primary">{title.split(' ')[0]}</span>
+        <span class="text-primary dark:text-rose pl-2">{title.split(' ').slice(1).join(' ')}</span>
+      </h1>
+
+      <div class="flex justify-center mt-6">
+        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-4 px-8 relative group">
+          <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-rose"></div>
+          <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-rose"></div>
+          
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <p class="text-xs md:text-sm font-michroma tracking-tight text-primary/90">
+              {descript1}
+            </p>
+            <PrimaryButton 
+              href={link}
+              title={`Visit ${title} website`}
+              content={"View Project"}
+              style="scale-90"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-sm md:text-base text-left py-12 lg:px-52 text-pretty leading-relaxed opacity-90 z-10 font-michroma">
       {descript2}
     </p>
 
-    <div class="flex flex-col items-center gap-12">
+    <div class="flex flex-col items-center gap-20 w-full z-10 mb-20">
       {
         imageSources &&
           imageSources.map((asset, index) => {
@@ -76,49 +99,66 @@ function getExtension(filename: string) {
             const extension = getExtension(srcUrl);
             return (
               <>
-                <div class="flex flex-col items-center gap-4">
+                <div class="flex flex-col items-center gap-6 w-full max-w-5xl group">
                   {asset.title && (
-                    <p class="text-xs md:text-md text-center font-bold">
-                      <span class="text-rose text-bold">-</span>
-                      {asset.title}
-                      <span class="text-rose text-bold">-</span>
-                    </p>
+                    <div class="flex items-center gap-4 w-full">
+                       <div class="h-[1px] flex-1 bg-zinc-500/20"></div>
+                       <p class="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-rose font-bold">
+                         FILE_FEED // {asset.title}
+                       </p>
+                       <div class="h-[1px] flex-1 bg-zinc-500/20"></div>
+                    </div>
                   )}
-                  {extension === "mp4" || extension === "webm" ? (
-                    <video
-                      src={srcUrl}
-                      muted
-                      autoplay
-                      loop
-                      class="w-full md:w-3/4 h-auto rounded-lg"
-                    />
-                  ) : typeof asset.src !== "string" ? (
-                    <Image
-                      src={asset.src}
-                      alt={asset.title || "Project screenshot"}
-                      width={1200}
-                      height={500}
-                      class="rounded-lg shadow-lg"
-                    />
-                  ) : (
-                    <img
-                      src={asset.src}
-                      alt={asset.title || "Project screenshot"}
-                      width={1200}
-                      height={500}
-                      class="rounded-lg shadow-lg"
-                    />
-                  )}
+                  
+                  <div class="mecha-panel overflow-hidden border border-blue-600/30 dark:border-blue-400/20 bg-zinc-950/5 p-2 relative w-full">
+                    {/* Industrial Corners */}
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-rose/40"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-rose/40"></div>
+                    
+                    {extension === "mp4" || extension === "webm" ? (
+                      <video
+                        src={srcUrl}
+                        muted
+                        autoplay
+                        loop
+                        class="w-full h-auto grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                      />
+                    ) : (
+                      <img
+                        src={typeof asset.src === "string" ? asset.src : asset.src.src}
+                        alt={asset.title || "Project screenshot"}
+                        width={1200}
+                        height={500}
+                        class="w-full h-auto grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                      />
+                    )}
+                  </div>
                 </div>
+
                 {index === 0 && insight && (
-                  <div class="flex flex-col items-center gap-2 py-8 lg:px-52 text-pretty leading-relaxed text-left">
-                    <h3 class="font-bold text-xl md:text-md text-zinc opacity-75">
-                      {insight.title}
-                    </h3>
-                    <h1 class="font-bold text-lg md:text-xl pb-4 text-rose opacity-75">
-                      {insight.heading}
-                    </h1>
-                    <p class="text-sm opacity-60">{insight.description}</p>
+                  <div class="flex flex-col items-center gap-4 py-16 lg:px-52 w-full max-w-5xl">
+                    <div class="flex gap-2 h-1 w-full mb-4">
+                       <div class="flex-grow bg-rose animate-pulse shadow-[0_0_8px_rgba(225,29,72,0.4)]"></div>
+                       <div class="w-24 bg-zinc-500/20"></div>
+                    </div>
+                    
+                    <div class="text-left w-full border-l-4 border-rose pl-6">
+                      <h3 class="font-mechsuit text-lg text-rose tracking-wider mb-2">
+                         01 // {insight.title}
+                      </h3>
+                      <h4 class="font-bold text-xl md:text-2xl mb-6 text-primary uppercase tracking-tight">
+                        {insight.heading}
+                      </h4>
+                      <p class="text-sm md:text-base leading-relaxed opacity-80 font-michroma">
+                        {insight.description}
+                      </p>
+                    </div>
+
+                    <div class="flex justify-end w-full mt-4">
+                        <div class="text-[10px] font-mono text-zinc-500/50 uppercase tracking-[0.5em]">
+                           End_Tactical_Briefing
+                        </div>
+                    </div>
                   </div>
                 )}
               </>

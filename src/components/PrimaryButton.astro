@@ -3,14 +3,18 @@ const { href, content, title, style } = Astro.props;
 ---
 
 <div class={style}>
-  <a href={href} title={title} target="_blank">
+  <a href={href} title={title} target="_blank" class="block w-fit mx-auto">
     <button
-      class="bg-rose hover:bg-transparent border-2 border-rose text-zinc-100
-             hover:text-rose active:scale-95 transition-all duration-300
-             p-4 px-8 rounded-md font-bold tracking-wide
-             shadow-lg shadow-rose/20 dark:shadow-rose/10 hover:shadow-rose/40"
+      class="mecha-panel group relative bg-rose hover:bg-rose/90 text-white
+             active:scale-95 transition-all duration-300
+             p-4 px-10 font-bold tracking-[0.2em] uppercase text-xs
+             shadow-lg shadow-rose/20 hover:shadow-rose/40"
     >
+      <!-- Industrial decoration -->
+      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/40"></div>
+      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/40"></div>
+      
       {content}
-    </button></a
-  >
+    </button>
+  </a>
 </div>

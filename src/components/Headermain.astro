@@ -100,49 +100,54 @@ const t = useTranslations(lang);
 <!-- Mobile Menu Overlay -->
 <nav
   id="mobile-menu"
-  class="fixed inset-0 w-full h-0 overflow-hidden opacity-0 transition-all duration-300 backdrop-blur-3xl bg-zinc-200/95 dark:bg-zinc-900/98 shadow-xl md:hidden z-[100] text-zinc-950 dark:text-zinc-50 font-bold"
+  class="fixed inset-0 w-full h-0 overflow-hidden opacity-0 transition-all duration-500 backdrop-blur-3xl bg-zinc-100/90 dark:bg-zinc-900/95 md:hidden z-[100] text-zinc-950 dark:text-zinc-50 font-mechsuit mecha-grid"
 >
-  <ul class="flex flex-col items-center justify-center h-full gap-6">
+  <div class="scanline"></div>
+  <div class="absolute top-24 left-10 text-[10px] uppercase tracking-[0.5em] opacity-30 font-mono z-10">MENU_SYS // v4.0</div>
+  
+  <ul class="flex flex-col items-center justify-center h-full gap-10 relative z-10">
     <li>
       <a
         href={lang === 'es' ? '/es/' : 'https://dxravage.github.io'}
-        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        class="block px-12 py-4 transition-all hover:text-rose hover:tracking-widest uppercase text-2xl"
         >{t("nav.home")}</a
       >
     </li>
     <li>
       <a
         href={lang === 'es' ? '/es/about/' : '/about/'}
-        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        class="block px-12 py-4 transition-all hover:text-rose hover:tracking-widest uppercase text-2xl"
         >{t("nav.about")}</a
       >
     </li>
     <li>
       <a
         href={lang === 'es' ? '/es/projectsGallery/' : '/projectsGallery/'}
-        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        class="block px-12 py-4 transition-all hover:text-rose hover:tracking-widest uppercase text-2xl"
         >{t("nav.projects")}</a
       >
     </li>
     <li>
       <a
         href="mailto:marianoavilaj4@gmail.com"
-        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        class="block px-12 py-4 transition-all hover:text-rose hover:tracking-widest uppercase text-2xl"
         >{t("nav.contact")}</a
       >
     </li>
-    <li>
+    
+    <li class="flex gap-4 mt-8">
+      <div class="p-4 mecha-panel border border-zinc-500/10 bg-zinc-500/5 transition-all">
+        <button id="theme-toggle-mobile" class="block transition-all hover:text-rose" aria-label="Toggle Dark Mode">
+            <svg id="theme-toggle-dark-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+
       <a
         href={t("nav.langLink")}
-        class="block px-24 py-8 rounded-md transition-all font-bold text-rose"
+        class="p-4 mecha-panel-alt border border-rose/30 bg-rose/10 text-rose text-2xl"
         >{t("nav.lang")}</a
       >
-    </li>
-    <li>
-      <button id="theme-toggle-mobile" class="block rounded-md transition-all font-bold hover:text-rose p-4" aria-label="Toggle Dark Mode">
-          <svg id="theme-toggle-dark-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-          <svg id="theme-toggle-light-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-      </button>
     </li>
   </ul>
 </nav>
@@ -163,8 +168,8 @@ const t = useTranslations(lang);
         menu.classList.toggle("h-screen");
         menu.classList.toggle("opacity-100");
 
-        document.body.classList.toggle("overflow-hidden", isOpen);
-        document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        document.body.classList.toggle("mecha-overflow-lock", isOpen);
+        document.documentElement.classList.toggle("mecha-overflow-lock", isOpen);
         
         // Handle header background to not overlap menu
         if (isOpen) {

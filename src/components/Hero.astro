@@ -7,36 +7,61 @@ const t = useTranslations(lang);
 ---
 
 <section
-  class="relative flex flex-col items-center pt-12 md:pt-24 md:w-2/3 mx-auto min-h-screen justify-center"
+  class="relative flex flex-col items-center pt-16 md:pt-4 w-full mx-auto min-h-screen justify-center mecha-grid overflow-hidden border border-blue-600/30 dark:border-blue-400/20"
 >
-  <div
-    class="absolute inset-0 bg-no-repeat bg-cover bg-center z-0 opacity-90 dark:hidden"
-  >
+  <!-- HUD Elements -->
+  <div class="scanline"></div>
+  <div class="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-rose opacity-50"></div>
+  <div class="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-rose opacity-50"></div>
+  <div class="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-rose opacity-50"></div>
+  <div class="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-rose opacity-50"></div>
+
+  <!-- Technical Labels -->
+  <div class="absolute top-10 left-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
+    System: Active // Model: RX-78-AVILA
+  </div>
+  <div class="absolute bottom-10 right-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
+    Coord: 19.4326 N, 99.1332 W
   </div>
 
-  <div class="relative z-10 flex flex-col items-center">
-    <section class="flex flex-col mx-auto items-center md:pt-24 md:w-2/3">
-      <div>
+  <div class="relative z-10 flex flex-col items-center w-full">
+    <section class="flex flex-col mx-auto items-center md:w-3/4">
+      <div class="relative">
         <h1
-          class="text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-4 md:mb-8 py-12 text-rose dark:text-primary items-center font-mechsuit"
+          class="text-4xl md:text-5xl lg:text-8xl flex flex-col md:flex-row gap-x-4 mb-4 md:mb-8 py-8 text-rose dark:text-primary items-center font-mechsuit transition-all duration-500 hover:scale-[1.02]"
           transition:name="myname"
         >
           Avila <span class="text-primary dark:text-rose pt-4 md:pt-0">mariano</span>
         </h1>
+        <!-- HUD Bracket Element -->
+        <span class="absolute -top-2 -right-8 text-[10px] opacity-80 hidden lg:block border border-rose-600/60 px-2 py-1 text-rose font-bold">
+          STATUS: OPERATIONAL
+        </span>
       </div>
 
-      <h2
-        class="text-xl md:text-2xl lg:text-3xl opacity-80 px-6 pb-4 md:px-4 text-center text-primary"
-      >
-        {t('hero.subtitle')}
-      </h2>
+      <div class="flex flex-col items-center space-y-6">
+        <h2
+          class="text-xl md:text-2xl lg:text-3xl opacity-90 px-6 md:px-4 text-center text-primary font-michroma tracking-tight"
+        >
+          {t('hero.subtitle')}
+        </h2>
+        
+        <!-- Animated Status Bar  -->
+        <div class="flex gap-1.5 h-1.5 w-64 md:w-80">
+           <div class="flex-1 bg-rose animate-pulse shadow-[0_0_8px_rgba(225,29,72,0.5)]"></div>
+           <div class="flex-1 bg-rose/60"></div>
+           <div class="flex-1 bg-rose/40"></div>
+           <div class="w-3 bg-gold shadow-[0_0_8px_rgba(245,158,11,0.5)]"></div>
+           <div class="flex-[3] bg-zinc-500/20"></div>
+        </div>
+      </div>
     </section>
 
     <PrimaryButton
       href="mailto:marianoavilaj4@gmail.com"
       title="Send an email to Mariano"
       content={t('hero.contact')}
-      style="pt-8 py-16 md:pt-20 md:pb-40 mb-32 flex justify-center"
+      style="mt-12 mb-20 flex justify-center scale-110 md:scale-125"
     />
   </div>
 </section>

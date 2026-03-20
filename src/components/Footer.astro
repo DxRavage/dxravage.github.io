@@ -11,45 +11,50 @@ const t = useTranslations(lang);
 ---
 
 <section
-  class="flex flex-col md:flex-row justify-center items-center pb-4 pt-14 md:pt-28"
+  class="relative flex flex-col md:grid md:grid-cols-3 gap-8 items-center py-8 px-8 md:px-20 mecha-grid border-t border-blue-600/30 dark:border-blue-400/20 w-full overflow-hidden bg-zinc-500/5 dark:bg-zinc-950/20"
 >
-  <p
-    class="text-xs md:text-sm text-pretty text-center text-primary opacity-65 px-4 md:px-12"
-  >
-    {t('footer.built')} <span
-      class="hover:text-rose hover:opacity-100 cursor-pointer"
-      ><a
-        href="https://astro.build"
-        target="_blank"
-        rel="noopener"
-        title="Visit Astro website">Astro</a
-      ></span
-    > {t('footer.and')}
-    <span class="hover:text-rose hover:opacity-100 cursor-pointer"
-      ><a
-        href="https://tailwindcss.com"
-        target="_blank"
-        rel="noopener"
-        title="Visit Tailwind website">Tailwind CSS</a
-      >,
-    </span> {t('footer.deployed')} <span
-      class="hover:text-rose hover:opacity-100 cursor-pointer"
-      ><a
-        href="https://pages.github.com"
-        target="_blank"
-        rel="noopener"
-        title="Visit GithubPages website">GithubPages</a
-      ></span
-    >.
-  </p>
-  <div class="overflow-hidden">
-    <Logo />
+  <div class="absolute top-0 left-0 bg-rose text-[8px] px-3 py-1 font-mono uppercase tracking-[0.4em] opacity-80 text-white shadow-[0_2px_4px_rgba(225,29,72,0.2)]">
+    System_Status: Online // EOL: 0x0
   </div>
 
-  <div class="flex space-x-2 justify-center">
-    <Mail />
-    <Github />
-    <Linkedin />
-    <Whatsapp />
+  <div class="z-10 text-center md:text-left order-2 md:order-1">
+    <p
+      class="text-[10px] md:text-xs text-pretty text-zinc-600 dark:text-zinc-400 font-mono tracking-tight"
+    >
+      {t('footer.built')} 
+      <a href="https://astro.build" target="_blank" rel="noopener" class="text-rose hover:underline">Astro</a> 
+      {t('footer.and')}
+      <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="text-rose hover:underline">Tailwind CSS</a>.
+      <br class="hidden md:block"/>
+      {t('footer.deployed')} 
+      <a href="https://pages.github.com" target="_blank" rel="noopener" class="text-rose hover:underline">GithubPages</a>.
+    </p>
+  </div>
+
+  <div class="flex justify-center items-center z-10 order-1 md:order-2">
+    <div class="opacity-40 hover:opacity-100 transition-opacity duration-500 scale-90 md:scale-110 grayscale hover:grayscale-0">
+      <Logo />
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center md:items-end gap-4 z-10 order-3">
+    <div class="flex space-x-4 justify-center md:justify-end">
+      <div class="p-2 border border-blue-600/20 dark:border-blue-400/20 bg-zinc-500/5 hover:border-rose/40 transition-all mecha-panel-alt">
+        <Mail />
+      </div>
+      <div class="p-2 border border-blue-600/20 dark:border-blue-400/20 bg-zinc-500/5 hover:border-rose/40 transition-all mecha-panel-alt">
+        <Github />
+      </div>
+      <div class="p-2 border border-blue-600/20 dark:border-blue-400/20 bg-zinc-500/5 hover:border-rose/40 transition-all mecha-panel-alt">
+        <Linkedin />
+      </div>
+      <div class="p-2 border border-blue-600/20 dark:border-blue-400/20 bg-zinc-500/5 hover:border-rose/40 transition-all mecha-panel-alt">
+        <Whatsapp />
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 right-0 text-[10px] font-mono opacity-60 text-rose dark:text-rose/70 uppercase tracking-widest p-2">
+    © RX-78-AVILA // 2026
   </div>
 </section>
