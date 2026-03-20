@@ -10,7 +10,7 @@ const localizedLink = lang === 'es' && link.startsWith('/') && !link.startsWith(
 ---
 
 <section class="group">
-  <div class="mecha-panel border border-blue-600/30 dark:border-blue-400/20 bg-zinc-900 hover:border-rose/60 transition-all duration-500 relative overflow-hidden h-80 shadow-lg">
+  <div class="mecha-panel border border-blue-600/30 dark:border-blue-400/20 bg-zinc-950 hover:border-rose/60 transition-all duration-500 relative overflow-hidden h-80 shadow-lg rounded-xl">
     
     <a href={localizedLink} rel="noopener noreferrer" class="block h-full relative">
       
@@ -19,49 +19,51 @@ const localizedLink = lang === 'es' && link.startsWith('/') && !link.startsWith(
         alt={title}
         class="absolute inset-0 object-cover object-center w-full h-full 
                transition-all duration-700 
-               opacity-90 
-               group-hover:opacity-10 
-               group-hover:scale-105 
+               opacity-80 
+               group-hover:opacity-20 
+               group-hover:scale-110 
                group-hover:grayscale 
-               group-hover:blur-[4px]" 
+               group-hover:blur-[2px]" 
         width="1200"
         height="600"
         loading="lazy"
       />
 
-      <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+      <div class="absolute inset-0 bg-zinc-950/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 backdrop-blur-sm"></div>
 
       <div class="relative z-20 h-full w-full flex flex-col justify-end p-6">
         
         <div class="group-hover:opacity-0 group-hover:pointer-events-none transition-opacity duration-300 opacity-50">
-           <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 to-transparent -z-10"></div>
-           <h3 class="text-xl text-white font-mechsuit drop-shadow-lg tracking-wider">
+           <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/40 to-transparent -z-10"></div>
+           <h3 class="text-xl text-white font-mechsuit tracking-wider uppercase">
              {title}
            </h3>
         </div>
 
         <div class="absolute bottom-6 left-6 right-6 flex flex-col opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-           <div class="text-[9px] text-rose font-mono mb-1 tracking-[0.2em] uppercase animate-pulse">
-             PROJECT_LOG // ACCESS_GRANTED
+           
+           <div class="text-[9px] text-rose font-mono mb-2 tracking-[0.3em] uppercase animate-pulse">
+             // DATA_RECOVERY_SUCCESS
            </div>
            
-           <h3 class="text-3xl text-rose font-mechsuit leading-none uppercase pb-1 border-b border-rose/30 mb-4">
+           <h3 class="text-3xl font-mechsuit leading-none uppercase pb-2 border-b border-rose/20 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary)] to-rose">
              {title}
            </h3>
            
            <div class="bg-rose/[0.03] border-l-2 border-rose/50 pl-4 mb-6">
-             <p class="text-[13px] md:text-sm text-zinc-900 dark:text-zinc-50 font-michroma leading-relaxed line-clamp-4 italic">
+             <p class="text-[13px] md:text-sm font-michroma leading-relaxed line-clamp-4 italic"
+                style="color: var(--color-primary);">
                {currentDesc}
              </p>
            </div>
 
-           <div class="flex items-center justify-between text-[10px] font-mono text-rose/70 mb-4">
-             <span class="font-bold">VIEW_DETAILS</span>
-             <span class="tracking-widest opacity-40">>>>>></span>
+           <div class="flex items-center justify-between text-[10px] font-mono mb-4 text-rose/70">
+             <span class="font-bold tracking-widest">VIEW_PROJECT_FILE</span>
+             <span class="opacity-40">>>>>></span>
            </div>
 
-           <div class="h-1 w-full bg-rose/10 overflow-hidden relative mt-auto">
-             <div class="absolute inset-0 bg-rose shadow-[0_0_10px_rgba(225,29,72,0.6)] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out delay-300"></div>
+           <div class="h-1 w-full bg-white/5 overflow-hidden relative mt-auto rounded-full">
+             <div class="absolute inset-0 bg-rose shadow-[0_0_15px_rgba(225,29,72,0.8)] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 ease-out delay-200"></div>
            </div>
         </div>
       </div>
