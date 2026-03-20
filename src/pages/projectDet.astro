@@ -43,27 +43,29 @@ function getExtension(filename: string) {
   <section
     class="relative px-4 lg:pt-32 py-16 lg:px-44 gap-8 flex flex-col justify-center text-center mecha-grid border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden"
   >
-    <!-- HUD Decoration -->
     <div class="scanline"></div>
+    
     <div class="absolute top-10 left-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
-      PROJECT_LOG // ID: {title.substring(0, 3).toUpperCase()}
+      PROJECT_LOG // ID: {title?.substring(0, 3).toUpperCase() || "N/A"}
     </div>
+    
     <div class="absolute top-10 right-10 hidden md:block text-[10px] uppercase tracking-[0.3em] opacity-80 font-mono text-rose dark:text-rose/80">
       STATUS: OPERATIONAL
     </div>
 
     <div class="z-10 flex flex-col gap-4">
       <h2 class="text-xs md:text-sm font-mono uppercase tracking-[0.4em] opacity-80 flex flex-wrap justify-center gap-2">
-        {tech.split(' | ').map((t, i, arr) => (
+        {tech?.split(' | ').map((t, i, arr) => (
           <>
             <span class="text-blue-600 dark:text-blue-400">{t}</span>
             {i < arr.length - 1 && <span class="text-zinc-500 dark:text-zinc-500 font-bold tracking-normal opacity-100">//</span>}
           </>
-        ))}
+        )) || "NO_TECH_DATA"}
       </h2>
+
       <h1 class="font-mechsuit text-4xl md:text-6xl lg:text-8xl transition-all duration-500 hover:scale-[1.02]">
-        <span class="text-rose dark:text-primary">{title.split(' ')[0]}</span>
-        <span class="text-primary dark:text-rose pl-2">{title.split(' ').slice(1).join(' ')}</span>
+        <span class="text-rose dark:text-primary">{title?.split(' ')[0] || ""}</span>
+        <span class="text-primary dark:text-rose pl-2">{title?.split(' ').slice(1).join(' ') || ""}</span>
       </h1>
 
       <div class="flex justify-center mt-6">
@@ -84,9 +86,7 @@ function getExtension(filename: string) {
           </div>
         </div>
       </div>
-    </div>
-
-    <p class="text-sm md:text-base text-left py-12 lg:px-52 text-pretty leading-relaxed opacity-90 z-10 font-michroma">
+    </div> <p class="text-sm md:text-base text-left py-12 lg:px-52 text-pretty leading-relaxed opacity-90 z-10 font-michroma">
       {descript2}
     </p>
 
@@ -111,7 +111,6 @@ function getExtension(filename: string) {
                   )}
                   
                   <div class="mecha-panel overflow-hidden border border-blue-600/30 dark:border-blue-400/20 bg-zinc-950/5 p-2 relative w-full">
-                    {/* Industrial Corners */}
                     <div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-rose/40"></div>
                     <div class="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-rose/40"></div>
                     
@@ -156,7 +155,7 @@ function getExtension(filename: string) {
 
                     <div class="flex justify-end w-full mt-4">
                         <div class="text-[10px] font-mono text-zinc-500/50 uppercase tracking-[0.5em]">
-                           End_Tactical_Briefing
+                            End_Tactical_Briefing
                         </div>
                     </div>
                   </div>
