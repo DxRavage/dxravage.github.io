@@ -36,71 +36,104 @@ const t = useTranslations(lang);
 
   <section class="flex justify-center px-4 md:px-8 py-20 mecha-grid border-t border-blue-600/30 dark:border-blue-400/20">
     <article id="about" class="max-w-6xl w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- Education Unit -->
-        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group hover:border-rose/30 transition-all">
-          <div class="absolute top-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(225,29,72,0.2)]">EDU_DB // 01</div>
-          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-zinc-500/30 pb-2">{t('about.edu')}</h3>
-          <ul class="text-sm space-y-2 font-michroma opacity-80">
-            <li class="font-bold text-primary">Universidad Autonoma del Noreste</li>
-            <li class="text-rose/80">Software Engineering</li>
-            <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold">STATUS: 2025_EXP</li>
-          </ul>
+        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group hover:border-rose/30 transition-all">
+          <div class="absolute top-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90">QUAL_SYS // DB-01</div>
+          <h3 class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2">{t('about.edu')}</h3>
+          
+          <div class="space-y-8">
+            <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80">
+              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">UANE // Core_Degree</li>
+              <li class="font-bold">Software Engineering</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Status: 2021-2025</li>
+            </ul>
+
+            <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
+              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">Stream_Link // 02</li>
+              <li class="font-bold">UX Design - Google</li>
+              <li class="text-rose/80 text-xs lg:text-sm">Professional Certificate</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Status: COMPLETED</li>
+            </ul>
+
+            <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
+              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">Arch_Index // 03</li>
+              <li class="font-bold">Back-End - Oracle</li>
+              <li class="text-rose/80 text-xs lg:text-sm">Oracle Next Education</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Status: COMPLETED</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Experience Unit -->
-        <div class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-          <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]">EXP_LOG // MK-II</div>
-          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.exp')}</h3>
-          <div class="space-y-6">
-            <div class="relative pl-4 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm font-bold text-primary uppercase">Technology Support Analyst</h4>
-               <p class="text-xs text-blue font-mono mb-2">Qualfon | Allstate // Incident Mgmt</p>
-               <p class="text-sm opacity-70 leading-relaxed">
-                 Diagnosing and resolving hardware, software, and network issues at scale.
-               </p>
+        <div class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group transition-all">
+          <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]">EXP_LOG // MK-II</div>
+          <h3 class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.exp')}</h3>
+          <div class="space-y-10">
+            
+            <div class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">Technology Support Analyst</h4>
+               <p class="text-xs lg:text-sm text-blue font-mono mb-3">Qualfon | Allstate // API & Critical Ops</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90">
+                 <li>[ <span class="text-rose">CORE</span> ] Troubleshooting of <span class="text-primary">REST APIs</span>, Webhooks, and HTTP protocols.</li>
+                 <li>[ <span class="text-rose">DATA</span> ] Deep analysis of <span class="text-primary">JSON</span> structures and system logs.</li>
+                 <li>[ <span class="text-rose">PLATFORM</span> ] Enterprise workflow management via <span class="text-primary">ServiceNow</span>.</li>
+                 <li>[ <span class="text-rose">STRATEGY</span> ] Advanced <span class="text-primary">Root Cause Analysis (RCA)</span> and ITIL v4.</li>
+               </ul>
             </div>
-            <div class="relative pl-4 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm font-bold text-primary uppercase">Senior Trainer</h4>
-               <p class="text-xs text-blue font-mono mb-2">Qualfon | Allstate // Multi-Region Ops</p>
-               <p class="text-sm opacity-70 leading-relaxed">
-                 Leading Trainees remotely (MX, CO, PH). QA and Coaching via SMART goals.
-               </p>
+
+            <div class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">Senior Trainer</h4>
+               <p class="text-xs lg:text-sm text-blue font-mono mb-3">Multi-Region Ops // Global Delivery</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90">
+                 <li>[ <span class="text-rose">LEADERSHIP</span> ] Management of remote technical teams across <span class="text-primary">MX, CO, and PH</span>.</li>
+                 <li>[ <span class="text-rose">METRICS</span> ] Performance optimization through <span class="text-primary">KPIs</span> and SMART goal frameworks.</li>
+                 <li>[ <span class="text-rose">COACHING</span> ] Delivery of specialized <span class="text-primary">Technical Training</span> and career development.</li>
+               </ul>
+            </div>
+
+            <div class="relative pl-5 border-l-2 border-zinc-500/30 opacity-70 group-hover:opacity-100 transition-opacity">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">Technical Support Specialist</h4>
+               <p class="text-xs lg:text-sm text-blue font-mono mb-3">Teleperformance | Cox Communications // ISP Ops</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed">
+                 <li>[ <span class="text-rose">NETWORK</span> ] Troubleshooting of <span class="text-primary">DOCSIS</span>, VoIP, and high-speed connectivity.</li>
+                 <li>[ <span class="text-rose">SUPPORT</span> ] Omni-channel technical assistance (Phone & Chat) for end-users.</li>
+                 <li>[ <span class="text-rose">TICKETING</span> ] Lifecycle management of service requests and incident reporting.</li>
+                 <li>[ <span class="text-rose">DIAGNOSTICS</span> ] Remote hardware provisioning and signal analysis for ISP equipment.</li>
+               </ul>
             </div>
           </div>
         </div>
 
-        <!-- Skills Units -->
         <div class="flex flex-col gap-6">
-          <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-             <div class="absolute bottom-0 right-0 bg-gold text-[10px] px-2 py-0.5 text-black font-mono opacity-90 shadow-[0_2px_4px_rgba(245,158,11,0.2)]">TECH_ARMORY</div>
-             <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.tskill')}</h3>
-             <div class="flex flex-wrap gap-2">
-               {['Astro', 'TypeScript', 'Tailwind', 'MySQL', 'React', 'Rest API'].map(skill => (
-                 <span class="text-[10px] font-mono border border-zinc-500/40 px-2 py-1 bg-zinc-500/5 text-primary/80">{skill}</span>
-               ))}
-             </div>
+          <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
+              <div class="absolute bottom-0 right-0 bg-gold text-[10px] lg:text-xs px-2 py-0.5 text-black font-mono opacity-90">TECH_ARMORY</div>
+              <h3 class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">Web & Dev Skills</h3>
+              <div class="flex flex-wrap gap-2">
+                {['HTML/CSS', 'JavaScript', 'React', 'Python', 'SQL', 'TypeScript', 'Astro', 'Git', 'Linux'].map(skill => (
+                  <span class="text-[9px] lg:text-xs font-mono border border-zinc-500/40 px-2.5 py-1.5 bg-zinc-500/5 text-primary/80 transition-colors group-hover:border-blue-400/50">{skill}</span>
+                ))}
+              </div>
           </div>
 
-          <div class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-             <div class="absolute bottom-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(225,29,72,0.2)]">DESIGN_CORE</div>
-             <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.dskill')}</h3>
-             <ul class="text-xs space-y-2 opacity-80 uppercase tracking-tighter">
-               <li>[ UI/UX Design ]</li>
-               <li>[ Wireframing ]</li>
-               <li>[ Design Thinking ]</li>
-             </ul>
+          <div class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
+              <div class="absolute bottom-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90">SYSTEM_CORE</div>
+              <h3 class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">API & Management</h3>
+              <div class="flex flex-wrap gap-2">
+                {['REST APIs', 'JSON', 'HTTP', 'Webhooks', 'ServiceNow', 'ITIL v4', 'RCA', 'Agile'].map(skill => (
+                  <span class="text-[9px] lg:text-xs font-mono border border-rose/40 px-2.5 py-1.5 bg-rose/5 text-rose/80 transition-colors group-hover:bg-rose/10">{skill}</span>
+                ))}
+              </div>
           </div>
         </div>
 
       </div>
     </article>
-  </section></MainLayout
->
+  </section>
+</MainLayout>
+
 <style>
   ul {
-    max-width: 400px;
+    max-width: 500px;
   }
   li {
     padding-bottom: 4px;

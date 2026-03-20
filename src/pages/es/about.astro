@@ -6,103 +6,119 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<MainLayout
-  title={t('about.title')}
-  description={t('about.desc')}
->
-  <div
-    class="relative flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-32 md:max-w-6xl md:mx-auto mecha-grid min-h-[40vh] border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden"
-  >
+<MainLayout title={t('about.title')} description={t('about.desc')}>
+  <div class="relative flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-32 md:max-w-6xl md:mx-auto mecha-grid min-h-[40vh] border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden">
     <div class="scanline"></div>
-    <h1
-      class="text-4xl md:text-6xl flex flex-col pt-14 pb-4 text-rose dark:text-primary items-center md:items-start gap-x-2 font-mechsuit z-10"
-      transition:name="myname"
-    >
+    <h1 class="text-4xl md:text-6xl flex flex-col pt-14 pb-4 text-rose dark:text-primary items-center md:items-start gap-x-2 font-mechsuit z-10" transition:name="myname">
       {t('about.h1')} <span class="text-primary dark:text-rose">{t('about.h1Span')}</span>
       <div class="h-1 w-24 bg-rose mt-4 hidden md:block"></div>
     </h1>
 
     <section class="flex justify-center md:justify-start pt-8 md:pt-14 md:pl-20 z-10">
-      <div class="flex flex-col gap-6 max-w-xl">
-        <p class="font-bold text-sm md:text-base border-l-2 border-rose pl-4 py-1">
+      <div class="flex flex-col gap-6 max-w-2xl">
+        <p class="font-bold text-sm md:text-lg border-l-2 border-rose pl-4 py-1 tracking-tight text-primary">
           {t('about.p1')}
         </p>
-        <p class="text-xs md:text-sm leading-relaxed opacity-80">
+        <p class="text-xs md:text-base leading-relaxed opacity-80 font-michroma">
           {t('about.p2')}
         </p>
+        <div class="flex items-center gap-2 opacity-50">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose"></span>
+          </span>
+          <span class="text-[10px] font-mono uppercase tracking-[0.2em]">System Online // All Modules Nominal</span>
+        </div>
       </div>
     </section>
   </div>
 
   <section class="flex justify-center px-4 md:px-8 py-20 mecha-grid border-t border-blue-600/30 dark:border-blue-400/20">
     <article id="about" class="max-w-6xl w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- Education Unit -->
-        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-          <div class="absolute top-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(225,29,72,0.2)]">EDU_DB // 01</div>
-          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-blue-600/30 dark:border-blue-400/20 pb-2 uppercase tracking-widest">{t('about.edu')}</h3>
-          <ul class="text-sm space-y-2 font-michroma opacity-80">
-            <li class="font-bold text-primary">Universidad Autonoma del Noreste</li>
-            <li class="text-rose/80">Software Engineering</li>
-            <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold">STATUS: 2025_EXP</li>
-          </ul>
+        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group transition-all">
+          <div class="absolute top-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90">QUAL_SYS // DB-01</div>
+          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-zinc-500/30 pb-2">{t('about.edu')}</h3>
+          <div class="space-y-8">
+            <ul class="text-sm space-y-2 font-michroma opacity-80">
+              <li class="font-bold text-primary uppercase text-[10px]">UANE // Core_Degree</li>
+              <li class="font-bold">{t('edu.uane')}</li>
+              <li class="text-rose/80 text-xs italic">{t('edu.uane.degree')}</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose font-bold text-[10px]">2021-2025 // 2025_EXP</li>
+            </ul>
+            <ul class="text-sm space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
+              <li class="font-bold text-primary uppercase text-[10px]">Stream_Link // 02</li>
+              <li class="font-bold">{t('edu.google')}</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose font-bold text-[10px]">STATUS: COMPLETED</li>
+            </ul>
+            <ul class="text-sm space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
+              <li class="font-bold text-primary uppercase text-[10px]">Arch_Index // 03</li>
+              <li class="font-bold">{t('edu.oracle')}</li>
+              <li class="opacity-80 tracking-widest font-mono text-rose font-bold text-[10px]">STATUS: COMPLETED</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Experience Unit -->
-        <div class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-          <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]">EXP_LOG // MK-II</div>
-          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-blue-600/30 dark:border-blue-400/20 pb-2 uppercase tracking-widest">{t('about.exp')}</h3>
-          <div class="space-y-6">
-            <div class="relative pl-4 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm font-bold text-primary uppercase">Technology Support Analyst</h4>
-               <p class="text-xs text-blue font-mono mb-2">Qualfon | Allstate // Incident Mgmt</p>
-               <p class="text-sm opacity-70 leading-relaxed">
-                 Diagnosing and resolving hardware, software, and network issues at scale.
-               </p>
+        <div class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group transition-all">
+          <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]">EXP_LOG // ARCHIVE</div>
+          <h3 class="font-mechsuit text-rose text-base mb-6 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.exp')}</h3>
+          <div class="space-y-10">
+            <div class="relative pl-5 border-l-2 border-blue-600/30">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.analyst.title')}</h4>
+               <p class="text-xs text-blue font-mono mb-3">{t('exp.analyst.subtitle')}</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none opacity-90 leading-relaxed">
+                 <li>[ <span class="text-rose">CORE</span> ] Troubleshooting: <span class="text-primary">REST APIs</span>, Webhooks, HTTP.</li>
+                 <li>[ <span class="text-rose">DATA</span> ] Analysis: <span class="text-primary">JSON</span> & System Logs.</li>
+                 <li>[ <span class="text-rose">STRATEGY</span> ] Advanced <span class="text-primary">RCA</span> and ITIL v4 framework.</li>
+               </ul>
             </div>
-            <div class="relative pl-4 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm font-bold text-primary uppercase">Senior Trainer</h4>
-               <p class="text-xs text-blue font-mono mb-2">Qualfon | Allstate // Multi-Region Ops</p>
-               <p class="text-sm opacity-70 leading-relaxed">
-                 Leading Trainees remotely (MX, CO, PH). QA and Coaching via SMART goals.
-               </p>
+            <div class="relative pl-5 border-l-2 border-blue-600/30">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.trainer.title')}</h4>
+               <p class="text-xs text-blue font-mono mb-3">{t('exp.trainer.subtitle')}</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none opacity-90 leading-relaxed">
+                 <li>[ <span class="text-rose">LEAD</span> ] Remote technical teams: <span class="text-primary">MX, CO, PH</span>.</li>
+                 <li>[ <span class="text-rose">QA</span> ] Metrics: <span class="text-primary">KPIs</span> & SMART Goals.</li>
+               </ul>
+            </div>
+            <div class="relative pl-5 border-l-2 border-zinc-500/30 opacity-70 group-hover:opacity-100 transition-opacity">
+               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.tp.title')}</h4>
+               <p class="text-xs text-blue font-mono mb-3">{t('exp.tp.subtitle')}</p>
+               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed">
+                 <li>[ <span class="text-rose">NET</span> ] Troubleshooting: <span class="text-primary">DOCSIS</span>, VoIP, ISP Config.</li>
+                 <li>[ <span class="text-rose">OPS</span> ] Omni-channel technical assistance and Ticketing.</li>
+               </ul>
             </div>
           </div>
         </div>
 
-        <!-- Skills Units -->
         <div class="flex flex-col gap-6">
-          <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-             <div class="absolute bottom-0 right-0 bg-gold text-[10px] px-2 py-0.5 text-black font-mono opacity-90 shadow-[0_2px_4px_rgba(245,158,11,0.2)]">TECH_ARMORY</div>
-             <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-blue-600/30 dark:border-blue-400/20 pb-2 uppercase tracking-widest font-bold tracking-widest">{t('about.tskill')}</h3>
-             <div class="flex flex-wrap gap-2">
-               {['Astro', 'TypeScript', 'Tailwind', 'MySQL', 'React', 'Rest API'].map(skill => (
-                 <span class="text-[10px] font-mono border border-zinc-500/40 px-2 py-1 bg-zinc-500/5 text-primary/80">{skill}</span>
-               ))}
-             </div>
+          <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
+              <div class="absolute bottom-0 right-0 bg-gold text-[10px] px-2 py-0.5 text-black font-mono opacity-90">TECH_ARMORY</div>
+              <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.tskill')}</h3>
+              <div class="flex flex-wrap gap-2">
+                {['HTML/CSS', 'JavaScript', 'React', 'Python', 'SQL', 'TypeScript', 'Astro', 'Git', 'Linux'].map(skill => (
+                  <span class="text-[9px] font-mono border border-zinc-500/40 px-2 py-1 bg-zinc-500/5 text-primary/80">{skill}</span>
+                ))}
+              </div>
           </div>
-
-          <div class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 relative group transition-all">
-             <div class="absolute bottom-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(225,29,72,0.2)]">DESIGN_CORE</div>
-             <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-blue-600/30 dark:border-blue-400/20 pb-2 uppercase tracking-widest">{t('about.dskill')}</h3>
-             <ul class="text-xs space-y-2 opacity-80 uppercase tracking-tighter">
-               <li>[ UI/UX Design ]</li>
-               <li>[ Wireframing ]</li>
-               <li>[ Design Thinking ]</li>
-             </ul>
+          <div class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
+              <div class="absolute bottom-0 left-0 bg-rose text-[10px] px-2 py-0.5 text-white font-mono opacity-90">DESIGN_CORE</div>
+              <h3 class="font-mechsuit text-rose text-xs mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.dskill')}</h3>
+              <ul class="text-[10px] space-y-2 opacity-80 uppercase tracking-tighter font-michroma">
+                <li>[ UI/UX Design ]</li>
+                <li>[ Wireframing ]</li>
+                <li>[ Design Thinking ]</li>
+              </ul>
           </div>
         </div>
 
       </div>
     </article>
-  </section></MainLayout
->
+  </section>
+</MainLayout>
+
 <style>
-  ul {
-    max-width: 400px;
-  }
-  li {
-    padding-bottom: 4px;
-  }
+  li { padding-bottom: 4px; }
+  .font-michroma { font-family: 'Michroma', sans-serif; }
 </style>
