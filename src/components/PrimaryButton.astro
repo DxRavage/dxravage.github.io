@@ -5,9 +5,10 @@ const { href, content, title, style } = Astro.props;
 <div class={style}>
   <a href={href} title={title} target="_blank">
     <button
-      class="bg-rose hover:bg-transparent border-2 border-rose text-secondary
-         hover:text-secondary hover:border-rose active:bg-rose
-         active:text-secondary p-4 rounded-md"
+      class="bg-rose hover:bg-transparent border-2 border-rose text-zinc-100
+             hover:text-rose active:scale-95 transition-all duration-300
+             p-4 px-8 rounded-md font-bold tracking-wide
+             shadow-lg shadow-rose/20 dark:shadow-rose/10 hover:shadow-rose/40"
     >
       {content}
     </button></a

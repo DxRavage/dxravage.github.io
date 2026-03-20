@@ -1,54 +1,23 @@
 ---
 import Project from "@components/Project.astro";
+import { projectsData } from "../data/projects";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-import wowImage from "/src/assets/wow.webp";
-import gbooksImage from "/src/assets/bookfinder.webp";
-import aikidoImage from "/src/assets/aikido.webp";
-import dungeon from "/src/assets/mainMenu.png";
-import ani from "/src/assets/anihero.webp";
-import mScrapper from "/src/assets/mschapters.webp";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="py-14 md:p-14">
-  <h2 class="flex justify-center pb-8 text-xl text-center">Work & Projects</h2>
+  <h2 class="flex justify-center pb-8 text-xl text-center">{t('bento.title')}</h2>
 
   <section class="grid grid-cols-1 lg:grid-cols-3 lg:px-28">
-    <Project
-      title="Endless Dungeon"
-      description="Turn-based RPG game with character selection and combat"
-      imgSrc={dungeon}
-      link="/projectBlog/Dungeon"
-    />
-    <Project
-      title="Manga Scrapper"
-      description="Web App for Manga content discovery"
-      imgSrc={mScrapper}
-      link="/projectBlog/Manga"
-    />
-    <Project
-      title="Ani Web App"
-      description="Web App for Anime content discovery"
-      imgSrc={ani}
-      link="/projectBlog/Ani"
-    />
-
-    <Project
-      title="Book Finder"
-      description="Implementation of Google Books API"
-      imgSrc={gbooksImage}
-      link="/projectBlog/gBooks"
-    />
-    <Project
-      title="Aikido Mobile App"
-      description="Mobile App for Aikido Dojo"
-      imgSrc={aikidoImage}
-      link="/projectBlog/Aikido"
-    />
-    <Project
-      title="WoW - Clone"
-      description="Clone of World of Warcraft Website using Astro and Tailwind"
-      imgSrc={wowImage}
-      link="/projectBlog/wowClone"
-    />
+    {projectsData.map((project) => (
+      <Project
+        title={project.title}
+        description={project.description[lang]}
+        imgSrc={project.imgSrc}
+        link={project.link}
+      />
+    ))}
   </section>
 </section>

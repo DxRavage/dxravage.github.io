@@ -1,0 +1,30 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+//Image Imports
+import findersearch from "/src/assets/findersearch.mp4";
+import bfinder from "/src/assets/bookfinder.webp";
+import bfinder2 from "/src/assets/bookfinder2.webp";
+import bfinder5 from "/src/assets/bookfinder5.webp";
+---
+
+<ProjectDet
+  title="Book Finder WebApp"
+  tech="Web Development | API"
+  descript1="Astro | Tailwind CSS | Typescript"
+  descript2="La aplicación web Book Finder permite a los usuarios buscar libros por autor o título, mostrando instantáneamente detalles. Un simple clic expande un panel detallado mostrando la calificación, género y una pre-visualización. Este proyecto integra la API de Google Books y es construido usando tecnologías web modernas como Astro, Tailwind CSS y TypeScript."
+  link="https://book-finder-dusky-six.vercel.app"
+  imageSources={[
+    { src: findersearch, title: "Buscador y Filtrado" },
+    { src: bfinder, title: "Página de Inicio" },
+    { src: bfinder2, title: "Vista en Detalle" },
+    { src: bfinder5, title: "Previsualizador Integrado" },
+  ]}
+  insight={{
+    title: "Enfoque",
+    heading: "Integrando una poderosa API con un stack moderno",
+    description:
+      "El reto central y núcleo de este proyecto fue la integración sin fricción con la **API de Google Books**. Esto requirió un excelente manejo asíncrono, estado de respuestas dinámicas y renderización ágil. La arquitectura y TypeScript aseguraron modelos de datos precisos para poder servir resultados inmediatos.",
+  }}
+/>

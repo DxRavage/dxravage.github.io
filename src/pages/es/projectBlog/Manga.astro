@@ -1,0 +1,87 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+// Image and video imports
+import mScrapper1 from "/src/assets/mshome.webp";
+import mScrapper2 from "/src/assets/mschapters.webp";
+import mScrapper3 from "/src/assets/mschapter.webp";
+import mScrapper4 from "/src/assets/mbhome.webp";
+import mScrapper5 from "/src/assets/mbchapters.webp";
+import mScrapper6 from "/src/assets/mbchapters2.webp";
+import mScrapper7 from "/src/assets/mbchapter.webp";
+import msvideo from "/src/assets/msvideo.mp4";
+import msvideo2 from "/src/assets/msvideo2.mp4";
+import msvideo3 from "/src/assets/msvideo3.mp4";
+
+// Updated project assets
+const projectAssets = [
+  {
+    src: msvideo,
+    title: "Navigating Home and Chapters",
+  },
+  {
+    src: mScrapper1,
+    title: "Manga Home",
+  },
+
+  {
+    src: mScrapper2,
+    title: "Manga Chapters",
+  },
+  {
+    src: msvideo2,
+    title: "Selecting a Manga Chapter",
+  },
+  {
+    src: mScrapper3,
+    title: "Manga Chapter",
+  },
+  {
+    src: msvideo3,
+    title: "Reading and Next Chapter",
+  },
+  {
+    src: mScrapper4,
+    title: "Mobile Manga Home",
+  },
+  {
+    src: mScrapper5,
+    title: "Mobile Manga",
+  },
+  {
+    src: mScrapper6,
+    title: "Mobile Manga Chapters",
+  },
+  {
+    src: mScrapper7,
+    title: "Mobile Manga Chapter",
+  },
+];
+---
+
+<ProjectDet
+  title="Manga Scraper"
+  tech="Web Scraping | Node.js | JSDOM"
+  descript1="Desarrollo de API"
+  descript2="El Manga Scraper es una API backend robusta y bajo demanda que extrae y organiza programáticamente contenido de manga desde populares fuentes en línea. Construido con Node.js y JSDOM, navega en las complejas estructuras HTML para extraer detalles de mangas y capítulos. Al proveer este contenido en un JSON muy estructurado, la API ofrece una forma eficiente y confiable para que el frontend lea una amplia biblioteca de títulos."
+  link="https://deeply-debris.vercel.app"
+  imageSources={[
+    { src: msvideo, title: "Navegando Navegación y Capítulos" },
+    { src: mScrapper1, title: "Inicio de Manga" },
+    { src: mScrapper2, title: "Capítulos de Manga" },
+    { src: msvideo2, title: "Seleccionando un Capítulo" },
+    { src: mScrapper3, title: "Capítulo de Manga" },
+    { src: msvideo3, title: "Lectura y Siguiente Capítulo" },
+    { src: mScrapper4, title: "Inicio Móvil" },
+    { src: mScrapper5, title: "Manga Móvil" },
+    { src: mScrapper6, title: "Capítulos en Móvil" },
+    { src: mScrapper7, title: "Capítulo en Móvil" },
+  ]}
+  insight={{
+    title: "Enfoque",
+    heading: "Web Scraping y Resiliencia",
+    description:
+      "El núcleo de este proyecto es su resiliente motor de web scraping. El proceso involucró disecar la estructura HTML del objetivo y utilizar JSDOM para crear un entorno de extracción. Un reto crítico fue diseñar un sistema que maneje contenido dinámico y cambios estructurales. La solución fue implementar selectores robustos para desacoplar la experiencia del lado cliente de las complejidades del raspado web.",
+  }}
+/>

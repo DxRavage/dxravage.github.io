@@ -1,6 +1,6 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,10 +14,10 @@ const t = useTranslations(lang);
     class="flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-24 md:max-w-4xl md:mx-auto"
   >
     <h1
-      class="text-4xl flex flex-col pt-14 pb-4 text-rose dark:text-primary items-center gap-x-2 font-mechsuit"
+      class="text-4xl flex flex-col pt-14 pb-4 text-rose items-center gap-x-2 font-mechsuit"
       transition:name="myname"
     >
-      {t('about.h1')} <span class="text-primary dark:text-rose">{t('about.h1Span')}</span>
+      {t('about.h1')} <span class="text-primary">{t('about.h1Span')}</span>
     </h1>
 
     <section class="flex justify-center md:justify-start pt-8 pl-12">

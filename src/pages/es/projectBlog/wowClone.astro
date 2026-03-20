@@ -1,0 +1,28 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+//Image Imports
+import wowSS from "/src/assets/wow.webp";
+import wowSS2 from "/src/assets/wow2.webp";
+import wowSS3 from "/src/assets/wow3.webp";
+---
+
+<ProjectDet
+  title="World of Warcraft - Clon"
+  tech="Desarrollo Web"
+  descript1="Astro | Tailwind CSS"
+  descript2="Este proyecto es un clon totalmente responsivo de la web de World of Warcraft, construido desde cero con Astro y Tailwind. La arquitectura modular asegura el mantenimiento y escalabilidad del sitio con componentes rápidos, logrando altas velocidades con una UI pulida."
+  link="https://wow-astro.vercel.app"
+  imageSources={[
+    { src: wowSS, title: "Página de Inicio" },
+    { src: wowSS2, title: "Versión Móvil" },
+    { src: wowSS3, title: "Contenido Horizontal Móvil" },
+  ]}
+  insight={{
+    title: "Enfoque",
+    heading: "Recreando un Layout Completo",
+    description:
+      "El desafío principal de este proyecto fue recrear el diseño estructurado y el contenido denso del sitio original manteniendo el rendimiento en plataformas móviles y de escritorio. Usando la Generación de Sitios Estáticos de **Astro**, pre-renderizamos en HTML ultra rápido. Tailwind fue la pieza perfecta para poder crear todo eficientemente.",
+  }}
+/>

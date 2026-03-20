@@ -1,6 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
 <!-- HEADER -->
 <header
-  class="shadow-md flex justify-between items-center px-4 py-4 text-sm font-mechsuit sticky top-0 z-50 bg-neutral-300/90"
+  class="flex justify-between items-center px-4 py-4 text-sm font-mechsuit sticky top-0 z-[110] transition-all duration-300 backdrop-blur-md bg-zinc-100/80 dark:bg-zinc-950/90 shadow-sm dark:shadow-none border-b border-transparent dark:border-zinc-800/50 text-zinc-800 dark:text-zinc-200"
 >
 <!-- Logo --> 
   <a
@@ -22,106 +28,132 @@
           d="M 60.8,23.3 C 75.0,45.0 74.0,43.5 80.7,54.5 L 54.9,57.8 69.3,50.0 61.0,40.5 52.4,58.1 40.7,60.0 C 46.5,50.3 54.5,35.0 60.8,23.3 Z"
         ></path>
         <path
-          style="fill:#333"
+          class="fill-[#333] dark:fill-zinc-100 transition-colors"
           d="m 91.0,40.4 -4.8,2.0 c 6.6,10.3 6.6,10.2 12.3,17.7 C 94.1,48.7 94.2,48.6 91.0,40.4 Z"
         ></path>
-        <path style="fill:#333" d="m 77.3,46.4 7.9,-3.4 6.4,9.8 -9.5,1.4 z"
+        <path class="fill-[#333] dark:fill-zinc-100 transition-colors" d="m 77.3,46.4 7.9,-3.4 6.4,9.8 -9.5,1.4 z"
         ></path>
       </g>
     </svg>
   </a>
 
-  <nav class="hidden md:flex flex-row gap-x-10 text-neutral-600 group">
+  <nav class="hidden md:flex flex-row gap-x-10 text-zinc-800 dark:text-zinc-200 group items-center">
     <a
-      href="https://dxravage.github.io"
-      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose"
+      href={lang === 'es' ? '/es/' : 'https://dxravage.github.io'}
+      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose md:mt-0 mt-4"
       title="Visit Mariano's portfolio homepage"
     >
-      Home
+      {t("nav.home")}
     </a>
     <a
-      href="/about/"
-      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose"
+      href={lang === 'es' ? '/es/about/' : '/about/'}
+      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose md:mt-0 mt-4"
       title="Visit Mariano's portfolio about page"
     >
-      About
+      {t("nav.about")}
     </a>
     <a
-      href="/projectsGallery/"
-      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose"
+      href={lang === 'es' ? '/es/projectsGallery/' : '/projectsGallery/'}
+      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose md:mt-0 mt-4"
       title="Visit Mariano's portfolio projects page"
     >
-      Projects
+      {t("nav.projects")}
     </a>
     <a
       href="mailto:marianoavilaj4@gmail.com"
-      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose"
+      class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose md:mt-0 mt-4"
       title="Visit Mariano's portfolio contact page"
     >
-      Contact
+      {t("nav.contact")}
     </a>
+    <a
+      href={t("nav.langLink")}
+      class="opacity-100 font-bold transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose ml-4 border-l-2 pl-4 border-rose md:mt-0 mt-4"
+      title="Switch Language"
+    >
+      {t("nav.lang")}
+    </a>
+    <button id="theme-toggle" class="opacity-100 transition-all duration-75 group-hover:opacity-50 hover:!opacity-100 hover:text-rose ml-4 md:mt-0 mt-4" aria-label="Toggle Dark Mode">
+      <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
   </nav>
 
   <!-- Burger Button -->
   <button
     id="menu-button"
-    class="md:hidden flex flex-col justify-between w-6 h-6 p-1 text-rose-500 focus:outline-none transition-all relative z-50"
+    class="md:hidden flex flex-col justify-between w-6 h-6 p-1 text-rose focus:outline-none transition-all relative z-[120]"
     aria-expanded="false"
   >
     <span
-      class="block w-full h-0.5 bg-current transition-transform duration-300 origin-center relative z-50"
+      class="block w-full h-0.5 bg-current transition-transform duration-300 origin-center"
     ></span>
     <span
-      class="block w-full h-0.5 bg-current transition-opacity duration-300 relative z-50"
+      class="block w-full h-0.5 bg-current transition-opacity duration-300"
     ></span>
     <span
-      class="block w-full h-0.5 bg-current transition-transform duration-300 origin-center relative z-50"
+      class="block w-full h-0.5 bg-current transition-transform duration-300 origin-center"
     ></span>
   </button>
+</header>
 
-  <!-- Mobile Menu -->
-  <nav
-    id="mobile-menu"
-    class="fixed inset-0 w-full h-0 overflow-hidden opacity-0 transition-all duration-300 bg-neutral-300/50 shadow-lg md:hidden z-40"
-  >
-    <ul class="flex flex-col items-center justify-center h-full gap-6">
-      <li>
-        <a
-          href="https://dxravage.github.io"
-          class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-neutral-200/20"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a
-          href="/about/"
-          class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-neutral-200/20"
-          >About</a
-        >
-      </li>
-      <li>
-        <a
-          href="/projectsGallery/"
-          class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-neutral-200/20"
-          >Projects</a
-        >
-      </li>
-      <li>
-        <a
-          href="mailto:marianoavilaj4@gmail.com"
-          class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-neutral-200/20"
-          >Contact</a
-        >
-      </li>
-    </ul>
-  </nav>
+<!-- Mobile Menu Overlay -->
+<nav
+  id="mobile-menu"
+  class="fixed inset-0 w-full h-0 overflow-hidden opacity-0 transition-all duration-300 backdrop-blur-3xl bg-zinc-200/95 dark:bg-zinc-900/98 shadow-xl md:hidden z-[100] text-zinc-950 dark:text-zinc-50 font-bold"
+>
+  <ul class="flex flex-col items-center justify-center h-full gap-6">
+    <li>
+      <a
+        href={lang === 'es' ? '/es/' : 'https://dxravage.github.io'}
+        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        >{t("nav.home")}</a
+      >
+    </li>
+    <li>
+      <a
+        href={lang === 'es' ? '/es/about/' : '/about/'}
+        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        >{t("nav.about")}</a
+      >
+    </li>
+    <li>
+      <a
+        href={lang === 'es' ? '/es/projectsGallery/' : '/projectsGallery/'}
+        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        >{t("nav.projects")}</a
+      >
+    </li>
+    <li>
+      <a
+        href="mailto:marianoavilaj4@gmail.com"
+        class="block px-24 py-8 rounded-md transition-all hover:text-rose hover:bg-black/5 dark:hover:bg-white/5"
+        >{t("nav.contact")}</a
+      >
+    </li>
+    <li>
+      <a
+        href={t("nav.langLink")}
+        class="block px-24 py-8 rounded-md transition-all font-bold text-rose"
+        >{t("nav.lang")}</a
+      >
+    </li>
+    <li>
+      <button id="theme-toggle-mobile" class="block rounded-md transition-all font-bold hover:text-rose p-4" aria-label="Toggle Dark Mode">
+          <svg id="theme-toggle-dark-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon-mob" class="hidden w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </button>
+    </li>
+  </ul>
+</nav>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const btn = document.getElementById("menu-button");
-      const menu = document.getElementById("mobile-menu");
-      const header = document.querySelector("header");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-button");
+    const menu = document.getElementById("mobile-menu");
+    const header = document.querySelector("header");
 
+    if (btn && menu && header) {
       btn.addEventListener("click", () => {
         const isOpen = btn.classList.toggle("open");
         btn.setAttribute("aria-expanded", isOpen.toString());
@@ -132,6 +164,17 @@
         menu.classList.toggle("opacity-100");
 
         document.body.classList.toggle("overflow-hidden", isOpen);
+        document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        
+        // Handle header background to not overlap menu
+        if (isOpen) {
+          header.classList.remove("backdrop-blur-md", "bg-zinc-100/80", "dark:bg-zinc-950/90", "shadow-sm", "border-b");
+          header.classList.add("bg-transparent");
+        } else {
+          header.classList.add("backdrop-blur-md", "bg-zinc-100/80", "dark:bg-zinc-950/90", "shadow-sm", "border-b");
+          header.classList.remove("bg-transparent");
+        }
+
         const [top, middle, bottom] = btn.querySelectorAll("span");
 
         if (isOpen) {
@@ -145,9 +188,51 @@
         }
       });
       window.addEventListener("scroll", () => {
-        header.classList.toggle("shadow-lg", window.scrollY > 0);
-        header.classList.toggle("shadow-md", window.scrollY === 0);
+        if (!document.getElementById("menu-button")?.classList.contains("open")) {
+          header.classList.toggle("shadow-lg", window.scrollY > 0);
+          header.classList.toggle("shadow-md", window.scrollY === 0);
+        }
       });
-    });
-  </script>
-</header>
+    }
+
+    // Theme toggle logic
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const themeToggleDarkIconMob = document.getElementById('theme-toggle-dark-icon-mob');
+    const themeToggleLightIconMob = document.getElementById('theme-toggle-light-icon-mob');
+    
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+
+    function updateUI(theme) {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon?.classList.remove('hidden');
+            themeToggleLightIconMob?.classList.remove('hidden');
+            themeToggleDarkIcon?.classList.add('hidden');
+            themeToggleDarkIconMob?.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleLightIcon?.classList.add('hidden');
+            themeToggleLightIconMob?.classList.add('hidden');
+            themeToggleDarkIcon?.classList.remove('hidden');
+            themeToggleDarkIconMob?.classList.remove('hidden');
+        }
+    }
+
+    // Read state initially
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    updateUI(currentTheme);
+
+    function handleToggleClick() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        updateUI(newTheme);
+    }
+
+    themeToggleBtn?.addEventListener('click', handleToggleClick);
+    themeToggleMobileBtn?.addEventListener('click', handleToggleClick);
+
+  });
+</script>

@@ -1,0 +1,27 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+// Image Imports
+import AniSS1 from "/src/assets/anivid.mp4";
+import AniSS2 from "/src/assets/anivid2.mp4";
+import AniSS3 from "/src/assets/ani.webp";
+---
+<ProjectDet
+  title="Ani Web App"
+  tech="UX/UI Design | Front-End Web Dev"
+  descript1="Astro | Tailwind CSS | Typescript"
+  descript2="La Ani Web App es una plataforma moderna y responsiva centrada en una experiencia de usuario impecable para explorar contenido de anime. Desde el concepto hasta el código, la app fue diseñada para proveer una interfaz intuitiva, capacidades de búsqueda fluidas y descubrimiento de contenido personalizado. Está construida para rendimiento y atractivo estético."
+  link=""
+  imageSources={[
+    { src: AniSS1, title: "Sección Hero" },
+    { src: AniSS2, title: "Recomendación de Contenido" },
+    { src: AniSS3, title: "Página Principal" },
+  ]}
+  insight={{
+    title: "Enfoque",
+    heading: "Desde Figma hasta una Experiencia Web Fluida",
+    description:
+      "Mi enfoque empezó con un diseño en Figma donde creé una interfaz limpia e intuitiva. Luego, este diseño fue traducido a una aplicación web de alto rendimiento usando **Astro** para minimizar JavaScript y asegurar cargas ultra rápidas. El diseño visual se implementó meticulosamente con **Tailwind CSS**, enfocándose en un diseño responsivo basado en componentes que se adapta a cualquier dispositivo.",
+  }}
+/>

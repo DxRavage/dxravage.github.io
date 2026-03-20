@@ -4,6 +4,10 @@ import Github from "../components/svg/Github.astro";
 import Mail from "../components/svg/Mail.astro";
 import Whatsapp from "../components/svg/Whatsapp.astro";
 import Logo from "../components/svg/Logo.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section
@@ -12,7 +16,7 @@ import Logo from "../components/svg/Logo.astro";
   <p
     class="text-xs md:text-sm text-pretty text-center text-primary opacity-65 px-4 md:px-12"
   >
-    Designed by myself, built using <span
+    {t('footer.built')} <span
       class="hover:text-rose hover:opacity-100 cursor-pointer"
       ><a
         href="https://astro.build"
@@ -20,7 +24,7 @@ import Logo from "../components/svg/Logo.astro";
         rel="noopener"
         title="Visit Astro website">Astro</a
       ></span
-    > and
+    > {t('footer.and')}
     <span class="hover:text-rose hover:opacity-100 cursor-pointer"
       ><a
         href="https://tailwindcss.com"
@@ -28,7 +32,7 @@ import Logo from "../components/svg/Logo.astro";
         rel="noopener"
         title="Visit Tailwind website">Tailwind CSS</a
       >,
-    </span> deployed with <span
+    </span> {t('footer.deployed')} <span
       class="hover:text-rose hover:opacity-100 cursor-pointer"
       ><a
         href="https://pages.github.com"

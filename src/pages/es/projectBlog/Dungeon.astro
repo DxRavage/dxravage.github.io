@@ -1,0 +1,79 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+// Image and video imports
+import Endless1 from "/src/assets/endlessmenu.mp4";
+import Endless2 from "/src/assets/endlessstart.mp4";
+import Endless3 from "/src/assets/endlessfight.mp4";
+import EndlessSS1 from "/src/assets/mainMenu.png";
+import EndlessSS2 from "/src/assets/characterSelection.png";
+import EndlessSS3 from "/src/assets/selection.png";
+import EndlessSS4 from "/src/assets/combat.png";
+import EndlessSS5 from "/src/assets/boss.png";
+import EndlessSS6 from "/src/assets/endlessreward.webp";
+
+const projectAssets = [
+  {
+    src: Endless1,
+    title: "Game Menu",
+  },
+  {
+    src: Endless2,
+    title: "Character Selection",
+  },
+  {
+    src: Endless3,
+    title: "Combat Gameplay",
+  },
+  {
+    src: EndlessSS1,
+    title: "Main Menu Screenshot",
+  },
+  {
+    src: EndlessSS2,
+    title: "Character Selection UI",
+  },
+  {
+    src: EndlessSS3,
+    title: "Dungeon Selection",
+  },
+  {
+    src: EndlessSS4,
+    title: "In-Game Combat",
+  },
+  {
+    src: EndlessSS5,
+    title: "Boss Fight",
+  },
+  {
+    src: EndlessSS6,
+    title: "Loot and Rewards",
+  },
+];
+---
+
+<ProjectDet
+  title="Endless Dungeon"
+  tech="Game Design | POO"
+  descript1="React | TypeScript | Tailwind CSS"
+  descript2="Endless Dungeon es un juego por turnos donde los jugadores exploran mazmorras generadas por procedimientos, luchando contra enemigos y recolectando botín para mejorar a sus personajes. El juego incluye varias clases de personajes con habilidades únicas, y un sistema de combate táctico. Está construido usando React y TypeScript, asegurando un código robusto y mantenible."
+  link="https://endless-dungeon.vercel.app/"
+  imageSources={[
+    { src: Endless1, title: "Menú del Juego" },
+    { src: Endless2, title: "Selección de Personaje" },
+    { src: Endless3, title: "Jugabilidad y Combate" },
+    { src: EndlessSS1, title: "Captura del Menú Principal" },
+    { src: EndlessSS2, title: "UI de Selección" },
+    { src: EndlessSS3, title: "Selección de Mazmorra" },
+    { src: EndlessSS4, title: "Combate Integrado" },
+    { src: EndlessSS5, title: "Pelea contra el Jefe" },
+    { src: EndlessSS6, title: "Botín y Recompensas" },
+  ]}
+  insight={{
+    title: "Principios de Diseño",
+    heading: "Construyendo un Sistema Basado en Combate",
+    description:
+      "El combate de Endless Dungeon y sus sistemas de personajes se construyen sobre una sólida base de Programación Orientada a Objetos. Cada clase, enemigo y objeto es un sujeto distinto con sus propias propiedades. Este enfoque permitió crear una gran variedad de habilidades asegurando que el mundo del juego se sienta dinámico y responsivo a las elecciones del jugador.",
+  }}
+/>

@@ -1,0 +1,34 @@
+---
+// Component Imports
+import ProjectDet from "../../projectDet.astro";
+
+// Image and video imports
+import AikidoSS1 from "/src/assets/aikido1.webp";
+import AikidoSS2 from "/src/assets/aikido2.webp";
+import AikidoSS4 from "/src/assets/aikido3.webp";
+import AikidoSS3 from "/src/assets/aikido4.webp";
+import AikidoSS5 from "/src/assets/aikido5.webp";
+import AikidoSS6 from "/src/assets/aikido6.webp";
+---
+
+<ProjectDet
+  title="Ryusui Dojo App"
+  tech="UX/UI | Mobile App"
+  descript1="Figma"
+  descript2="La App Ryusui Dojo es una solución móvil integral diseñada para optimizar la comunicación y el acceso a la información para los estudiantes de Aikido. La app provee un punto central para ver horarios de clases en tiempo real, registrarse a eventos y estar informado sobre anuncios del dojo. El diseño prioriza una interfaz limpia, intuitiva y navegación fluida, asegurando que tanto nuevos miembros como veteranos encuentren fácilmente la información."
+  link="https://www.figma.com/file/YOUR_FIGMA_PROJECT_ID"
+  imageSources={[
+    { src: AikidoSS1, title: "Pantalla de Inicio" },
+    { src: AikidoSS2, title: "Pantalla de Login" },
+    { src: AikidoSS3, title: "Dashboard Principal" },
+    { src: AikidoSS4, title: "Tablero de Eventos" },
+    { src: AikidoSS5, title: "Detalles del Evento" },
+    { src: AikidoSS6, title: "Sección de Notificaciones" },
+  ]}
+  insight={{
+    title: "Enfoque",
+    heading: "Centrado en el Usuario y Diseño Primero",
+    description:
+      "El proceso de diseño comenzó con un profundo enfoque en el usuario final. A través de investigación de usuarios y wireframes, identifiqué las necesidades clave tanto de estudiantes actuales como de nuevos visitantes. El objetivo era crear una interfaz simple y efectiva que minimice la fricción. Usando Figma, creé un sistema de diseño basado en componentes para asegurar consistencia a lo largo de todas las pantallas.",
+  }}
+/>

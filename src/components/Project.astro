@@ -1,11 +1,18 @@
 ---
 import { Image } from "astro:assets";
+import { getLangFromUrl } from '../i18n/utils';
+
 const { title, description, imgSrc, link } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+// Handle both pre-resolved strings (from Bento) and description objects (from ProjectsGallery)
+const currentDesc = typeof description === 'string' ? description : (description[lang] || description.en);
+const localizedLink = lang === 'es' && link.startsWith('/') && !link.startsWith('/es') ? `/es${link}` : link;
 ---
 
 <section>
   <div>
-    <a href={link} rel="noopener noreferrer" title="Project Website">
+    <a href={localizedLink} rel="noopener noreferrer" title="Project Website">
       <div class="relative bg-opacity-35 group h-96 overflow-hidden">
         <Image
           src={imgSrc}
@@ -16,12 +23,12 @@ const { title, description, imgSrc, link } = Astro.props;
           loading="lazy"
         />
         <div
-          class="absolute inset-0 md:opacity-0 cursor-pointer group-hover:opacity-80 transition-opacity duration-300"
+          class="absolute inset-0 md:opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-200"
         >
-          <div class="flex items-end h-full md.bg-stone-400 bg-opacity-50">
+          <div class="flex items-end h-full bg-zinc-200/95 dark:bg-zinc-950/95 backdrop-blur-sm">
             <div class="p-4">
               <h2 class="text-xl text-rose font-bold pb-4">{title}</h2>
-              <p class="text-xs text-primary">{description}</p>
+              <p class="text-xs text-zinc-900 dark:text-white font-medium drop-shadow-sm">{currentDesc}</p>
             </div>
           </div>
         </div>

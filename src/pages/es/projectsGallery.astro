@@ -1,8 +1,8 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 import Project from "@components/Project.astro";
-import { projectsData } from "../data/projects";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { projectsData } from "../../data/projects";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
