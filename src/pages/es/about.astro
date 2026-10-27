@@ -1,140 +1,382 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<MainLayout 
-  title={t('about.title')} 
-  description={t('about.desc')}
->
-  <div class="relative flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-32 md:max-w-6xl md:mx-auto mecha-grid min-h-[40vh] border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden">
+<MainLayout title={t("about.title")} description={t("about.desc")}>
+  <div
+    class="relative flex flex-col items-center p-4 md:flex-row md:items-start md:pb-12 md:pt-32 md:max-w-6xl md:mx-auto mecha-grid min-h-[40vh] border-x border-blue-600/30 dark:border-blue-400/20 overflow-hidden"
+  >
     <div class="scanline"></div>
-    <h1 class="text-4xl md:text-6xl flex flex-col pt-14 pb-4 text-rose dark:text-primary items-center md:items-start gap-x-2 font-mechsuit z-10" transition:name="myname">
-      {t('about.h1')} <span class="text-primary dark:text-rose">{t('about.h1Span')}</span>
+    <h1
+      class="text-4xl md:text-6xl flex flex-col pt-14 pb-4 text-rose dark:text-primary items-center md:items-start gap-x-2 font-mechsuit z-10"
+      transition:name="myname"
+    >
+      {t("about.h1")}
+      <span class="text-primary dark:text-rose">{t("about.h1Span")}</span>
       <div class="h-1 w-24 bg-rose mt-4 hidden md:block"></div>
     </h1>
 
-    <section class="flex justify-center md:justify-start pt-8 md:pt-14 md:pl-20 z-10">
+    <section
+      class="flex justify-center md:justify-start pt-8 md:pt-14 md:pl-20 z-10"
+    >
       <div class="flex flex-col gap-6 max-w-xl">
-        <p class="font-bold text-sm md:text-base border-l-2 border-rose pl-4 py-1">
-          {t('about.p1')}
+        <p
+          class="font-bold text-sm md:text-base border-l-2 border-rose pl-4 py-1"
+        >
+          {t("about.p1")}
         </p>
         <p class="text-xs md:text-sm leading-relaxed opacity-80">
-          {t('about.p2')}
+          {t("about.p2")}
         </p>
         <div class="flex items-center gap-2 opacity-50">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose"></span>
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose opacity-75"
+            ></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose"
+            ></span>
           </span>
-          <span class="text-[10px] font-mono uppercase tracking-[0.2em]">System Online // All Modules Nominal</span>
+          <span class="text-[10px] font-mono uppercase tracking-[0.2em]"
+            >System Online // All Modules Nominal</span
+          >
         </div>
       </div>
     </section>
   </div>
 
-  <section class="flex justify-center px-4 md:px-8 py-20 mecha-grid border-t border-blue-600/30 dark:border-blue-400/20">
+  <section
+    class="flex justify-center px-4 md:px-8 py-20 mecha-grid border-t border-blue-600/30 dark:border-blue-400/20"
+  >
     <article id="about" class="max-w-6xl w-full">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group hover:border-rose/30 transition-all">
-          <div class="absolute top-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90">QUAL_SYS // DB-01</div>
-          <h3 class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2">{t('about.edu')}</h3>
-          
+        <div
+          class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group hover:border-rose/30 transition-all"
+        >
+          <div
+            class="absolute top-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90"
+          >
+            QUAL_SYS // DB-01
+          </div>
+          <h3
+            class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2"
+          >
+            {t("about.edu")}
+          </h3>
+
           <div class="space-y-8">
             <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80">
-              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">UANE // Core_Degree</li>
-              <li class="font-bold">{t('edu.uane')}</li>
-              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Estado: Completo</li>
+              <li
+                class="font-bold text-primary uppercase text-[10px] lg:text-xs"
+              >
+                UANE // Core_Degree
+              </li>
+              <li class="font-bold">{t("edu.uane")}</li>
+              <li
+                class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase"
+              >
+                Estado: Completo
+              </li>
             </ul>
 
-            <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
-              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">Stream_Link // 02</li>
-              <li class="font-bold">{t('edu.google')}</li>
-              <li class="text-rose/80 text-xs lg:text-sm">{t('edu.google.cert')}</li>
-              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Estado: Completo</li>
+            <ul
+              class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4"
+            >
+              <li
+                class="font-bold text-primary uppercase text-[10px] lg:text-xs"
+              >
+                Stream_Link // 02
+              </li>
+              <li class="font-bold">{t("edu.google")}</li>
+              <li class="text-rose/80 text-xs lg:text-sm">
+                {t("edu.google.cert")}
+              </li>
+              <li
+                class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase"
+              >
+                Estado: Completo
+              </li>
             </ul>
 
-            <ul class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4">
-              <li class="font-bold text-primary uppercase text-[10px] lg:text-xs">Arch_Index // 03</li>
-              <li class="font-bold">{t('edu.oracle')}</li>
-              <li class="text-rose/80 text-xs lg:text-sm">{t('edu.oracle.cert')}</li>
-              <li class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase">Estado: Completo</li>
+            <ul
+              class="text-sm lg:text-base space-y-2 font-michroma opacity-80 border-t border-zinc-500/20 pt-4"
+            >
+              <li
+                class="font-bold text-primary uppercase text-[10px] lg:text-xs"
+              >
+                Arch_Index // 03
+              </li>
+              <li class="font-bold">{t("edu.oracle")}</li>
+              <li class="text-rose/80 text-xs lg:text-sm">
+                {t("edu.oracle.cert")}
+              </li>
+              <li
+                class="opacity-80 tracking-widest font-mono text-rose dark:text-rose/80 font-bold text-[10px] lg:text-xs uppercase"
+              >
+                Estado: Completo
+              </li>
             </ul>
           </div>
         </div>
 
-        <div class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group transition-all">
-          <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]">EXP_LOG // MK-II</div>
-          <h3 class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.exp')}</h3>
+        <div
+          class="md:col-span-2 mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-8 relative group transition-all"
+        >
+          <div
+            class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90 shadow-[0_2px_4px_rgba(29,78,216,0.2)]"
+          >
+            EXP_LOG // MK-II
+          </div>
+          <h3
+            class="font-mechsuit text-rose text-base lg:text-lg mb-6 border-b border-zinc-500/30 pb-2 uppercase tracking-widest"
+          >
+            {t("about.exp")}
+          </h3>
           <div class="space-y-10">
-            
-            <div class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.analyst.title')}</h4>
-               <p class="text-xs lg:text-sm text-blue font-mono mb-3">{t('exp.analyst.subtitle')}</p>
-               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90">
-                 <li>[ <span class="text-rose">CORE</span> ] {t('exp.analyst.i1')}</li>
-                 <li>[ <span class="text-rose">DATA</span> ] {t('exp.analyst.i2')}</li>
-                 <li>[ <span class="text-rose">PLATFORM</span> ] {t('exp.analyst.i3')}</li>
-                 <li>[ <span class="text-rose">STRATEGY</span> ] {t('exp.analyst.i4')}</li>
-               </ul>
+            <div
+              class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20"
+            >
+              <h4 class="text-sm lg:text-base font-bold text-primary uppercase">
+                {t("exp.analyst.title")}
+              </h4>
+              <p class="text-xs lg:text-sm text-blue font-mono mb-3">
+                {t("exp.analyst.subtitle")}
+              </p>
+              <ul
+                class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90"
+              >
+                <li>
+                  [ <span class="text-rose">CORE</span> ] {t("exp.analyst.i1")}
+                </li>
+                <li>
+                  [ <span class="text-rose">DATA</span> ] {t("exp.analyst.i2")}
+                </li>
+                <li>
+                  [ <span class="text-rose">PLATFORM</span> ] {
+                    t("exp.analyst.i3")
+                  }
+                </li>
+                <li>
+                  [ <span class="text-rose">STRATEGY</span> ] {
+                    t("exp.analyst.i4")
+                  }
+                </li>
+              </ul>
             </div>
 
-            <div class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20">
-               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.trainer.title')}</h4>
-               <p class="text-xs lg:text-sm text-blue font-mono mb-3">{t('exp.trainer.subtitle')}</p>
-               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90">
-                 <li>[ <span class="text-rose">LEADERSHIP</span> ] {t('exp.trainer.i1')}</li>
-                 <li>[ <span class="text-rose">METRICS</span> ] {t('exp.trainer.i2')}</li>
-                 <li>[ <span class="text-rose">COACHING</span> ] {t('exp.trainer.i3')}</li>
-               </ul>
+            <div
+              class="relative pl-5 border-l-2 border-blue-600/30 dark:border-blue-400/20"
+            >
+              <h4 class="text-sm lg:text-base font-bold text-primary uppercase">
+                {t("exp.trainer.title")}
+              </h4>
+              <p class="text-xs lg:text-sm text-blue font-mono mb-3">
+                {t("exp.trainer.subtitle")}
+              </p>
+              <ul
+                class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed opacity-90"
+              >
+                <li>
+                  [ <span class="text-rose">LEADERSHIP</span> ] {
+                    t("exp.trainer.i1")
+                  }
+                </li>
+                <li>
+                  [ <span class="text-rose">METRICS</span> ] {
+                    t("exp.trainer.i2")
+                  }
+                </li>
+                <li>
+                  [ <span class="text-rose">COACHING</span> ] {
+                    t("exp.trainer.i3")
+                  }
+                </li>
+              </ul>
             </div>
 
-            <div class="relative pl-5 border-l-2 border-zinc-500/30 opacity-70 group-hover:opacity-100 transition-opacity">
-               <h4 class="text-sm lg:text-base font-bold text-primary uppercase">{t('exp.tp.title')}</h4>
-               <p class="text-xs lg:text-sm text-blue font-mono mb-3">{t('exp.tp.subtitle')}</p>
-               <ul class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed">
-                 <li>[ <span class="text-rose">NETWORK</span> ] {t('exp.tp.i1')}</li>
-                 <li>[ <span class="text-rose">SUPPORT</span> ] {t('exp.tp.i2')}</li>
-                 <li>[ <span class="text-rose">TICKETING</span> ] {t('exp.tp.i3')}</li>
-                 <li>[ <span class="text-rose">DIAGNOSTICS</span> ] {t('exp.tp.i4')}</li>
-               </ul>
+            <div
+              class="relative pl-5 border-l-2 border-zinc-500/30 opacity-70 group-hover:opacity-100 transition-opacity"
+            >
+              <h4 class="text-sm lg:text-base font-bold text-primary uppercase">
+                {t("exp.tp.title")}
+              </h4>
+              <p class="text-xs lg:text-sm text-blue font-mono mb-3">
+                {t("exp.tp.subtitle")}
+              </p>
+              <ul
+                class="text-xs lg:text-sm space-y-2 font-michroma list-none leading-relaxed"
+              >
+                <li>
+                  [ <span class="text-rose">NETWORK</span> ] {t("exp.tp.i1")}
+                </li>
+                <li>
+                  [ <span class="text-rose">SUPPORT</span> ] {t("exp.tp.i2")}
+                </li>
+                <li>
+                  [ <span class="text-rose">TICKETING</span> ] {t("exp.tp.i3")}
+                </li>
+                <li>
+                  [ <span class="text-rose">DIAGNOSTICS</span> ] {
+                    t("exp.tp.i4")
+                  }
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="flex flex-col gap-6">
-          <div class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
-              <div class="absolute bottom-0 right-0 bg-gold text-[10px] lg:text-xs px-2 py-0.5 text-black font-mono opacity-90">TECH_ARMORY</div>
-              <h3 class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.tskill')}</h3>
-              <div class="flex flex-wrap gap-2">
-                {['HTML/CSS', 'JavaScript', 'React', 'Python', 'SQL', 'TypeScript', 'Astro', 'Git', 'Linux'].map(skill => (
-                  <span class="text-[9px] lg:text-xs font-mono border border-zinc-500/40 px-2.5 py-1.5 bg-zinc-500/5 text-primary/80 transition-colors group-hover:border-blue-400/50">{skill}</span>
-                ))}
-              </div>
+          {/* Desarrollo de Software */}
+          <div
+            class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all"
+          >
+            <div
+              class="absolute bottom-0 right-0 bg-gold text-[10px] lg:text-xs px-2 py-0.5 text-black font-mono opacity-90"
+            >
+              TECH_ARMORY
+            </div>
+
+            <h3
+              class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest"
+            >
+              Desarrollo de Software
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "Astro",
+                  "TypeScript",
+                  "JavaScript",
+                  "React",
+                  "HTML5",
+                  "CSS3",
+                  "SQL",
+                  "Git",
+                ].map((skill) => (
+                  <span class="text-[9px] lg:text-xs font-mono border border-zinc-500/40 px-2.5 py-1.5 bg-zinc-500/5 text-primary/80 transition-colors group-hover:border-blue-400/50">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
           </div>
 
-          <div class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all">
-              <div class="absolute bottom-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90">SYSTEM_CORE</div>
-              <h3 class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest">{t('about.mskill')}</h3>
-              <div class="flex flex-wrap gap-2">
-                {['REST APIs', 'JSON', 'HTTP', 'Webhooks', 'ServiceNow', 'ITIL v4', 'RCA', 'Agile'].map(skill => (
-                  <span class="text-[9px] lg:text-xs font-mono border border-rose/40 px-2.5 py-1.5 bg-rose/5 text-rose/80 transition-colors group-hover:bg-rose/10">{skill}</span>
-                ))}
-              </div>
+          {/* Sistemas y Soporte Técnico */}
+          <div
+            class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all"
+          >
+            <div
+              class="absolute bottom-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90"
+            >
+              SYSTEM_CORE
+            </div>
+
+            <h3
+              class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest"
+            >
+              Sistemas y Soporte Técnico
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+              {
+                ["Windows", "Linux", "Bash / Línea de comandos", "SSH"].map(
+                  (skill) => (
+                    <span class="text-[9px] lg:text-xs font-mono border border-rose/40 px-2.5 py-1.5 bg-rose/5 text-rose/80 transition-colors group-hover:bg-rose/10">
+                      {skill}
+                    </span>
+                  ),
+                )
+              }
+            </div>
+          </div>
+
+          {/* Integración de APIs y Sistemas */}
+          <div
+            class="mecha-panel bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all"
+          >
+            <div
+              class="absolute bottom-0 right-0 bg-gold text-[10px] lg:text-xs px-2 py-0.5 text-black font-mono opacity-90"
+            >
+              DATA_LINK
+            </div>
+
+            <h3
+              class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest"
+            >
+              Integración de APIs y Sistemas
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "REST APIs",
+                  "HTTP / HTTPS",
+                  "JSON",
+                  "Webhooks",
+                  "Diagnóstico de APIs",
+                  "Análisis de registros (logs)",
+                  "Consultas SQL",
+                  "Datadog",
+                ].map((skill) => (
+                  <span class="text-[9px] lg:text-xs font-mono border border-zinc-500/40 px-2.5 py-1.5 bg-zinc-500/5 text-primary/80 transition-colors group-hover:border-blue-400/50">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          {/* Operaciones de TI */}
+          <div
+            class="mecha-panel-alt bg-zinc-500/5 border border-blue-600/30 dark:border-blue-400/20 p-6 lg:p-7 relative group transition-all"
+          >
+            <div
+              class="absolute bottom-0 left-0 bg-rose text-[10px] lg:text-xs px-2 py-0.5 text-white font-mono opacity-90"
+            >
+              OPS_PROTOCOL
+            </div>
+
+            <h3
+              class="font-mechsuit text-rose text-xs lg:text-sm mb-4 border-b border-zinc-500/30 pb-2 uppercase tracking-widest"
+            >
+              Operaciones de TI y Gestión de Incidentes
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "ServiceNow",
+                  "Análisis de causa raíz (RCA)",
+                  "Gestión de incidentes",
+                  "Gestión de SLA",
+                  "Gestión de escalaciones",
+                  "Gestión de base de conocimientos",
+                ].map((skill) => (
+                  <span class="text-[9px] lg:text-xs font-mono border border-rose/40 px-2.5 py-1.5 bg-rose/5 text-rose/80 transition-colors group-hover:bg-rose/10">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
-
       </div>
     </article>
   </section>
 </MainLayout>
 
 <style>
-  ul { max-width: 500px; }
-  li { padding-bottom: 4px; }
-  .font-michroma { font-family: 'Michroma', sans-serif; }
+  ul {
+    max-width: 500px;
+  }
+  li {
+    padding-bottom: 4px;
+  }
+  .font-michroma {
+    font-family: "Michroma", sans-serif;
+  }
 </style>
