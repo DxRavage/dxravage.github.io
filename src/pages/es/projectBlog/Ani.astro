@@ -1,27 +1,30 @@
 ---
-// Component Imports
 import ProjectDet from "../../projectDet.astro";
 
-// Image Imports
-import AniSS1 from "/src/assets/anivid.mp4";
-import AniSS2 from "/src/assets/anivid2.mp4";
-import AniSS3 from "/src/assets/ani.webp";
+import AniSS1 from "/src/assets/hero.png";
+import AniSS2 from "/src/assets/hero 2.png";
+import AniSS3 from "/src/assets/Catalogo.png";
+import AniSS4 from "/src/assets/watch.png";
+import AniSS5 from "/src/assets/details.png";
 ---
+
 <ProjectDet
   title="Ani Web App"
-  tech="UX/UI Design | Front-End Web Dev"
-  descript1="Astro | Tailwind CSS | Typescript"
-  descript2="La Ani Web App es una plataforma moderna y responsiva centrada en una experiencia de usuario impecable para explorar contenido de anime. Desde el concepto hasta el código, la app fue diseñada para proveer una interfaz intuitiva, capacidades de búsqueda fluidas y descubrimiento de contenido personalizado. Está construida para rendimiento y atractivo estético."
-  link=""
+  tech="Desarrollo Full-Stack | Diseño UI/UX"
+  descript1="Astro 5 · TypeScript · Tailwind CSS · Cheerio · SSR"
+  descript2="Ani Web App es una plataforma web de anime que combina un catálogo dinámico con una experiencia de navegación y reproducción adaptable a distintos dispositivos. Permite explorar títulos, consultar detalles, acceder a episodios y cambiar entre servidores de video disponibles. También incorpora una lista personal y seguimiento del progreso de visualización, almacenando los datos localmente para que los usuarios puedan retomar sus episodios sin necesidad de crear una cuenta."
+  link="https://ani-web-coral.vercel.app/"
   imageSources={[
-    { src: AniSS1, title: "Sección Hero" },
-    { src: AniSS2, title: "Recomendación de Contenido" },
-    { src: AniSS3, title: "Página Principal" },
+    { src: AniSS1, title: "Sección principal" },
+    { src: AniSS2, title: "Recomendaciones de contenido" },
+    { src: AniSS3, title: "Catálogo de anime" },
+    { src: AniSS5, title: "Detalles del contenido" },
+    { src: AniSS4, title: "Reproductor y selección de servidores" },
   ]}
   insight={{
-    title: "Enfoque",
-    heading: "Desde Figma hasta una Experiencia Web Fluida",
+    title: "Implementación técnica",
+    heading: "Del diseño de interfaz a una aplicación funcional",
     description:
-      "Mi enfoque empezó con un diseño en Figma donde creé una interfaz limpia e intuitiva. Luego, este diseño fue traducido a una aplicación web de alto rendimiento usando **Astro** para minimizar JavaScript y asegurar cargas ultra rápidas. El diseño visual se implementó meticulosamente con **Tailwind CSS**, enfocándose en un diseño responsivo basado en componentes que se adapta a cualquier dispositivo.",
+      "El proyecto evolucionó de una propuesta de diseño UI/UX a una aplicación web funcional. Astro se utiliza para renderizar las páginas desde el servidor, mientras que Cheerio permite extraer y procesar información de fuentes externas. Se implementó una caché en memoria para reducir solicitudes repetidas y mejorar la eficiencia al consultar contenido reciente. En el cliente, localStorage permite guardar títulos y conservar el progreso de los episodios sin depender de cuentas de usuario ni de una base de datos. La interfaz se construyó con Tailwind CSS, manteniendo una estructura basada en componentes y adaptable a distintos tamaños de pantalla.",
   }}
 />

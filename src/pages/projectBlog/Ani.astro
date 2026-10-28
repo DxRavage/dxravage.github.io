@@ -1,27 +1,30 @@
 ---
-// Component Imports
 import ProjectDet from "../projectDet.astro";
 
-// Image Imports
-import AniSS1 from "/src/assets/anivid.mp4";
-import AniSS2 from "/src/assets/anivid2.mp4";
-import AniSS3 from "/src/assets/ani.webp";
+import AniSS1 from "/src/assets/hero.png";
+import AniSS2 from "/src/assets/hero 2.png";
+import AniSS3 from "/src/assets/Catalogo.png";
+import AniSS4 from "/src/assets/watch.png";
+import AniSS5 from "/src/assets/details.png";
 ---
+
 <ProjectDet
   title="Ani Web App"
-  tech="UX/UI Design | Front-End Web Dev"
-  descript1="Astro | Tailwind CSS | Typescript"
-  descript2="The Ani Web App is a modern, responsive platform centered on a seamless user experience for exploring and engaging with anime content. From concept to code, the app was designed to provide an intuitive interface, effortless search capabilities, and personalized content discovery. It's built for performance and aesthetic appeal, making it easy for users to find new shows and connect with a vibrant community."
-  link=""
+  tech="Full-Stack Development | UX/UI Design"
+  descript1="Astro 5 · TypeScript · Tailwind · Cheerio · SSR"
+  descript2="An anime catalog and streaming web app built with Astro. It combines dynamically retrieved anime data with a responsive interface for browsing titles, viewing episodes, and switching between available video servers. The app also includes a personal watchlist and episode progress tracking, with viewing data stored locally so users can pick up where they left off."
+  link="https://ani-web-coral.vercel.app/"
   imageSources={[
     { src: AniSS1, title: "Hero Section" },
-    { src: AniSS2, title: "Content Recomendation" },
-    { src: AniSS3, title: "Homepage" },
+    { src: AniSS2, title: "Content Recommendations" },
+    { src: AniSS3, title: "Anime Catalog" },
+    { src: AniSS5, title: "Content Details" },
+    { src: AniSS4, title: "Video Player & Streaming" },
   ]}
   insight={{
-    title: "Approach",
-    heading: "From Figma to Fluid Web Experience",
+    title: "Technical Implementation",
+    heading: "Connecting Content Discovery with Playback",
     description:
-      "My approach began with a user-first design in Figma, where I created a clean, intuitive interface that prioritizes content discovery and accessibility. I then translated this design into a high-performance web application using **Astro's island architecture** to minimize JavaScript and ensure lightning-fast load times. The visual design was meticulously implemented with **Tailwind CSS**, focusing on a responsive, component-driven layout that adapts seamlessly to any device. This disciplined workflow, from detailed mockups to a production-ready build, highlights my ability to deliver a polished, modern, and highly performant front-end product that puts the user's experience first.",
+      "The app uses Astro's server-side rendering to retrieve and present catalog data, with Cheerio handling HTML parsing from external sources. An in-memory cache helps avoid repeating requests for recently accessed content. On the client side, localStorage keeps track of episode progress and saved titles without requiring user accounts or a separate database. The interface is built with Tailwind CSS and adapts to different screen sizes, with dedicated views for browsing anime and watching episodes.",
   }}
 />

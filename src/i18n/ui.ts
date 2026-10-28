@@ -115,7 +115,7 @@ export const ui = {
     "edu.oracle.cert": "Oracle Next Education",
 
     // Experience: Technology Support Analyst
-    "exp.analyst.title": "Analista de Soporte Tecnológico",
+    "exp.analyst.title": "Analista de Soporte Técnico",
     "exp.analyst.subtitle": "Qualfon | Allstate // API & Ops Críticas",
     "exp.analyst.i1": "Resolución de problemas de REST APIs, Webhooks y protocolos HTTP.",
     "exp.analyst.i2": "Análisis de estructuras JSON y logs del sistema.",

@@ -2,8 +2,8 @@ import wowImage from "/src/assets/wow.webp";
 import gbooksImage from "/src/assets/bookfinder.webp";
 import aikidoImage from "/src/assets/aikido.webp";
 import dungeon from "/src/assets/mainMenu.png";
-import ani from "/src/assets/anihero.webp";
-import mScrapper from "/src/assets/mschapters.webp";
+import ani from "/src/assets/hero.png";
+import mScrapper from "/src/assets/scrapperhero.png";
 
 export const projectsData = [
   {
